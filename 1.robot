@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     Tests for parp
-Library           Selenium2Library
+#Library           Selenium2Library
 Library           page.py
 
 *** Variables ***
@@ -18,6 +18,6 @@ Register Proper Data
     [Tags]    ty
     [Documentation]  Sprawdzenie możliwości rejestracji nowego użytkownika z uprawnieniami wnioskodawcy
     [Setup]    Open Browser	${web-page}    browser=${browser}
-    my click  (By.PARTIAL_LINK_TEXT, "Zarejestruj nowe konto")
+    my click  By.PARTIAL_LINK_TEXT, "Zarejestruj nowe konto"
     send to field random value of length  (By.ID, "rejestracja_konta_imie")  7
     Close Browser

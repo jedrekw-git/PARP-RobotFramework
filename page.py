@@ -2,15 +2,17 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 import rstr
+from Selenium2Library import Selenium2Library
+from robot.libraries.BuiltIn import BuiltIn
 
-class page(object):
-    def __init__(self, driver=None, title=None, url=None):
-        self._driver = driver
-        self._title = title
-        self._url = url
+class page(Selenium2Library):
+    # def __init__(self, driver=None, title=None, url=None):
+    #     self._driver = driver
+    #     self._title = title
+    #     self._url = url
 
     def get_driver(self):
-        return self._driver
+        return self._current_browser()
 
     def wait_for_visibility(self, locator, info="no error", timeout=10):
         return WebDriverWait(self.get_driver(), timeout).until(
@@ -42,3 +44,4 @@ class page(object):
     def my_click(self, locator, info="click on button error", timeout=5):
         element = self.wait_for_visibility(locator, info, timeout)
         element.click()
+        BuiltIn().run_keyword(locator, info, timeout)
