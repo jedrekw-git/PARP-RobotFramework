@@ -2,10 +2,12 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 import rstr
-from Selenium2Library import Selenium2Library
+from ExtendedSelenium2Library import ExtendedSelenium2Library
 from robot.libraries.BuiltIn import BuiltIn
+from random import randint
+import uuid
 
-class page(Selenium2Library):
+class page(ExtendedSelenium2Library):
     # def __init__(self, driver=None, title=None, url=None):
     #     self._driver = driver
     #     self._title = title
@@ -33,8 +35,42 @@ class page(Selenium2Library):
         self.clear_field(locator)
         self.send_keys(value_to_send, locator, info)
 
-    def get_random_string(length):
+    def get_random_string(self, length=8):
         return rstr.rstr("abcdefghijklmnoprstuwxyz", length)
+
+    def get_random_string_big_letters(self, length=8):
+        return rstr.rstr("ABCDEFGHIJKLMNOPRSTUWXYZ", length)
+
+    def get_random_password(self):
+        return str(self.get_random_integer(2)+self.get_random_string(4)+self.get_random_string_big_letters(4)+"$")
+
+    def get_random_password_1_char_long(self):
+        return str(self.get_random_integer(1))
+
+    def get_random_integer(self, length=6):
+        range_start = 10**(length-1)
+        range_end = (10**length)-1
+        return str(randint(range_start, range_end))
+
+    def get_random_pesel(self):
+        a = randint(0, 9)
+        b = randint(0, 9)
+        c = 0
+        d = randint(0, 9)
+        e = 0
+        f = randint(0, 9)
+        g = randint(0, 9)
+        h = randint(0, 9)
+        i = randint(0, 9)
+        j = randint(0, 9)
+        k = (9*a+7*b+1*d+7*f+3*g+1*h+9*i+7*j) % 10
+        return str(a)+str(b)+"0"+str(d)+"0"+str(f)+str(g)+str(h)+str(i)+str(j)+str(k)
+
+    def get_random_uuid(self, length=5):
+        return str(uuid.uuid1())[:length]
+
+    def get_random_email(self):
+        return str(self.get_random_uuid(9) + "@wp.pl")
 
     def send_to_field_random_value_of_length(self, locator, leng, info="field was not visible"):
         self.clear_field(locator)
@@ -42,6 +78,8 @@ class page(Selenium2Library):
         self.send_keys(value, locator, info)
 
     def my_click(self, locator, info="click on button error", timeout=5):
-        element = self.wait_for_visibility(locator, info, timeout)
-        element.click()
-        BuiltIn().run_keyword(locator, info, timeout)
+        # element = self.wait_for_visibility(locator, info, timeout)
+        # self.get_driver()._element_find(locator).click()
+        self.get_driver().execute_script("arguments[0].click();", self.find_element((locator)))
+        # element.click()
+        # BuiltIn().run_keyword(locator, info, timeout)
