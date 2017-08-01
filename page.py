@@ -3,9 +3,9 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 import rstr
 from ExtendedSelenium2Library import ExtendedSelenium2Library
-from robot.libraries.BuiltIn import BuiltIn
 from random import randint
 import uuid
+import datetime
 
 class page(ExtendedSelenium2Library):
     # def __init__(self, driver=None, title=None, url=None):
@@ -71,6 +71,10 @@ class page(ExtendedSelenium2Library):
 
     def get_random_email(self):
         return str(self.get_random_uuid(9) + "@wp.pl")
+
+    def get_todays_date(self):
+        _today = datetime.date.today()
+        return _today.strftime('%Y-%m-%d')
 
     def send_to_field_random_value_of_length(self, locator, leng, info="field was not visible"):
         self.clear_field(locator)

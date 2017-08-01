@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation     Założenie konta
-#Library           Selenium2Library
 Library           page.py
 
 *** Variables ***
@@ -41,6 +40,7 @@ Rejestracja dane poprawne
     SELECT CHECKBOX  id=rejestracja_konta_oswiadczeniaUzytkownika_10
     click element  id=hide-ue-cookie-info
     click element  xpath=//button
+    page should contain  zostało założone. Proszę odebrać wiadomość e-mail z linkiem aktywacyjnym.
     Close Browser
 
 Rejestracja brak zaznaczonych obowiązkowych checkboxs
@@ -92,7 +92,6 @@ Rejestracja niepoprawny pesel oraz email
     close browser
 
 Rejestracja niewalidowane haslo
-    [Tags]    ty
     [Documentation]  Sprawdzenie walidacji hasła podczas rejestracji
     [Setup]    Open Browser	${web-page}    browser=${browser}
     click element   link=Zarejestruj nowe konto     True
@@ -110,4 +109,17 @@ Rejestracja niewalidowane haslo
     clear element text  id=rejestracja_konta_haslo_noweHaslo_noweHaslo2
     click element  xpath=//button
     element text should be  xpath=//div[4]/span/div     Hasło jest wymagane.
+    close browser
+
+Rejestracja 2 różne hasła
+    [Documentation]  Sprawdzenie czy działa poprawnie porównywanie wartości z pola powtórz hasło z polem hasło.
+    [Setup]    Open Browser	${web-page}    browser=${browser}
+    click element   link=Zarejestruj nowe konto     True
+    ${randompassword1}=    get random password
+    Press Key  id=rejestracja_konta_haslo_noweHaslo_noweHaslo1  ${randompassword1}
+    ${randompassword2}=    get random string
+    Press Key  id=rejestracja_konta_haslo_noweHaslo_noweHaslo2  ${randompassword2}
+    click element  id=hide-ue-cookie-info
+    click element  xpath=//button
+    element text should be  xpath=//div[4]/span/div     Hasło i powtórzone hasło nie zgadzają się.
     close browser
