@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     Założenie konta
-Library           page.py
+Library           ../Funkcje/page.py
 
 *** Variables ***
 ${browser}        chrome    # Web browser to use for testing. Can be overriden from command line.
