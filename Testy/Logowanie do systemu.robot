@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Założenie konta
+Documentation     Logowanie do systemu
 Library           ../Funkcje/page.py
 Library  OperatingSystem
 Library  String
