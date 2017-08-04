@@ -1,7 +1,7 @@
 *** Variables ***
 
-${LoginField}    id=_username
-${PasswordField}   id=_password
+${LoginPole}    id=_username
+${HasłoPole}   id=_password
 ${LoginButton}  id=zaloguj
-${ForgottenPassowrdButton}  id=zapomniane_haslo
+${ZapomnianeHasloButton}  id=zapomniane_haslo
 

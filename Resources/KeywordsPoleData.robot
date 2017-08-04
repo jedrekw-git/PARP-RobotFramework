@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../Resources/AdresyURL.robot
 Resource    ../Resources/UtworzenieWnioskuUI.robot
-Library           ..Funkcje/page.py
+Library           ../Funkcje/page.py
 Library           String
 
 *** Keywords ***

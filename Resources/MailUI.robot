@@ -1,7 +1,7 @@
 *** Variables ***
 
-${MailLoginField}     id=form-login
-${MailPasswordField}   id=form-password
+${MailLoginPole}     id=form-login
+${MailHasloPole}   id=form-password
 ${MailLoginButton}     xpath=//button
-${FirstMailTitleField}     xpath=//div[3]/span
-${FirstMailDateField}     css=div.stream-item__date.ng-binding
+${PierwszyMailTytułPole}     xpath=//div[3]/span
+${PierwszyMailDataPole}     css=div.stream-item__date.ng-binding
