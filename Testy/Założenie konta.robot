@@ -28,7 +28,6 @@ Rejestracja dane poprawne
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
     Rejestracja Uzytkownika Zaznacz Checkboxy
-    click element  ${hideuecookieinfobutton}
     click element  ${ZapiszUzytkownikaButton}
     page should contain  zostało założone. Proszę odebrać wiadomość e-mail z linkiem aktywacyjnym.
     Close Browser
@@ -48,7 +47,6 @@ Rejestracja brak zaznaczonych obowiązkowych checkboxs
     ${randomstring3}=    get random password
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
-    click element  ${hideuecookieinfobutton}
     click element  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[8]/span/div     Oświadczenie "Administratorem moich danych osobowych jest Minister Rozwoju pełniący ..." jest wymagane.
     element text should be  xpath=//span[2]/div     Oświadczenie "Podstawą przetwarzania danych osobowych jest art. 122 ust. 3 rozporząd..." jest wymagane.
@@ -75,7 +73,6 @@ Rejestracja niepoprawny pesel oraz email
     ${randomstring3}=    get random password
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
-    click element  ${hideuecookieinfobutton}
     click element  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[5]/div[2]/span/div      Podany PESEL nie jest poprawny.
     element text should be  xpath=//div[6]/div[2]/span/div      Adres e-mail nie jest prawidłowy.
@@ -88,7 +85,6 @@ Rejestracja niewalidowane haslo
     ${randompassword1}=    get random password 1 char long
     Press Key  ${Haslo1Pole}  ${randompassword1}
     Press Key  ${Haslo2Pole}  ${randompassword1}
-    click element  ${hideuecookieinfobutton}
     click element  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[4]/span/div     Hasło musi zawierać nie mniej niż 8 znaków.
     element text should be  xpath=//span/div[2]      Hasło musi zawierać nie mniej niż 2 liter.
@@ -109,7 +105,6 @@ Rejestracja 2 różne hasła
     Press Key  ${Haslo1Pole}  ${randompassword1}
     ${randompassword2}=    get random string
     Press Key  ${Haslo2Pole}  ${randompassword2}
-    click element  ${hideuecookieinfobutton}
     click element  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[4]/span/div     Hasło i powtórzone hasło nie zgadzają się.
     close browser

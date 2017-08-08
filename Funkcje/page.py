@@ -66,6 +66,33 @@ class page(ExtendedSelenium2Library):
         k = (9*a+7*b+1*d+7*f+3*g+1*h+9*i+7*j) % 10
         return str(a)+str(b)+"0"+str(d)+"0"+str(f)+str(g)+str(h)+str(i)+str(j)+str(k)
 
+    def get_random_nip(self):
+        a = randint(0, 9)
+        b = randint(0, 9)
+        c = randint(0, 9)
+        d = randint(0, 9)
+        e = randint(0, 9)
+        f = randint(0, 9)
+        g = randint(0, 9)
+        h = randint(0, 9)
+        i = randint(0, 9)
+        j = (6*a+5*b+7*c+2*d+3*e+4*f+5*g+6*h+7*i) % 11
+        return str(a)+str(b)+str(c)+str(d)+str(e)+str(f)+str(g)+str(h)+str(i)+str(j)
+
+    def get_random_regon(self):
+        a = randint(0, 9)
+        b = randint(0, 9)
+        c = randint(0, 9)
+        d = randint(0, 9)
+        e = randint(0, 9)
+        f = randint(0, 9)
+        g = randint(0, 9)
+        h = randint(0, 9)
+        j = (8*a+9*b+2*c+3*d+4*e+5*f+6*g+7*h) % 11
+        if j == 10:
+            j = 0
+        return str(a)+str(b)+str(c)+str(d)+str(e)+str(f)+str(g)+str(h)+str(j)
+
     def get_random_uuid(self, length=5):
         return str(uuid.uuid1())[:length]
 
