@@ -3,19 +3,13 @@ Documentation     Założenie konta
 Library           ../Funkcje/page.py
 Resource    ../Resources/RejestracjaUzytkownikaUI.robot
 Resource    ../Resources/Keywords.robot
-Resource    ../Resources/DashboardUI.robot
 
 *** Test Cases ***
-Strona sie otwiera
-    [Documentation]  Sprawdzenie otwarcia się strony
-    Otworz strone startowa
-    Wait Until Page Contains    Lokalny System Informatyczny     15
-    Close Browser
 
 Rejestracja dane poprawne
     [Documentation]  Sprawdzenie możliwości rejestracji nowego użytkownika z uprawnieniami wnioskodawcy
     Otworz strone startowa
-    click element   ${RejestracjaUzytkownikaButton}     True
+    ClickIE   ${RejestracjaUzytkownikaButton}
     ${randomstring1}=    get random string
     Press Key  ${ImiePole}  ${randomstring1}
     ${randomstring2}=    get random string
@@ -28,14 +22,14 @@ Rejestracja dane poprawne
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
     Rejestracja Uzytkownika Zaznacz Checkboxy
-    click element  ${ZapiszUzytkownikaButton}
+    ClickIE  ${ZapiszUzytkownikaButton}
     page should contain  zostało założone. Proszę odebrać wiadomość e-mail z linkiem aktywacyjnym.
     Close Browser
 
 Rejestracja brak zaznaczonych obowiązkowych checkboxs
     [Documentation]  Sprawdzenie działania walidacji w przypadku braku zaznaczonych obowiązkowych checkboxs formularza rejestracyjnego
     Otworz strone startowa
-    click element   ${RejestracjaUzytkownikaButton}     True
+    ClickIE   ${RejestracjaUzytkownikaButton}
     ${randomstring1}=    get random string
     Press Key  ${ImiePole}  ${randomstring1}
     ${randomstring2}=    get random string
@@ -47,7 +41,7 @@ Rejestracja brak zaznaczonych obowiązkowych checkboxs
     ${randomstring3}=    get random password
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
-    click element  ${ZapiszUzytkownikaButton}
+    ClickIE  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[8]/span/div     Oświadczenie "Administratorem moich danych osobowych jest Minister Rozwoju pełniący ..." jest wymagane.
     element text should be  xpath=//span[2]/div     Oświadczenie "Podstawą przetwarzania danych osobowych jest art. 122 ust. 3 rozporząd..." jest wymagane.
     element text should be  xpath=//span[3]/div     Oświadczenie "Moje dane osobowe będą przetwarzane w celu wykonywania obowiązków pańs..." jest wymagane.
@@ -61,7 +55,7 @@ Rejestracja brak zaznaczonych obowiązkowych checkboxs
 Rejestracja niepoprawny pesel oraz email
     [Documentation]  Sprawdzenie walidacji pola PESEL oraz adres e-mail
     Otworz strone startowa
-    click element   ${RejestracjaUzytkownikaButton}     True
+    ClickIE   ${RejestracjaUzytkownikaButton}
     ${randomstring1}=    get random string
     Press Key  ${ImiePole}  ${randomstring1}
     ${randomstring2}=    get random string
@@ -73,7 +67,7 @@ Rejestracja niepoprawny pesel oraz email
     ${randomstring3}=    get random password
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
-    click element  ${ZapiszUzytkownikaButton}
+    ClickIE  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[5]/div[2]/span/div      Podany PESEL nie jest poprawny.
     element text should be  xpath=//div[6]/div[2]/span/div      Adres e-mail nie jest prawidłowy.
     close browser
@@ -81,11 +75,11 @@ Rejestracja niepoprawny pesel oraz email
 Rejestracja niewalidowane haslo
     [Documentation]  Sprawdzenie walidacji hasła podczas rejestracji
     Otworz strone startowa
-    click element   ${RejestracjaUzytkownikaButton}     True
+    ClickIE   ${RejestracjaUzytkownikaButton}
     ${randompassword1}=    get random password 1 char long
     Press Key  ${Haslo1Pole}  ${randompassword1}
     Press Key  ${Haslo2Pole}  ${randompassword1}
-    click element  ${ZapiszUzytkownikaButton}
+    ClickIE  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[4]/span/div     Hasło musi zawierać nie mniej niż 8 znaków.
     element text should be  xpath=//span/div[2]      Hasło musi zawierać nie mniej niż 2 liter.
     element text should be  xpath=//span/div[3]     Hasło musi zawierać nie mniej niż 2 cyfr.
@@ -93,18 +87,19 @@ Rejestracja niewalidowane haslo
     element should contain  xpath=//span/div[5]     Hasło musi zawierać nie mniej niż 1 znaki specjalne.
     clear element text  ${Haslo1Pole}
     clear element text  ${Haslo2Pole}
-    click element  ${ZapiszUzytkownikaButton}
+    ClickIE  ${ZapiszUzytkownikaButton}
+    wait until page does not contain  Hasło musi zawierać nie mniej niż 8 znaków.
     element text should be  xpath=//div[4]/span/div     Hasło jest wymagane.
     close browser
 
 Rejestracja 2 różne hasła
     [Documentation]  Sprawdzenie czy działa poprawnie porównywanie wartości z pola powtórz hasło z polem hasło.
     Otworz strone startowa
-    click element   ${RejestracjaUzytkownikaButton}     True
+    ClickIE   ${RejestracjaUzytkownikaButton}
     ${randompassword1}=    get random password
     Press Key  ${Haslo1Pole}  ${randompassword1}
     ${randompassword2}=    get random string
     Press Key  ${Haslo2Pole}  ${randompassword2}
-    click element  ${ZapiszUzytkownikaButton}
+    ClickIE  ${ZapiszUzytkownikaButton}
     element text should be  xpath=//div[4]/span/div     Hasło i powtórzone hasło nie zgadzają się.
     close browser
