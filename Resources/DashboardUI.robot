@@ -2,11 +2,11 @@
 
 ${WiecejOpcjiButton}    id=wiecej_opcji
 ${LogoutButton}     id=logout
-${PierwszyWniosekNazwaPole}    xpath=//tbody[2]/tr/td[2]
-${PierwszyWniosekUtworzonyDataPole}    xpath=//tbody[2]/tr/td[3]
-${PierwszyWniosekZmienionyDataPole}     xpath=//tbody[2]/tr/td[4]
-${PierwszyWniosekStatusPole}    xpath=//td[6]
-${PierwszyWniosekUsunButton}    xpath=//a[3]
+${PierwszyWniosekNazwaPole}    css=td.grid-column-nazwa.last-row
+${PierwszyWniosekUtworzonyDataPole}    css=td.grid-column-kiedyUtworzony.last-row
+${PierwszyWniosekZmienionyDataPole}     css=td.grid-column-dataZmiany.last-row
+${PierwszyWniosekStatusPole}    css=td.grid-column-status.last-row
+${PierwszyWniosekUsunButton}    xpath=//a[contains(text(),'Usuń')]
 ${PierwszyWniosekUsunPotwierdzButton}    link=Usuń wniosek
 ${HideUeCookieInfoButton}    id=hide-ue-cookie-info
 ${NowyWniosekPOIR.03.02.01}      xpath=//tr[5]/td[5]/a

@@ -13,16 +13,18 @@ Utworzenie wniosku
     [Documentation]  Celem testu jest utworzenie wniosku o dofinansowanie
     Otworz strone startowa
     Zaloguj sie
-    click element  ${NowyWniosekPOIR.03.02.01}
+    ClickIE  ${NowyWniosekPOIR.03.02.01}
     wait until page contains  Pomyślnie utworzono wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-    click element  ${BrandButton}
+    ClickIE  ${BrandButton}
+    wait until element contains  css=h2     Trwające nabory
     Filtruj Wnioski Po ID   ${IDwniosku}
     wait until element contains  ${PierwszyWniosekNazwaPole}      Nowy wniosek
     ${todayDate} =  get todays date
     wait until element contains     ${PierwszyWniosekUtworzonyDataPole}   ${todayDate}
     wait until element contains     ${PierwszyWniosekStatusPole}       Nowy wniosek
-    Usun pierwszy wniosek
+    go to  ${homepage}wniosek/usun/${IDwniosku}
+    ClickIE  ${PierwszyWniosekUsunPotwierdzButton}
     wait until page contains  Pomyślnie usunięto wniosek
     close browser
 
@@ -30,16 +32,17 @@ Informacje ogólne o projekcie dane poprawne
     [Documentation]  Celem testu jest uzupełnienie danych w module informacje ogólne o projekcie używając poprawnych danych
     Otworz strone startowa
     Zaloguj sie
-    click element  ${NowyWniosekPOIR.02.03.01}
+    ClickIE  ${NowyWniosekPOIR.02.03.01}
     wait until page contains  Pomyślnie utworzono wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${TytulProjektuPole}      Testowy_projekt
     press key  ${KrotkiOpisProjektuPole}     test
     press key  ${CelProjektuPole}        Test
-    Click Javascript Xpath  ${DodajSlowoKluczoweButon}
+    ClickIE     ${DodajSlowoKluczoweButon}
     press key  ${PierwszeSlowoKluczowePole}  test
-    Focus   ${DziedzinaProjektuPole}
-    Kliknij Dropdown i wpisz wartosc    ${DziedzinaProjektuPole}    ${DziedzinaProjektuInput}   Zarządzanie projektami IT
+    ClickIE  ${DziedzinaProjektuInput}
+    press key  ${DziedzinaProjektuInput}   Zarządzanie projektami IT
+    press key  ${DziedzinaProjektuInput}    \\13
     Wyczysc Pole Data    ${OkresRealizacjiProjektuPoczatek}
     Wyczysc Pole Data    ${OkresRealizacjiProjektuKoniec}
     Pilnuj Formatu Daty    ${OkresRealizacjiProjektuPoczatek}
@@ -47,31 +50,31 @@ Informacje ogólne o projekcie dane poprawne
     Wprowadz Date    ${OkresRealizacjiProjektuPoczatek}    2017-06-01
     Wprowadz Date    ${OkresRealizacjiProjektuKoniec}    2017-07-01
     focus  ${BrandButton}
-    click element  ${ZapiszWniosekButton}
+    ClickIE  ${ZapiszWniosekButton}
     wait until page contains  Trwa zapis, proszę czekać...
     wait until page contains  Pomyślnie utworzono wniosek
-    click element  ${WalidujWniosekButton}
+    ClickIE  ${WalidujWniosekButton}
     wait until page contains  Wynik sprawdzania poprawności wniosku
     wait until page contains  Planowany termin rozpoczęcia realizacji projektu nie może być wcześniejszy niż dzień następny po dniu złożenia wniosku w generatorze.
     wait until page contains  Nazwa Wnioskodawcy: To pole jest obowiązkowe
-    click element  ${WyjdzZWalidacji}
-    click element  ${BrandButton}
+    go to  ${Dashboard}
     Filtruj Wnioski Po ID   ${IDwniosku}
     wait until element contains  ${PierwszyWniosekNazwaPole}      Testowy_projekt
     ${todayDate} =  get todays date
     wait until element contains     ${PierwszyWniosekUtworzonyDataPole}   ${todayDate}
     wait until element contains     ${PierwszyWniosekZmienionyDataPole}   ${todayDate}
     wait until element contains     ${PierwszyWniosekStatusPole}       W edycji
-    Usun pierwszy wniosek
+    go to  ${homepage}wniosek/usun/${IDwniosku}
+    ClickIE  ${PierwszyWniosekUsunPotwierdzButton}
     wait until page contains  Pomyślnie usunięto wniosek
     close browser
 
 Wnioskodawca informacje ogólne dane poprawne
     [Documentation]  Celem testu jest sprawdzenie możliwości dodania poprawnych danych w module wnioskodawca-informacje ogólne
-    [Tags]  ty
     Otworz strone startowa
     Zaloguj sie
-    click element  ${NowyWniosekPOPW.01.04.00-IpsumLorem}
+    ClickIE   ${NowyWniosekPOPW.01.04.00-IpsumLorem}
+    ClickIE  ${NowyWniosekPOPW.01.04.00-IpsumLorem}
     wait until page contains  Pomyślnie utworzono wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WnioskodawcaOgolneNazwaPole}   Test
@@ -93,7 +96,7 @@ Wnioskodawca informacje ogólne dane poprawne
     Kliknij Dropdown i wpisz wartosc  ${WnioskodawcaOgolneSiedzibaUlicaDropdown}       111 Eskadry Myśliwskiej
     press key  ${WnioskodawcaOgolneSiedzibaNrBudynkuPole}   1
     press key  ${WnioskodawcaOgolneSiedzibaNrLokaluPole}    a
-    press key  ${WnioskodawcaOgolneSiedzibaKodPocztowyPole}     11-111
+    Wpisz kod poczowy  ${WnioskodawcaOgolneSiedzibaKodPocztowyPole}     11-111
     press key  ${WnioskodawcaOgolneSiedzibaPocztaPole}      Warszawa
     press key  ${WnioskodawcaOgolneSiedzibaTelefonPole}     111111111
     press key  ${WnioskodawcaOgolneSiedzibaFaksPole}        111111111
@@ -102,7 +105,7 @@ Wnioskodawca informacje ogólne dane poprawne
     press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyOstatniRokPole}      10 000 000.00
     press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyPrzedostatniRokPole}     30 000 000.00
     press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyPoprzedzajacyPrzedostatniRokPole}    50 000 000.00
-    click element  ${WspolnicyDodajButton}
+    ClickIE  ${WspolnicyDodajButton}
     press key  ${WnioskodawcaOgolneWspolnicyImiePole}       Jan
     press key   ${WnioskodawcaOgolneWspolnicyNazwiskoPole}  Kowalski
     press key  ${WnioskodawcaOgolneWspolnicyNipPole}        2454351430
@@ -113,9 +116,8 @@ Wnioskodawca informacje ogólne dane poprawne
     press key  ${WnioskodawcaOgolneWspolnicyUlicaPole}      Test
     press key  ${WnioskodawcaOgolneWspolnicyNrBudynkuPole}  2
     press key  ${WnioskodawcaOgolneWspolnicyNrLokaluPole}   a
-    press key   ${WnioskodawcaOgolneWspolnicyKodPocztowyPole}   11-111
+    Wpisz kod poczowy   ${WnioskodawcaOgolneWspolnicyKodPocztowyPole}   11-111
     press key  ${WnioskodawcaOgolneWspolnicyPocztaPole}     Warszawa
     press key  ${WnioskodawcaOgolneWspolnicyMiejscowoscPole}    Warszawa
     press key  ${WnioskodawcaOgolneWspolnicyTelefonPole}    111111112
-
     close browser

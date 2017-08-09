@@ -39,7 +39,6 @@ Zmienne Srodowiskowe Dla IE
     ...    http://www.abodeqa.com/2014/11/26/challenges-to-run-selenium-webdriver-scripts-in-ie-browser/
     ...    W ustawieniach, w karcie Zabezpieczenia trzeba włączyć (albo wyłączyć) tryb chroniony dla wszystkich stref:
     ...    http://www.abodeqa.com/2013/05/25/unexpected-error-launching-internet-explorer-protected-mode-must-be-set-to-the-same-value/
-#    caps.setCapability("ignoreZoomSetting", true);
     Set Environment Variable    webdriver.ie.driver    ${LocalIEDriver}
     ${caps}=    Evaluate    sys.modules['selenium.webdriver'].DesiredCapabilities.INTERNETEXPLORER    sys,selenium.webdriver
     Set To Dictionary    ${caps}    ignoreProtectedModeSettings    ${True}
@@ -71,6 +70,11 @@ Click Javascript Xpath
     ${lokatorBezXpath}     Fetch From Right    ${xpath}    =
     Execute JavaScript  document.evaluate("${lokatorBezXpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
 
+ClickIE
+    [Arguments]    ${locator}
+    [Documentation]  Click that works in IE
+    Press Key   ${locator}    \\13
+
 Focus Javascript Xpath
     [Arguments]    ${xpath}
     [Documentation]    Scrolluje do elementu przy uzyciu javascript i wykorzystujac lokator xpath
@@ -81,32 +85,36 @@ Zaloguj sie
     [Documentation]     Loguje sie uzywajac zmiennych {login} i {password}
     Press Key  ${LoginPole}  ${login}
     Press Key  ${HasłoPole}  ${password}
-    click element  ${LoginButton}   True
+    Press Key   ${HasłoPole}  \\13
 
 Zaloguj sie uzywajac
     [Documentation]     Loguje sie uzywajac podane zmienne
     [Arguments]    ${LoginPodany}     ${HasloPodane}
     Press Key  ${LoginPole}  ${LoginPodany}
     Press Key  ${HasłoPole}  ${HasloPodane}
-    click element  ${LoginButton}   True
+    Press Key   ${HasłoPole}  \\13
 
 Podaj login i email zapomnianego konta
     [Documentation]     Podaje login i email zapomnianego konta uzywajac podane zmienne, a nastepnie klika przycisk submit
     [Arguments]    ${LoginPodany}     ${EmailPodany}
     press key  ${ZapomnianeHasloLoginPole}  ${LoginPodany}
     press key  ${ZapomnianeHasloEmailPole}  ${EmailPodany}
-    click element  ${ZapomnianeHasloSubmitButton}     True
+    ClickIE  ${ZapomnianeHasloSubmitButton}
 
 Zaloguj na konto email
     [Documentation]     Przechodzi na stronę logowania konta mailowego a nastepnie loguje sie na nie (o2.pl)
     go to   ${mail-page}
+    wait until element contains     ${MailHeader}      Zapamiętaj mnie
     press key  ${MailLoginPole}    ${RECOVERPASSWORDEMAIL}
     PRESS KEY  ${MailHasloPole}     ${MAIL-PAGE-PASSWORD}
-    click element  ${MailLoginButton}
+    ClickIE  ${MailHasloPole}
+
+Sprawdz czy pierwszy email jest z PARP
+    wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Odzyskiwanie hasła
 
 Kliknij link z emaila
     [Documentation]     Wchodzi na pierwszy mail na koncie o2.pl a nastepnie przechodzi na strone odzyskiwania hasla podana w mailu
-    click element   ${PierwszyMailTytułPole}
+    Click Javascript Xpath   ${PierwszyMailTytułPole}
     ${url}=  get element attribute   link=tym odnośnikiem@href
     go to   ${url}
 
@@ -115,7 +123,7 @@ Podaj nowe hasło
     [Arguments]    ${NoweHaslo}
     press key  ${ZapomnianeHasloNoweHasloField1}     ${NoweHaslo}
     press key  ${ZapomnianeHasloNoweHasloField2}     ${NoweHaslo}
-    click element  ${ZapomnianeHasloNoweHasloSubmitButton}
+    ClickIE  ${ZapomnianeHasloNoweHasloSubmitButton}
 
 Pobierz ID wniosku
     [Documentation]    Przy dodawaniu wniosku pobiera z adresu URL ID wniosku
@@ -127,12 +135,7 @@ Filtruj Wnioski Po ID
     [Documentation]     Filtruje wnioski po podanym numerze ID
     [Arguments]    ${ID}
     press key  ${FiltrowanieWnioskowIDPole}     ${ID}
-    click element   ${FiltrowanieWnioskowSubmitButton}
-
-Usun pierwszy wniosek
-    [Documentation]     Usuwa pierwszy wniosek na liscie
-    click element  ${PierwszyWniosekUsunButton}
-    click element  ${PierwszyWniosekUsunPotwierdzButton}
+    ClickIE   ${FiltrowanieWnioskowSubmitButton}
 
 Rejestracja Uzytkownika Zaznacz Checkboxy
     [Documentation]     Przy rejestracji użytkownika zaznacza wszystkie checkboxy
@@ -156,7 +159,14 @@ Czekaj Na Zakonczenie Ajax
 Kliknij Dropdown i wpisz wartosc
     [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
     [Arguments]    ${AdresDropdowna}      ${WartoscDoWpisania}
-    click element  ${AdresDropdowna}
+    clickIE  ${AdresDropdowna}
     Czekaj Na Zakonczenie Ajax
     press key   ${AdresPolaInput}  ${WartoscDoWpisania}
     Press Key   ${AdresPolaInput}  \\13      # ASCII code dla Enter
+
+Wpisz kod poczowy
+    [Documentation]     Wpisuje do pola kod poczowy
+    [Arguments]    ${AdresPola}     ${WartoscDoWpisania}
+    clickIE  ${AdresPola}
+    clear element text  ${AdresPola}
+    press key   ${AdresPola}   ${WartoscDoWpisania}

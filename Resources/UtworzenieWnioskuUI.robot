@@ -5,14 +5,14 @@ ${TytulProjektuPole}    id=ogolne_projekt_tytulProjektu
 ${KrotkiOpisProjektuPole}    id=ogolne_projekt_krotkiOpisProjektu
 ${CelProjektuPole}     id=ogolne_projekt_celProjektu
 ${PierwszeSlowoKluczowePole}  id=ogolne_projekt_slowaKluczowe_0_nazwa
-${DziedzinaProjektuPole}  xpath=//span/ul
+${DziedzinaProjektuPole}  xpath=//form[@id='formularz_ogolne_projekt']/table/tbody/tr[11]/td[2]/span/span/span/ul
 ${DziedzinaProjektuInput}  xpath=//li/input
 ${OkresRealizacjiProjektuPoczatek}    id=ogolne_projekt_okresRealizacjiProjektuPoczatek
 ${OkresRealizacjiProjektuKoniec}    id=ogolne_projekt_okresRealizacjiProjektuKoniec
 ${DodajSlowoKluczoweButon}     xpath=//div[2]/div/button
 ${ZapiszWniosekButton}     id=akcja_zapisz_wniosek
 ${WalidujWniosekButton}     link=Sprawdź poprawność
-${WyjdzZWalidacji}      xpath=//a
+${WyjdzZWalidacji}      link=Planowany termin rozpoczęcia realizacji projektu nie może być wcześniejszy niż dzień następny po dniu złożenia wniosku w generatorze.
 ${AdresPolaInput}     xpath=//span/input
 ${WnioskodawcaOgolneNazwaPole}     id=wnioskodawca_ogolne_nazwa
 ${WnioskodawcaOgolneStatusDropdown}     id=select2-wnioskodawca_ogolne_status-container
