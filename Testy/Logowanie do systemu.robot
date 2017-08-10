@@ -19,6 +19,7 @@ Strona sie otwiera
 
 Logowanie dane poprawne
     [Documentation]  Celem testu jest sprawdzenie możliwości logowania do systemu z uprawnieniami wnioskodawcy używając danych poprawnych
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-6
     Otworz strone startowa
     Zaloguj sie
     wait until element contains  ${BrandButton}     Lokalny System Informatyczny
@@ -27,6 +28,7 @@ Logowanie dane poprawne
 
 Logowanie niepoprawne hasło
     [Documentation]  Sprawdzenie możliwości logowania wprowadzając nieprawidłowe hasło.
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-7
     Otworz strone startowa
     ${badpassword} =    get random string
     Zaloguj sie uzywajac    ${login}    ${badpassword}
@@ -35,6 +37,7 @@ Logowanie niepoprawne hasło
 
 Logowanie nieistniejący login
     [Documentation]  Celem testu jest sprawdzenie możliwości logowania używając nieistniejącego w systemie loginu
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-8
     Otworz strone startowa
     ${badlogin} =    get random string
     ${badpassword} =    get random string
@@ -44,6 +47,7 @@ Logowanie nieistniejący login
 
 Wylogowanie
     [Documentation]  Celem testu jest sprawdzenie możliwości wylogowania zalogowanego użytkownika
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-9
     Otworz strone startowa
     Zaloguj sie
     wait until element contains  ${BrandButton}     Lokalny System Informatyczny
@@ -54,6 +58,7 @@ Wylogowanie
 
 Logowanie na nieaktywowane konto
     [Documentation]  Celem testu jest sprawdzenie możliwości zalogowania użytkownika, który nie aktywował swojego konta
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-10
     Otworz strone startowa
     Zaloguj sie uzywajac  ${inactiveaccountlogin}   ${inactiveaccountpassword}
     element text should be  xpath=//h2  Zaloguj się do LSI:
@@ -62,6 +67,7 @@ Logowanie na nieaktywowane konto
 
 Zapomniane hasło dane poprawne
     [Documentation]  Celem testu jest sprawdzenie możliwości przywrócenia hasła, które zapomniał użytkownik
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-11
     Otworz strone startowa
     ClickIE  ${ZapomnianeHasloButton}
     Podaj login i email zapomnianego konta  ${recoverpasswordlogin}     ${recoverpasswordemail}
@@ -79,6 +85,7 @@ Zapomniane hasło dane poprawne
 
 Zapomniane hasło niepoprawna nazwa użytkownika
     [Documentation]  Celem testu jest sprawdzenie obsługi błędu, kiedy użytkownik poda nieprawidłową nazwę użytkownika podczas próby odzyskania hasła.
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-12
     Otworz strone startowa
     ClickIE  ${ZapomnianeHasloButton}
     ${RandomLogin}      get random string
@@ -88,6 +95,7 @@ Zapomniane hasło niepoprawna nazwa użytkownika
 
 Zapomniane hasło niepoprawny mail
     [Documentation]  Celem testu jest sprawdzenie działania w przypadku wpisywania przez użytkownika nieistniejącego maila w systemie lub niewalidowanego maila
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-13
     Otworz strone startowa
     ClickIE  ${ZapomnianeHasloButton}
     ${RandomEmail} =    get random email

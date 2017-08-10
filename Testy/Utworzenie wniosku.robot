@@ -11,6 +11,7 @@ Resource    ../Resources/Keywords.robot
 *** Test Cases ***
 Utworzenie wniosku
     [Documentation]  Celem testu jest utworzenie wniosku o dofinansowanie
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-14
     Otworz strone startowa
     Zaloguj sie
     ClickIE  ${NowyWniosekPOIR.03.02.01}
@@ -23,13 +24,12 @@ Utworzenie wniosku
     ${todayDate} =  get todays date
     wait until element contains     ${PierwszyWniosekUtworzonyDataPole}   ${todayDate}
     wait until element contains     ${PierwszyWniosekStatusPole}       Nowy wniosek
-    go to  ${homepage}wniosek/usun/${IDwniosku}
-    ClickIE  ${PierwszyWniosekUsunPotwierdzButton}
-    wait until page contains  Pomyślnie usunięto wniosek
+    Usun Wniosek    ${IDwniosku}
     close browser
 
 Informacje ogólne o projekcie dane poprawne
     [Documentation]  Celem testu jest uzupełnienie danych w module informacje ogólne o projekcie używając poprawnych danych
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-15
     Otworz strone startowa
     Zaloguj sie
     ClickIE  ${NowyWniosekPOIR.02.03.01}
@@ -50,9 +50,7 @@ Informacje ogólne o projekcie dane poprawne
     Wprowadz Date    ${OkresRealizacjiProjektuPoczatek}    2017-06-01
     Wprowadz Date    ${OkresRealizacjiProjektuKoniec}    2017-07-01
     focus  ${BrandButton}
-    ClickIE  ${ZapiszWniosekButton}
-    wait until page contains  Trwa zapis, proszę czekać...
-    wait until page contains  Pomyślnie utworzono wniosek
+    Zapisz Wniosek
     ClickIE  ${WalidujWniosekButton}
     wait until page contains  Wynik sprawdzania poprawności wniosku
     wait until page contains  Planowany termin rozpoczęcia realizacji projektu nie może być wcześniejszy niż dzień następny po dniu złożenia wniosku w generatorze.
@@ -64,17 +62,15 @@ Informacje ogólne o projekcie dane poprawne
     wait until element contains     ${PierwszyWniosekUtworzonyDataPole}   ${todayDate}
     wait until element contains     ${PierwszyWniosekZmienionyDataPole}   ${todayDate}
     wait until element contains     ${PierwszyWniosekStatusPole}       W edycji
-    go to  ${homepage}wniosek/usun/${IDwniosku}
-    ClickIE  ${PierwszyWniosekUsunPotwierdzButton}
-    wait until page contains  Pomyślnie usunięto wniosek
+    Usun Wniosek    ${IDwniosku}
     close browser
 
 Wnioskodawca informacje ogólne dane poprawne
     [Documentation]  Celem testu jest sprawdzenie możliwości dodania poprawnych danych w module wnioskodawca-informacje ogólne
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-16
     Otworz strone startowa
     Zaloguj sie
     ClickIE   ${NowyWniosekPOPW.01.04.00-IpsumLorem}
-    ClickIE  ${NowyWniosekPOPW.01.04.00-IpsumLorem}
     wait until page contains  Pomyślnie utworzono wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WnioskodawcaOgolneNazwaPole}   Test
@@ -120,4 +116,138 @@ Wnioskodawca informacje ogólne dane poprawne
     press key  ${WnioskodawcaOgolneWspolnicyPocztaPole}     Warszawa
     press key  ${WnioskodawcaOgolneWspolnicyMiejscowoscPole}    Warszawa
     press key  ${WnioskodawcaOgolneWspolnicyTelefonPole}    111111112
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    ClickIE  ${WalidujWniosekButton}
+#    WALIDACJA I DODATKOWE DANE
+    Usun Wniosek    ${IDwniosku}
     close browser
+
+Wnioskodawca adres korespodencyjny dane poprawne
+    [Documentation]  Celem testu jest sprawdzenie możliwości dodawania adresu korespondencyjnego przez wnioskodawcę
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-17
+    Otworz strone startowa
+    Zaloguj sie
+    ClickIE   ${NowyWniosekPOPW.01.04.00-IIetap2017}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    select from list by label  ${WnioskodawcaAdresKorespondencyjnyKrajDropdown}    Polska
+    Kliknij Dropdown i wpisz wartosc  ${WnioskodawcaAdresKorespondencyjnyWojewodztwoDropdown}   MAZOWIECKIE
+    Kliknij Dropdown i wpisz wartosc  ${WnioskodawcaAdresKorespondencyjnyPowiatDropdown}    Warszawa
+    Kliknij Dropdown i wpisz wartosc    ${WnioskodawcaAdresKorespondencyjnyGminaDropdown}   Warszawa
+    press key  ${WnioskodawcaAdresKorespondencyjnyUlicaPole}    Test
+    press key  ${WnioskodawcaAdresKorespondencyjnyNrBudynkuPole}    1
+    press key   ${WnioskodawcaAdresKorespondencyjnyNrLokaluPole}    a
+    Wpisz kod poczowy  ${WnioskodawcaAdresKorespondencyjnyKodPocztowyPole}  11-111
+    press key  ${WnioskodawcaAdresKorespondencyjnyPocztaPole}   Warszawa
+    press key  ${WnioskodawcaAdresKorespondencyjnyMiejscowoscPole}  Warszawa
+    press key   ${WnioskodawcaAdresKorespondencyjnyTelefonPole}     111111111
+    press key  ${WnioskodawcaAdresKorespondencyjnyFaksPole}     00000000
+    press key  ${WnioskodawcaAdresKorespondencyjnyEmailPole}    mariustestowy@gmail.com
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    ClickIE  ${WalidujWniosekButton}
+    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Kraj: To pole jest obowiązkowe     5
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Województwo: To pole jest obowiązkowe      1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Powiat: To pole jest obowiązkowe       1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Gmina: To pole jest obowiązkowe        1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Nr budynku: To pole jest obowiązkowe       1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Kod pocztowy: To pole jest obowiązkowe     1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Poczta: To pole jest obowiązkowe       1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Miejscowość: To pole jest obowiązkowe      1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Telefon: To pole jest obowiązkowe      1
+    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Adres e-mail: To pole jest obowiązkowe     1
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+Informacje o pełnomocniku dane poprawne
+    [Documentation]  Celem testu jest sprawdzenie możliwości uzupełnienia danych o pełnomocniku
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-18
+    Otworz strone startowa
+    Zaloguj sie
+    ClickIE   ${NowyWniosekPOPW.01.04.00-IIetap2017}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    press key  ${WniosekPelnomocnikImiePole}    Jan
+    press key   ${WniosekPelnomocnikNazwiskoPole}   Kowalski
+    press key  ${WniosekPelnomocnikStanowiskoPole}  Test
+    press key   ${WniosekPelnomocnikInstytucjaPole}     Test
+    press key  ${WniosekPelnomocnikTelefonKomorkowyPole}    111111111
+    Kliknij Dropdown i wpisz wartosc  ${WniosekPelnomocnikTelefonKrajDropdown}    Polska
+    Kliknij Dropdown i wpisz wartosc  ${WniosekPelnomocnikTelefonWojewodztwoDropdown}   MAZOWIECKIE
+    Kliknij Dropdown i wpisz wartosc  ${WniosekPelnomocnikTelefonPowiatDropdown}    Warszawa
+    Kliknij Dropdown i wpisz wartosc    ${WniosekPelnomocnikTelefonGminaDropdown}   Warszawa
+    Wpisz kod poczowy   ${WniosekPelnomocnikKodPocztowyPole}    11-111
+    press key  ${WniosekPelnomocnikPocztaPole}  Warszawa
+    press key  ${WniosekPelnomocnikMiejscowoscPole}     Warszawa
+    press key  ${WniosekPelnomocnikUlicaPole}       Test
+    press key  ${WniosekPelnomocnikNrBudynkuPole}       1
+    press key  ${WniosekPelnomocnikNrLokaluPole}        A
+    ClickIE     ${DodajPelnomocnikaButton}
+    wait until element is visible  ${WniosekPelnomocnik2ImiePole}
+    ClickIE  ${UsunPomocnika2Button}
+    dismiss alert  True
+    element should not be visible  ${WniosekPelnomocnik2ImiePole}
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+#    POLA W ZAKLADCE  IV. INFORMACJE O PEŁNOMOCNIKU NIE SĄ WALIDOWANE, zgłoszone
+
+Osoba do kontaktów roboczych dane poprawme
+    [Documentation]  Celem testu jest sprawdzenie możliwości dodania osoby do kontaktów roboczych
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-19
+    Otworz strone startowa
+    Zaloguj sie
+    ClickIE   ${NowyWniosekPOPW.01.04.00-IIetap2017}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    press key  ${WniosekKontaktyRoboczeImiePole}    Jan
+    press key   ${WniosekKontaktyRoboczeNazwiskoPole}   Kowalski
+    press key  ${WniosekKontaktyRoboczeStanowiskoPole}  Test
+    press key  ${WniosekKontaktyRoboczeInstytucjaPole}  Test
+    press key  ${WniosekKontaktyRoboczeTelefonPole}     111111111
+    press key  ${WniosekKontaktyRoboczeTelefonKomorkowyPole}        111111111
+    press key  ${WniosekKontaktyRoboczeAdresEmailPole}      mariustestowy@gmail.com
+    press key  ${WniosekKontaktyRoboczeFaksPole}        111111111
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    ClickIE  ${WalidujWniosekButton}
+    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Imię: To pole jest obowiązkowe     5
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Nazwisko: To pole jest obowiązkowe      1
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Stanowisko: To pole jest obowiązkowe       1
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Telefon: To pole jest obowiązkowe        1
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Telefon komórkowy: To pole jest obowiązkowe       1
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Adres e-mail: To pole jest obowiązkowe     1
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Adres e-mail: Nieprawidłowy adres e-mail       1
+    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Instytucja: To pole jest obowiązkowe      1
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+Klasyfikacja projektu dane poprawne
+    [Tags]  ty
+    [Documentation]  Celem testu jest sprawdzenie możliwości uzupełnienia danych poświęconych klasyfikacji projektu
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-20
+    Otworz strone startowa
+    Zaloguj sie
+    ClickIE   ${NowyWniosekPOPW.01.04.00-IIetap2017}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    Kliknij Dropdown i wpisz wartosc  ${KlasyfikacjaProjektuPKDprojektuDropdown}    01.12.Z Uprawa ryżu
+    press key  ${KlasyfikacjaProjektuPKDprojektuWyjasnieniePole}    test
+    ClickIE  ${KlasyfikacjaProjektuWplywNaRownoscSzansNiepelnosprawnychRadio}
+    press key  ${KlasyfikacjaProjektuWplywNaRownoscSzansNiepelnosprawnychOpisPole}  test
+    ClickIE  ${KlasyfikacjaProjektuProduktyDostepneDlaNiepelnosprawnychRadio}
+    press key  ${KlasyfikacjaProjektuProduktyDostepneDlaNiepelnosprawnychOpisPole}  tak
+    ClickIE  ${KlasyfikacjaProjektuWplywNaRownoscSzansPlciRadio}
+    press key  ${KlasyfikacjaProjektuWplywNaRownoscSzansPlciOpisPole}   test
+    ClickIE  ${KlasyfikacjaProjektuWplywNaZrownowazonyRozwojRadio}
+    press key  ${KlasyfikacjaProjektuWplywNaZrownowazonyRozwojOpisPole}     test
+#Wpływ projektu na realizację zasady 4R: Pozytywny
+
+
+
+

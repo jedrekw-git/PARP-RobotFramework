@@ -8,6 +8,7 @@ Resource    ../Resources/Keywords.robot
 
 Rejestracja dane poprawne
     [Documentation]  Sprawdzenie możliwości rejestracji nowego użytkownika z uprawnieniami wnioskodawcy
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-1
     Otworz strone startowa
     ClickIE   ${RejestracjaUzytkownikaButton}
     ${randomstring1}=    get random string
@@ -28,6 +29,7 @@ Rejestracja dane poprawne
 
 Rejestracja brak zaznaczonych obowiązkowych checkboxs
     [Documentation]  Sprawdzenie działania walidacji w przypadku braku zaznaczonych obowiązkowych checkboxs formularza rejestracyjnego
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-2
     Otworz strone startowa
     ClickIE   ${RejestracjaUzytkownikaButton}
     ${randomstring1}=    get random string
@@ -54,6 +56,7 @@ Rejestracja brak zaznaczonych obowiązkowych checkboxs
 
 Rejestracja niepoprawny pesel oraz email
     [Documentation]  Sprawdzenie walidacji pola PESEL oraz adres e-mail
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-3
     Otworz strone startowa
     ClickIE   ${RejestracjaUzytkownikaButton}
     ${randomstring1}=    get random string
@@ -74,6 +77,7 @@ Rejestracja niepoprawny pesel oraz email
 
 Rejestracja niewalidowane haslo
     [Documentation]  Sprawdzenie walidacji hasła podczas rejestracji
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-4
     Otworz strone startowa
     ClickIE   ${RejestracjaUzytkownikaButton}
     ${randompassword1}=    get random password 1 char long
@@ -94,6 +98,7 @@ Rejestracja niewalidowane haslo
 
 Rejestracja 2 różne hasła
     [Documentation]  Sprawdzenie czy działa poprawnie porównywanie wartości z pola powtórz hasło z polem hasło.
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-5
     Otworz strone startowa
     ClickIE   ${RejestracjaUzytkownikaButton}
     ${randompassword1}=    get random password

@@ -14,6 +14,7 @@ Resource        ../Resources/RejestracjaUzytkownikaUI.robot
 Resource        ../Resources/AdresyURL.robot
 Resource        ../Resources/ZapomnianeHasłoUI.robot
 Resource        ../Resources/MailUI.robot
+Resource        ../Resources/UtworzenieWnioskuUI.robot
 
 *** Keywords ***
 
@@ -167,6 +168,19 @@ Kliknij Dropdown i wpisz wartosc
 Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
     [Arguments]    ${AdresPola}     ${WartoscDoWpisania}
-    clickIE  ${AdresPola}
+#    clickIE  ${AdresPola}
     clear element text  ${AdresPola}
     press key   ${AdresPola}   ${WartoscDoWpisania}
+
+Zapisz Wniosek
+    [Documentation]     Zapisuje wniosek, waliduje pojawienie się popupa i czeka na zakonczenie procesu
+    ClickIE  ${ZapiszWniosekButton}
+    wait until page contains  Trwa zapis, proszę czekać...
+    Czekaj Na Zakonczenie Ajax
+
+Usun Wniosek
+    [Documentation]     Usuwa wniosek i sprawdza czy został usunięty
+    [Arguments]    ${ID}
+    go to  ${homepage}wniosek/usun/${ID}
+    ClickIE  ${PierwszyWniosekUsunPotwierdzButton}
+    wait until page contains  Pomyślnie usunięto wniosek

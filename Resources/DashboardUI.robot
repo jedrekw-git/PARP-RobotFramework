@@ -12,5 +12,6 @@ ${HideUeCookieInfoButton}    id=hide-ue-cookie-info
 ${NowyWniosekPOIR.03.02.01}      xpath=//tr[5]/td[5]/a
 ${NowyWniosekPOIR.02.03.01}     xpath=//tr[4]/td[5]/a
 ${NowyWniosekPOPW.01.04.00-IpsumLorem}     xpath=//tr[3]/td[5]/a
+${NowyWniosekPOPW.01.04.00-IIetap2017}      xpath=//tr[2]/td[5]/a
 ${FiltrowanieWnioskowIDPole}     xpath=//input
 ${FiltrowanieWnioskowSubmitButton}      xpath=//th[7]/button
