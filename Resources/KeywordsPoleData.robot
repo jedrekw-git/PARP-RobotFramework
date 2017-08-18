@@ -115,3 +115,9 @@ Wprowadz Date Chrome
     ${PoleBezId}    Fetch From Right    ${Pole Id}    =
     Focus    ${Pole Id}
     Execute JavaScript    document.getElementById('${PoleBezId}').value='${Data}';
+
+Sprawdz Pole Daty i Wpisz
+    [Arguments]    ${Pole Id}    ${WartoscDaty}
+    Pilnuj Formatu Daty    ${Pole Id}
+    Wyczysc Pole Data    ${Pole Id}
+    Wprowadz Date    ${Pole Id}    ${WartoscDaty}

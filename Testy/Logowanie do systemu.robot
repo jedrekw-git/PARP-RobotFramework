@@ -51,8 +51,8 @@ Wylogowanie
     Otworz strone startowa
     Zaloguj sie
     wait until element contains  ${BrandButton}     Lokalny System Informatyczny
-    ClickIE  ${WiecejOpcjiButton}
-    ClickIE  ${LogoutButton}
+    Click  ${WiecejOpcjiButton}
+    Click  ${LogoutButton}
     wait until element contains  ${LoginLabel}  Nazwa użytkownika:
     close browser
 
@@ -69,7 +69,7 @@ Zapomniane hasło dane poprawne
     [Documentation]  Celem testu jest sprawdzenie możliwości przywrócenia hasła, które zapomniał użytkownik
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-11
     Otworz strone startowa
-    ClickIE  ${ZapomnianeHasloButton}
+    Click  ${ZapomnianeHasloButton}
     Podaj login i email zapomnianego konta  ${recoverpasswordlogin}     ${recoverpasswordemail}
     page should contain  Wysłano powiadomienie z kodem do odzyskania hasła.
     Zaloguj na konto email
@@ -87,7 +87,7 @@ Zapomniane hasło niepoprawna nazwa użytkownika
     [Documentation]  Celem testu jest sprawdzenie obsługi błędu, kiedy użytkownik poda nieprawidłową nazwę użytkownika podczas próby odzyskania hasła.
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-12
     Otworz strone startowa
-    ClickIE  ${ZapomnianeHasloButton}
+    Click  ${ZapomnianeHasloButton}
     ${RandomLogin}      get random string
     Podaj login i email zapomnianego konta  ${RandomLogin}  ${recoverpasswordemail}
     page should contain  Nie udało się wysłać powiadomienia z kodem do odzyskania hasła. Prosimy sprawdzić poprawność podanej nazwy użytkownika oraz adresu e-mail.
@@ -97,7 +97,7 @@ Zapomniane hasło niepoprawny mail
     [Documentation]  Celem testu jest sprawdzenie działania w przypadku wpisywania przez użytkownika nieistniejącego maila w systemie lub niewalidowanego maila
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-13
     Otworz strone startowa
-    ClickIE  ${ZapomnianeHasloButton}
+    Click  ${ZapomnianeHasloButton}
     ${RandomEmail} =    get random email
     Podaj login i email zapomnianego konta  ${recoverpasswordlogin}     ${RandomEmail}
     page should contain  Nie udało się wysłać powiadomienia z kodem do odzyskania hasła. Prosimy sprawdzić poprawność podanej nazwy użytkownika oraz adresu e-mail.
