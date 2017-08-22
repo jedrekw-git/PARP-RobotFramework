@@ -71,10 +71,21 @@ Click Javascript Xpath
     ${lokatorBezXpath}     Fetch From Right    ${xpath}    =
     Execute JavaScript  document.evaluate("${lokatorBezXpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
 
-ClickIE
+Click Javascript Id
+    [Arguments]    ${id}
+    [Documentation]    Klika element przy uzyciu javascript i wykorzystujac lokator id
+    ${lokatorBezId}     Fetch From Right    ${id}    =
+    Execute JavaScript  document.getElementById('${lokatorBezId}').click();
+
+Click2
     [Arguments]    ${locator}
-    [Documentation]  Click that works in IE
+    [Documentation]  Click ktory dziala na IE
     Press Key   ${locator}    \\13
+
+Click
+    [Arguments]    ${Lokator}
+    Run Keyword If    '${BROWSER}'=='ie'    Click2     ${Lokator}
+    ...    ELSE    click element    ${Lokator}
 
 Focus Javascript Xpath
     [Arguments]    ${xpath}
@@ -100,7 +111,7 @@ Podaj login i email zapomnianego konta
     [Arguments]    ${LoginPodany}     ${EmailPodany}
     press key  ${ZapomnianeHasloLoginPole}  ${LoginPodany}
     press key  ${ZapomnianeHasloEmailPole}  ${EmailPodany}
-    ClickIE  ${ZapomnianeHasloSubmitButton}
+    Click  ${ZapomnianeHasloSubmitButton}
 
 Zaloguj na konto email
     [Documentation]     Przechodzi na stronę logowania konta mailowego a nastepnie loguje sie na nie (o2.pl)
@@ -108,7 +119,7 @@ Zaloguj na konto email
     wait until element contains     ${MailHeader}      Zapamiętaj mnie
     press key  ${MailLoginPole}    ${RECOVERPASSWORDEMAIL}
     PRESS KEY  ${MailHasloPole}     ${MAIL-PAGE-PASSWORD}
-    ClickIE  ${MailHasloPole}
+    Click  ${MailHasloPole}
 
 Sprawdz czy pierwszy email jest z PARP
     wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Odzyskiwanie hasła
@@ -124,7 +135,7 @@ Podaj nowe hasło
     [Arguments]    ${NoweHaslo}
     press key  ${ZapomnianeHasloNoweHasloField1}     ${NoweHaslo}
     press key  ${ZapomnianeHasloNoweHasloField2}     ${NoweHaslo}
-    ClickIE  ${ZapomnianeHasloNoweHasloSubmitButton}
+    Click  ${ZapomnianeHasloNoweHasloSubmitButton}
 
 Pobierz ID wniosku
     [Documentation]    Przy dodawaniu wniosku pobiera z adresu URL ID wniosku
@@ -136,7 +147,7 @@ Filtruj Wnioski Po ID
     [Documentation]     Filtruje wnioski po podanym numerze ID
     [Arguments]    ${ID}
     press key  ${FiltrowanieWnioskowIDPole}     ${ID}
-    ClickIE   ${FiltrowanieWnioskowSubmitButton}
+    Click   ${FiltrowanieWnioskowSubmitButton}
 
 Rejestracja Uzytkownika Zaznacz Checkboxy
     [Documentation]     Przy rejestracji użytkownika zaznacza wszystkie checkboxy
@@ -160,21 +171,28 @@ Czekaj Na Zakonczenie Ajax
 Kliknij Dropdown i wpisz wartosc
     [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
     [Arguments]    ${AdresDropdowna}      ${WartoscDoWpisania}
-    clickIE  ${AdresDropdowna}
+    click  ${AdresDropdowna}
     Czekaj Na Zakonczenie Ajax
     press key   ${AdresPolaInput}  ${WartoscDoWpisania}
     Press Key   ${AdresPolaInput}  \\13      # ASCII code dla Enter
 
+Kliknij Dropdown bez pola input i wpisz wartosc
+    [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
+    [Arguments]    ${AdresDropdowna}      ${WartoscDoWpisania}
+    click  ${AdresDropdowna}
+    Czekaj Na Zakonczenie Ajax
+    press key   ${AdresDropdowna}  ${WartoscDoWpisania}
+    Press Key   ${AdresDropdowna}  \\13      # ASCII code dla Enter
+
 Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
     [Arguments]    ${AdresPola}     ${WartoscDoWpisania}
-#    clickIE  ${AdresPola}
     clear element text  ${AdresPola}
     press key   ${AdresPola}   ${WartoscDoWpisania}
 
 Zapisz Wniosek
     [Documentation]     Zapisuje wniosek, waliduje pojawienie się popupa i czeka na zakonczenie procesu
-    ClickIE  ${ZapiszWniosekButton}
+    Click  ${ZapiszWniosekButton}
     wait until page contains  Trwa zapis, proszę czekać...
     Czekaj Na Zakonczenie Ajax
 
@@ -182,5 +200,10 @@ Usun Wniosek
     [Documentation]     Usuwa wniosek i sprawdza czy został usunięty
     [Arguments]    ${ID}
     go to  ${homepage}wniosek/usun/${ID}
-    ClickIE  ${PierwszyWniosekUsunPotwierdzButton}
+    Click  ${PierwszyWniosekUsunPotwierdzButton}
     wait until page contains  Pomyślnie usunięto wniosek
+
+Czekaj az strona nie zawiera
+    [Documentation]     Czeka, az strona nie zawiera tekstu
+    [Arguments]    ${text}
+    Wait Until Keyword Succeeds     2s      1s      page should not contain     ${text}

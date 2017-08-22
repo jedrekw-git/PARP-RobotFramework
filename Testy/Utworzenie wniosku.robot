@@ -216,15 +216,27 @@ Informacje o pełnomocniku dane poprawne
     press key  ${WniosekPelnomocnikNrLokaluPole}        A
     Click     ${DodajPelnomocnikaButton}
     wait until element is visible  ${WniosekPelnomocnik2ImiePole}   5
-    Click  ${UsunPomocnika2Button}
+    Click2  ${UsunPomocnika2Button}
     dismiss alert  True
     element should not be visible  ${WniosekPelnomocnik2ImiePole}
     focus  ${BrandButton}
     Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Wait Until Page Does Not Contain     Pełnomocnik - Imię: To pole jest obowiązkowe     5
+    wait until page does not contain     Pełnomocnik - Nazwisko: To pole jest obowiązkowe       1
+    wait until page does not contain     Pełnomocnik - Stanowisko: To pole jest obowiązkowe     1
+    wait until page does not contain     Pełnomocnik - Instytucja: To pole jest obowiązkowe     1
+    wait until page does not contain     Pełnomocnik - Telefon komórkowy: To pole jest obowiązkowe      1
+    wait until page does not contain     Pełnomocnik - Nr budynku: To pole jest obowiązkowe     1
+    wait until page does not contain     Pełnomocnik - Kod pocztowy: To pole jest obowiązkowe       1
+    wait until page does not contain     Pełnomocnik - Poczta: To pole jest obowiązkowe     1
+    wait until page does not contain     Pełnomocnik - Miejscowość: To pole jest obowiązkowe        1
+    wait until page does not contain     Pełnomocnik - Województwo: To pole jest obowiązkowe        1
+    wait until page does not contain     Pełnomocnik - Powiat: To pole jest obowiązkowe       1
+    wait until page does not contain     Pełnomocnik - Gmina: To pole jest obowiązkowe      1
     Usun Wniosek    ${IDwniosku}
     close browser
-
-#    POLA W ZAKLADCE  IV. INFORMACJE O PEŁNOMOCNIKU NIE SĄ WALIDOWANE, zgłoszone
 
 Osoba do kontaktów roboczych dane poprawme
     [Documentation]  Celem testu jest sprawdzenie możliwości dodania osoby do kontaktów roboczych
@@ -258,7 +270,6 @@ Osoba do kontaktów roboczych dane poprawme
     close browser
 
 Klasyfikacja projektu dane poprawne
-    [Tags]  ty
     [Documentation]  Celem testu jest sprawdzenie możliwości uzupełnienia danych poświęconych klasyfikacji projektu
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-20
     Otworz strone startowa
@@ -347,19 +358,18 @@ Klasyfikacja projektu dane poprawne
     Zapisz Wniosek
     Click  ${WalidujWniosekButton}
     wait until page contains  Wynik sprawdzania poprawności wniosku
-    page should not contain
     Wait Until Page Does Not Contain     Numer kodu PKD działalności, której dotyczy projekt: To pole jest obowiązkowe     5s
-    Wait Until Page Does Not Contain     Opis rodzaju działalności: To pole jest obowiązkowe        timeout=1
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację równościa szans i niedyskryminacji: To pole jest obowiązkowe      timeout=1
-    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację równości szans i niedyskryminacji: To pole jest obowiązkowe     timeout=1
-    Wait Until Page Does Not Contain     Czy produkty projektu będą dostępne dla osób z niepełnosprawnościami?: To pole jest obowiązkowe        timeout=1
-    Wait Until Page Does Not Contain     Uzasadnienie dostępności produktów dla osób z niepełnosprawnościami: To pole jest obowiązkowe      timeout=1
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe     timeout=1
-    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe       timeout=1
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady zrównoważonego rozwoju: To pole jest obowiązkowe       timeout=1
-    Wait Until Page Does Not Contain     Obszar KIS, w który wpisuje się projekt: To pole jest wymagane     timeout=1
-    Wait Until Page Does Not Contain     Uzasadnienie wybranego obszaru KIS, w który wpisuje się projekt: To pole jest obowiązkowe      timeout=1
-    Wait Until Page Does Not Contain     Rodzaj działalności gospodarczej: To pole jest obowiązkowe      1s
+    Wait Until Page Does Not Contain     Opis rodzaju działalności: To pole jest obowiązkowe        1s
+    Wait Until Page Does Not Contain     Wpływ projektu na realizację równościa szans i niedyskryminacji: To pole jest obowiązkowe      1s
+    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację równości szans i niedyskryminacji: To pole jest obowiązkowe     1s
+    Wait Until Page Does Not Contain     Czy produkty projektu będą dostępne dla osób z niepełnosprawnościami?: To pole jest obowiązkowe        1s
+    Wait Until Page Does Not Contain     Uzasadnienie dostępności produktów dla osób z niepełnosprawnościami: To pole jest obowiązkowe      1s
+    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe     1s
+    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe       1s
+    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady zrównoważonego rozwoju: To pole jest obowiązkowe       1s
+    Wait Until Page Does Not Contain     Obszar KIS, w który wpisuje się projekt: To pole jest wymagane     1s
+    Wait Until Page Does Not Contain     Uzasadnienie wybranego obszaru KIS, w który wpisuje się projekt: To pole jest obowiązkowe      1s
+    Wait Until Page Does Not Contain     Rodzaj działalności gospodarczej: To pole jest obowiązkowe     1s
     Wait Until Page Does Not Contain     Klasyfikacja NABS projektu: To pole jest obowiązkowe      1s
     Wait Until Page Does Not Contain     Klasyfikacja OECD projektu: To pole jest obowiązkowe      1s
     Wait Until Page Does Not Contain     Typ obszaru realizacji: To pole jest obowiązkowe      1s
@@ -442,7 +452,58 @@ Wskaźniki dane poprawne
     Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
     wait until page contains  Pomyślnie utworzono wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-#    NIE ZGADZA SIE TEST CASE, zapytane
+    press key  ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaPole}        1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik6MetodologiaIWeryfikacjaPole}        test
+    press key  ${WykazWskaznikowWnioskuWskaznik7WartoscDocelowaPole}        1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik7MetodologiaIWeryfikacjaPole}        test
+    press key  ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaPole}        1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaPole}        test
+    press key  ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik11MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik17MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik16WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik16MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaPole}       test
+    press key  ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaPole}       1000000.00
+    press key  ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaPole}       test
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains  Wynik sprawdzania poprawności wniosku
+    wait until page does not contain    Wskaźnik "lsi1420-0005 Liczba nabytych lub wytworzonych w ramach projektu środków trwałych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe     5
+    wait until page does not contain    Wskaźnik "lsi1420-0007 Liczba nabytych w ramach projektu wartości niematerialnych i prawnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.     1
+    wait until page does not contain    Wskaźnik "lsi1420-0006 Liczba nabytych w ramach projektu usług doradczych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
+    wait until page does not contain    Wskaźnik "WLWK-161 Wzrost zatrudnienia we wspieranych przedsiębiorstwach O/K/M [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
+    wait until page does not contain    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Wartość docelowa wskaźnika jest za mała.     1
+    wait until page does not contain    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
+    wait until page does not contain    Wskaźnik "WLWK-181 Przychody ze sprzedaży nowych lub udoskonalonych produktów/procesów [zł]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.        1
+    wait until page does not contain    Wskaźnik "lsi1420-0003 Liczba wprowadzonych innowacji [szt.]". Wartość docelowa wskaźnika jest za mała.     1
+    wait until page does not contain    Rok docelowy wskaźnika jest za mały: lsi1420-0003 Liczba wprowadzonych innowacji [szt.].        1
+    wait until page does not contain    Rok docelowy wskaźnika jest za duży: lsi1420-0003 Liczba wprowadzonych innowacji [szt.].        1
+    wait until page does not contain    Wskaźnik "lsi1420-0009 Liczba wprowadzonych innowacji marketingowych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
+    wait until page does not contain    Wskaźnik "lsi1420-0008 Liczba wprowadzonych innowacji organizacyjnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
+    wait until page does not contain    Wskaźnik "WLWK-179 Liczba wprowadzonych innowacji procesowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
+    wait until page does not contain    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Wartość docelowa wskaźnika jest za mała.        1
+    wait until page does not contain    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
+    wait until page does not contain    Wskaźnik "lsi1420-0010 Liczba wprowadzonych ekoinnowacji". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
+    wait until page does not contain    Wskaźnik "WLWK-793 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - kobiety [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
+    wait until page does not contain    Wskaźnik "WLWK-794 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - mężczyźni [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.     1
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+
 
 Harmonogram rzeczowo finansowy dane poprawne
     [Documentation]   Celem testu jest sprawdzenie możliwości dodania harmonogramu rzeczowo-finansowego
@@ -460,13 +521,14 @@ Harmonogram rzeczowo finansowy dane poprawne
     Zapisz Wniosek
     Click  ${DodajWydatekRzeczywisciePonoszonyButton}
     select from list by label   ${ZakresRzeczowoFinansowyWydatkiZadanieDropdown}    1. test
-    select from list by label  ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowDropdown}        Usługi doradcze
-    press key  ${ZakresRzeczowoFinansowyWydatkiNazwaKosztuPole}     test
-#Opis kosztu w danej kategorii/podkategoria kosztów : test
+    select from list by label  ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowDropdown}        Raty spłaty kapitału środków trwałych innych niż nieruchomości
+    press key  ${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategorii}        test
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemPole}   10 000 000.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowanePole}    10 000 000.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatPole}     0.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowaniePole}   1 000 000.00
+    click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataNieruchomosciNieRadio}
+    click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataInneNieRadio}
     focus  ${BrandButton}
     Zapisz Wniosek
     element should contain  ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaPole}    10.00
@@ -474,11 +536,10 @@ Harmonogram rzeczowo finansowy dane poprawne
     wait until page contains  Wynik sprawdzania poprawności wniosku
     Wait Until Page Does Not Contain     Proszę wpisać zadania.     5
     Wait Until Page Does Not Contain     Proszę wpisać wydatki rzeczywiście ponoszone.      1
+    wait until page does not contain     Całkowite wydatki kwalifikowalne nie mogą być mniejsze niż 5 000 000,00 PLN (wpisano 0,00 PLN).        1
+    wait until page contains    'Raty spłaty kapitału środków trwałych innych niż nieruchomości': koszty kwalifikowalne zakupu nieruchomości mogą stanowić maksymalnie 10% kosztów kwalifikowalnych ogółem (aktualnie wynoszą 100%).
     Usun Wniosek    ${IDwniosku}
     close browser
-#    Podmiot upoważniony do ponoszenia wydatków na rzecz wnioskodawcy: Spłata kapitału nieruchomoci zabudowanych i niezabudowanych: NIE
-#   Podmiot upoważniony do ponoszenia wydatków na rzecz wnioskodawcy: Spłata kapitału rodków trwałych innych niż nieruchomoci zabudowane i niezabudowane: NIE
-
 
 Otrzymana pomoc oraz powiązanie projektu dane poprawne
     [Documentation]   Celem testu jest sprawdzenie możliwości uzupełnienie wartości w module OTRZYMANA POMOC ORAZ POWIĄZANIE PROJEKTU oraz sprawdzenie poprawności zapisu tych danych.
@@ -488,7 +549,294 @@ Otrzymana pomoc oraz powiązanie projektu dane poprawne
     Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
     wait until page contains  Pomyślnie utworzono wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-    Click  
+    Click  ${OtrzymanaPomocIPowiazanieProjektuPomocDeminimisOtrzymanaNieRadio}
+    press key   ${OtrzymanaPomocIPowiazanieProjektuDeminisRolnictwoRybolowstwoPole}      0.00
+    click  ${OtrzymanaPomocIPowiazanieProjektuInnaPomocPublicznaOtrzymanaNieRadio}
+    press key  ${OtrzymanaPomocIPowiazanieProjektuOpisPowiazaniaProjektuZInnymiWnioskodawcyPole}        test
+    press key  ${OtrzymanaPomocIPowiazanieProjektuInwestycjaPoczatkowaOpisNowyZakladPole}       test
+    press key  ${OtrzymanaPomocIPowiazanieProjektuInwestycjaPoczatkowaOpisNoweProduktyPole}     test
+    press key  ${OtrzymanaPomocIPowiazanieProjektuWartoscKsiegowaPole}      100 000.00
+    click  ${OtrzymanaPomocIPowiazanieProjektuInneProjektyNuts3NieRadio}
+    press key  ${OtrzymanaPomocIPowiazanieProjektuSzczegoloweZalozeniaDoPrognozFinansowychPole}     test
+    click javascript id  ${OtrzymanaPomocIPowiazanieProjektuRokObrotowyJestRokiemKalendarzowymTakRadio}
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Wait Until Page Does Not Contain     Pomoc de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe     5
+    Wait Until Page Does Not Contain     Pomoc publiczna inna niż de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe      1
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+Źródła finansowania wydatków dane poprawne
+    [Tags]  ty
+    [Documentation]   Celem testu jest sprawdzenie możliwości uzupełnienia źródła finansowania wydatków
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-25
+    Otworz strone startowa
+    Zaloguj sie
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+
+
+Oświadczenia dane poprawne
+    [Documentation]   Celem testu jest sprawdzenie możliwości dodania oświadczeń
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-26
+    Otworz strone startowa
+    Zaloguj sie
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    select checkbox  ${Oswiadczenia1InformacjeOgolneOProjekcieCheckbox}
+    select checkbox  ${Oswiadczenia2WnioskodawcaInformacjeOgolneCheckbox}
+    select checkbox  ${Oswiadczenia3WnioskodawcaAdresKorespondencyjnyCheckbox}
+    select checkbox  ${Oswiadczenia4InformacjeOPelnomocnikuCheckbox}
+    select checkbox  ${Oswiadczenia5OsobaDoKontaktowRoboczychCheckbox}
+    select checkbox  ${Oswiadczenia6MiejsceRealizacjiProjektuCheckbox}
+    select checkbox  ${Oswiadczenia7KlasyfikacjaProjektuCheckbox}
+    select checkbox  ${Oswiadczenia8WskaznikiCheckbox}
+    select checkbox  ${Oswiadczenia9CharmonogramRzeczowoFinansowyCheckbox}
+    select checkbox  ${Oswiadczenia10ZestawienieFinansoweOgolemCheckbox}
+    select checkbox  ${Oswiadczenia11ZrodlaFinansowaniaWydatkowCheckbox}
+    select checkbox  ${Oswiadczenia12OtrzymanaPomocOrazPowiazanieProjektuCheckbox}
+    select checkbox  ${Oswiadczenia14ZalacznikiCheckbox}
+    select checkbox  ${OswiadczeniaPodstawaPrawnaUstawaCheckbox}
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    checkbox should be selected  ${Oswiadczenia1InformacjeOgolneOProjekcieCheckbox}
+    checkbox should be selected  ${Oswiadczenia2WnioskodawcaInformacjeOgolneCheckbox}
+    checkbox should be selected  ${Oswiadczenia3WnioskodawcaAdresKorespondencyjnyCheckbox}
+    checkbox should be selected  ${Oswiadczenia4InformacjeOPelnomocnikuCheckbox}
+    checkbox should be selected  ${Oswiadczenia5OsobaDoKontaktowRoboczychCheckbox}
+    checkbox should be selected  ${Oswiadczenia6MiejsceRealizacjiProjektuCheckbox}
+    checkbox should be selected  ${Oswiadczenia7KlasyfikacjaProjektuCheckbox}
+    checkbox should be selected  ${Oswiadczenia8WskaznikiCheckbox}
+    checkbox should be selected  ${Oswiadczenia9CharmonogramRzeczowoFinansowyCheckbox}
+    checkbox should be selected  ${Oswiadczenia10ZestawienieFinansoweOgolemCheckbox}
+    checkbox should be selected  ${Oswiadczenia11ZrodlaFinansowaniaWydatkowCheckbox}
+    checkbox should be selected  ${Oswiadczenia12OtrzymanaPomocOrazPowiazanieProjektuCheckbox}
+    checkbox should be selected  ${Oswiadczenia14ZalacznikiCheckbox}
+    checkbox should be selected  ${OswiadczeniaPodstawaPrawnaUstawaCheckbox}
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+
+Brak uzupełnionych obowiązkowych pól
+    [Documentation]   Celem testu jest sprawdzenie walidacji przez system nie uzupełnionych pól
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-28
+    Otworz strone startowa
+    Zaloguj sie
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains    Wynik sprawdzania poprawności wniosku
+    wait until page contains    Tytuł projektu: To pole jest obowiązkowe
+    wait until page contains    Krótki opis projektu: To pole jest obowiązkowe
+    wait until page contains    Cel projektu
+    wait until page contains    Okres realizacji projektu <od>: To pole jest obowiązkowe
+    wait until page contains    Okres realizacji projektu <do>: To pole jest obowiązkowe
+    wait until page contains    Proszę wpisać przynajmniej jedno słowo kluczowe.
+    wait until page contains    Nazwa Wnioskodawcy: To pole jest obowiązkowe
+    wait until page contains    Status Wnioskodawcy: To pole jest obowiązkowe
+    wait until page contains    Data rozpoczęcia działalności zgodnie z dokumentem rejestrowym: To pole jest obowiązkowe
+    wait until page contains    Forma prawna: To pole jest obowiązkowe
+    wait until page contains    Forma własności: To pole jest obowiązkowe
+    wait until page contains    NIP Wnioskodawcy: To pole jest obowiązkowe
+    wait until page contains    Nieprawidłowy numer NIP
+    wait until page contains    REGON: To pole jest obowiązkowe
+    wait until page contains    Nieprawidłowy numer REGON
+    wait until page contains    Numer w Krajowym Rejestrze Sądowym: To pole jest obowiązkowe
+    wait until page contains    Numer kodu PKD przeważającej działalności Wnioskodawcy: To pole jest obowiązkowe
+    wait until page contains    Możliwość odzyskania VAT: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Kraj: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Województwo: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Powiat: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Gmina: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Nr budynku: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Kod pocztowy: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Miejscowość: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Telefon: To pole jest obowiązkowe
+    wait until page contains    Adres siedziby wnioskodawcy - Adres e-mail: To pole jest obowiązkowe
+    wait until page contains    Historia wnioskodawcy oraz przedmiot działalności w kontekście projektu: To pole jest obowiązkowe
+    wait until page contains    Miejsce na rynku: To pole jest obowiązkowe
+    wait until page contains    Charakterystyka rynku: To pole jest obowiązkowe
+    wait until page contains    Oczekiwania i potrzeby klientów: To pole jest obowiązkowe
+    wait until page contains    Charakter popytu: To pole jest obowiązkowe
+    wait until page contains    Zgodnie z przyjętymi kryteriami wyboru projektów w ramach działania 3.2.1 POIR o dofinansowanie mogą ubiegać się wyłącznie MSP, które przynajmniej w jednym zamkniętym roku obrotowym (trwającym przynajmniej 12 miesięcy) w okresie 3 lat poprzedzających rok, w którym złożony został wniosek o udzielenie wsparcia osiągnęły wysokość przychodów ze sprzedaży nie mniejszą niż 1 000 000
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Kraj: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Województwo: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Powiat: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Gmina: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Nr budynku: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Kod pocztowy: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Poczta: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Miejscowość: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Telefon: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca - Adres korespondencyjny - Adres e-mail: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Imię: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Nazwisko: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Stanowisko: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Telefon: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Telefon komórkowy: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Adres e-mail: To pole jest obowiązkowe
+    wait until page contains    Osoba do kontaktów roboczych - Adres e-mail: Nieprawidłowy adres e-mail
+    wait until page contains    Osoba do kontaktów roboczych - Instytucja: To pole jest obowiązkowe
+    wait until page contains    Główna lokalizacja projektu musi być wybrana
+    wait until page contains    Numer kodu PKD działalności, której dotyczy projekt: To pole jest obowiązkowe
+    wait until page contains    Opis rodzaju działalności: To pole jest obowiązkowe
+    wait until page contains    Wpływ projektu na realizację równościa szans i niedyskryminacji: To pole jest obowiązkowe
+    wait until page contains    Uzasadnienie wpływu projektu na realizację równości szans i niedyskryminacji: To pole jest obowiązkowe
+    wait until page contains    Czy produkty projektu będą dostępne dla osób z niepełnosprawnościami?: To pole jest obowiązkowe
+    wait until page contains    Uzasadnienie dostępności produktów dla osób z niepełnosprawnościami: To pole jest obowiązkowe
+    wait until page contains    Wpływ projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe
+    wait until page contains    Uzasadnienie wpływu projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe
+    wait until page contains    Wpływ projektu na realizację zasady zrównoważonego rozwoju: To pole jest obowiązkowe
+    wait until page contains    Obszar KIS, w który wpisuje się projekt: To pole jest wymagane
+    wait until page contains    Uzasadnienie wybranego obszaru KIS, w który wpisuje się projekt: To pole jest obowiązkowe
+    wait until page contains    Rodzaj działalności gospodarczej: To pole jest obowiązkowe
+    wait until page contains    Klasyfikacja NABS projektu: To pole jest obowiązkowe
+    wait until page contains    Klasyfikacja OECD projektu: To pole jest obowiązkowe
+    wait until page contains    Typ obszaru realizacji: To pole jest obowiązkowe
+    wait until page contains    Wpływ projektu na realizację zasady 4R: To pole jest obowiązkowe
+    wait until page contains    Uzasadnienie wpływu projektu na realizację zasady 4R: To pole jest obowiązkowe
+    wait until page contains    Opis prac badawczo-rozwojowych będących przedmiotem wdrożenia: To pole jest obowiązkowe
+    wait until page contains    Zakres prac badawczo-rozwojowych zrealizowanych samodzielnie przez wnioskodawcę: To pole jest obowiązkowe
+    wait until page contains    Zakres prac badawczo-rozwojowych zrealizowanych na zlecenie wnioskodawcy: To pole jest obowiązkowe
+    wait until page contains    Podstawy prawne do korzystania z wyników prac badawczo-rozwojowych będących przedmiotem wdrożenia: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wynalazku: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wynalazku - objętego ochroną patentową: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wynalazku - zgłoszonego do ochrony patentowej: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wynalazku - objętego lub zgłoszonego do ochrony w procedurze krajowej: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wynalazku - objętego lub zgłoszonego do ochrony w procedurze zagranicznej: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wzoru użytkowego: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wzoru użytkowego - objętego ochroną: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wzoru użytkowego - zgłoszonego do ochrony: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wzoru użytkowego - objętego lub zgłoszonego do ochrony w procedurze krajowej: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczy wzoru użytkowego - objętego lub zgłoszonego do ochrony w procedurze zagranicznej: To pole jest obowiązkowe
+    wait until page contains    Opis produktu będącego rezultatem projektu wraz ze wskazaniem zakresu i znaczenia wyników prac badawczo-rozwojowych dla opracowania tego produktu. Innowacyjność produktu wdrażanego w oparciu o wyniki prac badawczo-rozwojowych: To pole jest obowiązkowe
+    wait until page contains    Wpływ projektu na dalszy rozwój branży i rynku: To pole jest obowiązkowe
+    wait until page contains    Harmonogram wdrożenia nowego produktu: To pole jest obowiązkowe
+    wait until page contains    Ryzyko technologiczne: To pole jest obowiązkowe
+    wait until page contains    Ryzyko biznesowe: To pole jest obowiązkowe
+    wait until page contains    Ryzyko finansowe: To pole jest obowiązkowe
+    wait until page contains    Ryzyko administracyjne: To pole jest obowiązkowe
+    wait until page contains    Inne ryzyka: To pole jest obowiązkowe
+    wait until page contains    Nieruchomości: To pole jest obowiązkowe
+    wait until page contains    Maszyny i urządzenia: To pole jest obowiązkowe
+    wait until page contains    Zasoby ludzkie: To pole jest obowiązkowe
+    wait until page contains    Inne zasoby: To pole jest obowiązkowe
+    wait until page contains    Rynek docelowy: To pole jest obowiązkowe
+    wait until page contains    Zapotrzebowanie rynkowe na produkt: To pole jest obowiązkowe
+    wait until page contains    Dystrybucja i sprzedaż produktu: To pole jest obowiązkowe
+    wait until page contains    Promocja produktu: To pole jest obowiązkowe
+    wait until page contains    Znaczenie nowych cech i funkcjonalności dla odbiorców produktu: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący aspektów technicznych, specyficznych dla produkcji samochodów lub autobusów elektrycznych bądź produkcji specyficznych części/podzespołów do samochodów lub autobusów elektrycznych: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący aspektów technicznych, specyficznych dla produkcji samochodów lub autobusów elektrycznych bądź produkcji specyficznych części/podzespołów do samochodów lub autobusów elektrycznych - uzasadnienie: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący infrastruktury zasilającej do pojazdów elektrycznych i jej integracji z siecią elektroenergetyczną: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący infrastruktury zasilającej do pojazdów elektrycznych i jej integracji z siecią elektroenergetyczną - uzasadnienie: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący technologii ładowania i magazynowania energii w celu zasilania pojazdów elektrycznych: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący technologii ładowania i magazynowania energii w celu zasilania pojazdów elektrycznych - uzasadnienie: To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący utylizacji i recyclingu komponentów ładowania i magazynowania energii (produkty zaprojektowane zgodnie z zasadą cradle to cradle): To pole jest obowiązkowe
+    wait until page contains    Projekt dotyczący utylizacji i recyclingu komponentów ładowania i magazynowania energii (produkty zaprojektowane zgodnie z zasadą cradle to cradle) - uzasadnienie: To pole jest obowiązkowe
+    wait until page contains    Wnioskodawca jest członkiem klastra posiadającego status Krajowego Klastra Kluczowego: To pole jest obowiązkowe
+    wait until page contains    Wskaźnik "WLWK-180 Liczba wprowadzonych innowacji nietechnologicznych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-177 Liczba przedsiębiorstw wspartych w zakresie ekoinnowacji [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-087 Liczba przedsiębiorstw objętych wsparciem w celu wprowadzenia produktów nowych dla rynku (CI 28) [przedsiębiorstwa]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-100 Liczba przedsiębiorstw wspartych w zakresie wdrożenia wyników prac B+R [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0005 Liczba nabytych lub wytworzonych w ramach projektu środków trwałych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0007 Liczba nabytych w ramach projektu wartości niematerialnych i prawnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0006 Liczba nabytych w ramach projektu usług doradczych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-161 Wzrost zatrudnienia we wspieranych przedsiębiorstwach O/K/M [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Wartość docelowa wskaźnika jest za mała.
+    wait until page contains    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-181 Przychody ze sprzedaży nowych lub udoskonalonych produktów/procesów [zł]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0003 Liczba wprowadzonych innowacji [szt.]". Wartość docelowa wskaźnika jest za mała.
+    wait until page contains    Wskaźnik "lsi1420-0003 Liczba wprowadzonych innowacji [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0009 Liczba wprowadzonych innowacji marketingowych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0008 Liczba wprowadzonych innowacji organizacyjnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-179 Liczba wprowadzonych innowacji procesowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Wartość docelowa wskaźnika jest za mała.
+    wait until page contains    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "lsi1420-0010 Liczba wprowadzonych ekoinnowacji". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-793 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - kobiety [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Wskaźnik "WLWK-794 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - mężczyźni [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    wait until page contains    Proszę wpisać zadania.
+    wait until page contains    Proszę wpisać wydatki rzeczywiście ponoszone.
+    wait until page contains    Całkowite wydatki kwalifikowalne nie mogą być mniejsze niż 5 000 000,00 PLN (wpisano 0,00 PLN).
+    wait until page contains    Suma wydatków ogółem: Musi być większe od 0
+    wait until page contains    Suma wydatków kwalifikowalnych: Musi być większe od 0
+    wait until page contains    Pomoc de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe
+    wait until page contains    Pomoc publiczna inna niż de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe
+    wait until page contains    Nie podłączono wymaganej liczby załączników typu: Tabele finansowe - Sytuacja finansowa wnioskodawcy oraz jej prognoza (Bilans, Rachunek zysków i strat, Przepływy środków pieniężnych – w wersjach dla firmy nierealizującej projekt oraz dla samego projektu).
+    wait until page contains    Nie podłączono wymaganej liczby załączników typu: Dokumenty potwierdzające przeprowadzenie prac B+R (obowiązkowo sprawozdanie z przeprowadzonych badań oraz dodatkowe dokumenty np. umowy z wykonawcami, dokumenty księgowe).
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+
+Walidacja pól Regon adres email NIP
+    [Documentation]   Celem testu jest sprawdzenie możliwości uzupełnienia wniosku o dofinansowanie wprowadzając dane niewalidowane
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-29
+    Otworz strone startowa
+    Zaloguj sie
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    press key  ${WnioskodawcaOgolneNipPole}     a
+    press key   ${WnioskodawcaOgolneRegonPole}  a
+    press key   ${WnioskodawcaOgolnePeselPole}  a
+    press key  ${WnioskodawcaOgolneSiedzibaAdresEmailPole}      a
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains    Wynik sprawdzania poprawności wniosku
+    wait until page contains    Nieprawidłowy numer NIP
+    wait until page contains    Nieprawidłowy numer REGON
+# PESEL NIE WALIDOWANY, zapytane
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+Walidacja dat
+    [Documentation]   Celem testu jest sprawdzenie walidacji dat przed wysłaniem wniosku o dofinansowanie
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-30
+    Otworz strone startowa
+    Zaloguj sie
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuPoczatek}    2017-07-01
+    Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuKoniec}    2017-06-01
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains    Wynik sprawdzania poprawności wniosku
+    wait until page contains  Okres realizacji projektu <od> powinno być wcześniej niż Okres realizacji projektu <do>
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+Sprawdzenie kryterium wartości minmalnego przychodu
+    [Tags]  ty
+    [Documentation]   Celem testu jest sprawdzenie zachowania się strony, kiedy użytkownik wprowadzić wartość przychodu ze sprzedaży mniejszą od wartości minimalnej
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-31
+    Otworz strone startowa
+    Zaloguj sie
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyOstatniRokPole}      0.01
+    press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyPrzedostatniRokPole}     0.01
+    press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyPoprzedzajacyPrzedostatniRokPole}    0.01
+    focus  ${BrandButton}
+    Zapisz Wniosek
+    Click  ${WalidujWniosekButton}
+    wait until page contains    Wynik sprawdzania poprawności wniosku
+    wait until page contains    Zgodnie z przyjętymi kryteriami wyboru projektów w ramach działania 3.2.1 POIR o dofinansowanie mogą ubiegać się wyłącznie MSP, które przynajmniej w jednym zamkniętym roku obrotowym (trwającym przynajmniej 12 miesięcy) w okresie 3 lat poprzedzających rok, w którym złożony został wniosek o udzielenie wsparcia osiągnęły wysokość przychodów ze sprzedaży nie mniejszą niż 1 000 000
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+#DOPISAC BRAKUJACE TEST CASY
 
 
 
