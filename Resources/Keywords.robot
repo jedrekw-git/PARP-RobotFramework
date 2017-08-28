@@ -190,8 +190,14 @@ Wpisz kod poczowy
     clear element text  ${AdresPola}
     press key   ${AdresPola}   ${WartoscDoWpisania}
 
+Utworz wniosek
+    [Documentation]     Tworzy wniosek do użycia w testach automatycznych
+    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
+    wait until page contains  Pomyślnie utworzono wniosek
+
 Zapisz Wniosek
     [Documentation]     Zapisuje wniosek, waliduje pojawienie się popupa i czeka na zakonczenie procesu
+    focus  ${BrandButton}
     Click  ${ZapiszWniosekButton}
     wait until page contains  Trwa zapis, proszę czekać...
     Czekaj Na Zakonczenie Ajax
@@ -203,7 +209,12 @@ Usun Wniosek
     Click  ${PierwszyWniosekUsunPotwierdzButton}
     wait until page contains  Pomyślnie usunięto wniosek
 
-Czekaj az strona nie zawiera
-    [Documentation]     Czeka, az strona nie zawiera tekstu
-    [Arguments]    ${text}
-    Wait Until Keyword Succeeds     2s      1s      page should not contain     ${text}
+Waliduj wniosek
+    [Documentation]     Otwiera okno walidacji wniosku
+    Click  ${WalidujWniosekButton}
+    wait until page contains    Wynik sprawdzania poprawności wniosku
+
+Wroc do strony glownej
+    [Documentation]     Wraca do strony glownej ze strony tworzenia wniosku
+    Click  ${BrandButton}
+    wait until element contains  css=h2     Trwające nabory

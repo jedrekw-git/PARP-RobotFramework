@@ -257,6 +257,22 @@ ${Oswiadczenia11ZrodlaFinansowaniaWydatkowCheckbox}       id=oswiadczenia_sekcje
 ${Oswiadczenia12OtrzymanaPomocOrazPowiazanieProjektuCheckbox}       id=oswiadczenia_sekcje_11_zaznaczono
 ${Oswiadczenia14ZalacznikiCheckbox}       id=oswiadczenia_sekcje_12_zaznaczono
 ${OswiadczeniaPodstawaPrawnaUstawaCheckbox}     id=oswiadczenia_podstawaPrawnaUstawa
+${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemPole}    id=wykaz_zrodel_finansowania_wydatkow_srodkiWspolnotoweOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweKwalifikowalnePole}   id=wykaz_zrodel_finansowania_wydatkow_srodkiWspolnotoweKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemPole}       id=wykaz_zrodel_finansowania_wydatkow_kspBudzetPanstwaOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalnePole}       id=wykaz_zrodel_finansowania_wydatkow_kspBudzetPanstwaKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemPole}       id=wykaz_zrodel_finansowania_wydatkow_kspBudzetJstOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalnePole}       id=wykaz_zrodel_finansowania_wydatkow_kspBudzetJstKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemPole}     id=wykaz_zrodel_finansowania_wydatkow_prywatneSrodkiWlasneOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalnePole}        id=wykaz_zrodel_finansowania_wydatkow_prywatneSrodkiWlasneKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemPole}       id=wykaz_zrodel_finansowania_wydatkow_prywatneLeasingOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalnePole}       id=wykaz_zrodel_finansowania_wydatkow_prywatneLeasingKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemPole}       id=wykaz_zrodel_finansowania_wydatkow_prywatneKredytOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalnePole}       id=wykaz_zrodel_finansowania_wydatkow_prywatneKredytKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowEbiOgolemPole}       id=wykaz_zrodel_finansowania_wydatkow_ebiOgolem_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalnePole}       id=wykaz_zrodel_finansowania_wydatkow_ebiKwalifikowalne_tbbc_amount
+${WykazZrodelFinansowaniaWydatkowOgolemSumaPole}    xpath=//div[2]/div/form/table/tbody/tr[11]/td/span
+${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaPole}    xpath=//div[2]/div/form/table/tbody/tr[11]/td[2]/span
 
 
 

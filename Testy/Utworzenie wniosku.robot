@@ -14,11 +14,9 @@ Utworzenie wniosku
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-14
     Otworz strone startowa
     Zaloguj sie
-    Click  ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-    Click  ${BrandButton}
-    wait until element contains  css=h2     Trwające nabory
+    Wroc do strony glownej
     Filtruj Wnioski Po ID   ${IDwniosku}
     wait until element contains  ${PierwszyWniosekNazwaPole}      Nowy wniosek
     ${todayDate} =  get todays date
@@ -32,8 +30,7 @@ Informacje ogólne o projekcie dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-15
     Otworz strone startowa
     Zaloguj sie
-    Click  ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${TytulProjektuPole}      Testowy_projekt
     press key  ${KrotkiOpisProjektuPole}     test
@@ -43,10 +40,8 @@ Informacje ogólne o projekcie dane poprawne
     Kliknij Dropdown bez pola input i wpisz wartosc  ${DziedzinaProjektuInput}   Zarządzanie projektami IT
     Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuPoczatek}    2017-06-01
     Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuKoniec}    2017-07-01
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until page contains  Planowany termin rozpoczęcia realizacji projektu nie może być wcześniejszy niż dzień następny po dniu złożenia wniosku w generatorze.
     wait until page does not contain  Tytuł projektu: To pole jest obowiązkowe      1
     wait until page does not contain  Krótki opis projektu: To pole jest obowiązkowe    1
@@ -69,8 +64,7 @@ Wnioskodawca informacje ogólne dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-16
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WnioskodawcaOgolneNazwaPole}   Test
     Kliknij Dropdown i wpisz wartosc  ${WnioskodawcaOgolneStatusDropdown}   małym
@@ -120,10 +114,8 @@ Wnioskodawca informacje ogólne dane poprawne
     press key   ${WnioskodawcaOgolneCharakterystykaRynkuPole}       test
     press key  ${WnioskodawcaOgolneOczekiwaniaPotrzebyKlientowPole}     test
     press key   ${WnioskodawcaOgolneCharakterPopytuPole}        test
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain    Nazwa Wnioskodawcy: To pole jest obowiązkowe    5
     Wait Until Page Does Not Contain    Status Wnioskodawcy: To pole jest obowiązkowe   1
     Wait Until Page Does Not Contain    Data rozpoczęcia działalności zgodnie z dokumentem rejestrowym: To pole jest obowiązkowe    1
@@ -158,8 +150,7 @@ Wnioskodawca adres korespodencyjny dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-17
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     select from list by label  ${WnioskodawcaAdresKorespondencyjnyKrajDropdown}    Polska
     Kliknij Dropdown i wpisz wartosc  ${WnioskodawcaAdresKorespondencyjnyWojewodztwoDropdown}   MAZOWIECKIE
@@ -174,10 +165,8 @@ Wnioskodawca adres korespodencyjny dane poprawne
     press key   ${WnioskodawcaAdresKorespondencyjnyTelefonPole}     111111111
     press key  ${WnioskodawcaAdresKorespondencyjnyFaksPole}     00000000
     press key  ${WnioskodawcaAdresKorespondencyjnyEmailPole}    mariustestowy@gmail.com
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Kraj: To pole jest obowiązkowe     5
     Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Województwo: To pole jest obowiązkowe      1
     Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Powiat: To pole jest obowiązkowe       1
@@ -196,8 +185,7 @@ Informacje o pełnomocniku dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-18
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WniosekPelnomocnikImiePole}    Jan
     press key   ${WniosekPelnomocnikNazwiskoPole}   Kowalski
@@ -219,10 +207,8 @@ Informacje o pełnomocniku dane poprawne
     Click2  ${UsunPomocnika2Button}
     dismiss alert  True
     element should not be visible  ${WniosekPelnomocnik2ImiePole}
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain     Pełnomocnik - Imię: To pole jest obowiązkowe     5
     wait until page does not contain     Pełnomocnik - Nazwisko: To pole jest obowiązkowe       1
     wait until page does not contain     Pełnomocnik - Stanowisko: To pole jest obowiązkowe     1
@@ -243,8 +229,7 @@ Osoba do kontaktów roboczych dane poprawme
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-19
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WniosekKontaktyRoboczeImiePole}    Jan
     press key   ${WniosekKontaktyRoboczeNazwiskoPole}   Kowalski
@@ -254,10 +239,8 @@ Osoba do kontaktów roboczych dane poprawme
     press key  ${WniosekKontaktyRoboczeTelefonKomorkowyPole}        111111111
     press key  ${WniosekKontaktyRoboczeAdresEmailPole}      mariustestowy@gmail.com
     press key  ${WniosekKontaktyRoboczeFaksPole}        111111111
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Imię: To pole jest obowiązkowe     5
     Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Nazwisko: To pole jest obowiązkowe      1
     Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Stanowisko: To pole jest obowiązkowe       1
@@ -274,8 +257,7 @@ Klasyfikacja projektu dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-20
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     Kliknij Dropdown i wpisz wartosc  ${KlasyfikacjaProjektuPKDprojektuDropdown}    01.12.Z Uprawa ryżu
     press key  ${KlasyfikacjaProjektuPKDprojektuWyjasnieniePole}    test
@@ -354,10 +336,8 @@ Klasyfikacja projektu dane poprawne
     press key  ${KlasyfikacjaProjektuZapotrzebowanieRynkowePole}        test
     press key  ${KlasyfikacjaProjektuDystrybucjaSprzedazProduktuPole}       test
     press key  ${KlasyfikacjaProjektuPromocjaProduktuPole}      test
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain     Numer kodu PKD działalności, której dotyczy projekt: To pole jest obowiązkowe     5s
     Wait Until Page Does Not Contain     Opis rodzaju działalności: To pole jest obowiązkowe        1s
     Wait Until Page Does Not Contain     Wpływ projektu na realizację równościa szans i niedyskryminacji: To pole jest obowiązkowe      1s
@@ -417,8 +397,7 @@ Miejsce realizacji projektu dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-21
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     click javascript xpath  ${DodajMiejsceRealizacjiProjektuButton}
     click javascript xpath  ${MiejsceRealizacjiProjektuGlownaLokalizacjaCheckbox}
@@ -432,10 +411,8 @@ Miejsce realizacji projektu dane poprawne
     press key  ${MiejsceRealizacjiProjektuNrLokaluPole}     a
     Wpisz kod poczowy  ${MiejsceRealizacjiProjektuKodPocztowyPole}      22-222
     press key  ${MiejsceRealizacjiProjektuTytulPrawnyPole}      test
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until element does not contain    xpath=//tr[61]/td/a       Województwo: To pole jest obowiązkowe     5
     wait until element does not contain    xpath=//tr[63]/td/a       Gmina: To pole jest obowiązkowe       1
     wait until element does not contain    xpath=//tr[64]/td/a       Podregion (NUTS 3): To pole jest obowiązkowe        1
@@ -449,8 +426,7 @@ Wskaźniki dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-22
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaPole}        1000000.00
     press key  ${WykazWskaznikowWnioskuWskaznik6MetodologiaIWeryfikacjaPole}        test
@@ -478,10 +454,8 @@ Wskaźniki dane poprawne
     press key  ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaPole}       test
     press key  ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaPole}       1000000.00
     press key  ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaPole}       test
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until page does not contain    Wskaźnik "lsi1420-0005 Liczba nabytych lub wytworzonych w ramach projektu środków trwałych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe     5
     wait until page does not contain    Wskaźnik "lsi1420-0007 Liczba nabytych w ramach projektu wartości niematerialnych i prawnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.     1
     wait until page does not contain    Wskaźnik "lsi1420-0006 Liczba nabytych w ramach projektu usług doradczych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
@@ -510,8 +484,7 @@ Harmonogram rzeczowo finansowy dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-23
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     Click     ${DodajZadanieButton}
     press key  ${ZakresRzeczowoFinansowyZadaniaNazwaPole}   test
@@ -529,11 +502,9 @@ Harmonogram rzeczowo finansowy dane poprawne
     press key  ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowaniePole}   1 000 000.00
     click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataNieruchomosciNieRadio}
     click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataInneNieRadio}
-    focus  ${BrandButton}
     Zapisz Wniosek
     element should contain  ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaPole}    10.00
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain     Proszę wpisać zadania.     5
     Wait Until Page Does Not Contain     Proszę wpisać wydatki rzeczywiście ponoszone.      1
     wait until page does not contain     Całkowite wydatki kwalifikowalne nie mogą być mniejsze niż 5 000 000,00 PLN (wpisano 0,00 PLN).        1
@@ -546,8 +517,7 @@ Otrzymana pomoc oraz powiązanie projektu dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-24
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     Click  ${OtrzymanaPomocIPowiazanieProjektuPomocDeminimisOtrzymanaNieRadio}
     press key   ${OtrzymanaPomocIPowiazanieProjektuDeminisRolnictwoRybolowstwoPole}      0.00
@@ -559,33 +529,43 @@ Otrzymana pomoc oraz powiązanie projektu dane poprawne
     click  ${OtrzymanaPomocIPowiazanieProjektuInneProjektyNuts3NieRadio}
     press key  ${OtrzymanaPomocIPowiazanieProjektuSzczegoloweZalozeniaDoPrognozFinansowychPole}     test
     click javascript id  ${OtrzymanaPomocIPowiazanieProjektuRokObrotowyJestRokiemKalendarzowymTakRadio}
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains  Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     Wait Until Page Does Not Contain     Pomoc de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe     5
     Wait Until Page Does Not Contain     Pomoc publiczna inna niż de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe      1
     Usun Wniosek    ${IDwniosku}
     close browser
 
 Źródła finansowania wydatków dane poprawne
-    [Tags]  ty
     [Documentation]   Celem testu jest sprawdzenie możliwości uzupełnienia źródła finansowania wydatków
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-25
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemPole}     9 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalnePole}     9 000 000.00
+    Zapisz Wniosek
+    wait until element contains  ${WykazZrodelFinansowaniaWydatkowOgolemSumaPole}   9 000 000.00
+    wait until element contains  ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaPole}   9 000 000.00
+    Waliduj wniosek
+    wait until page does not contain  Suma wydatków ogółem: Musi być większe od 0
+    wait until page does not contain  Suma wydatków kwalifikowalnych: Musi być większe od 0
+    wait until page contains  Suma wydatków ogółem z części "Źródła finansowania wydatków" (wpisano 9 000 000,00 PLN) powinna być równa sumie wydatków ogółem z części "Zestawienie finansowe ogółem" (wpisano 0,00 PLN).
+    wait until page contains  Suma wydatków kwalifikowalnych z części "Źródła finansowania wydatków" (wpisano 9 000 000,00 PLN) powinna być równa sumie wydatków kwalifikowalnych z części "Zestawienie finansowe ogółem" (wpisano 0,00 PLN).
+    wait until page contains  Wartość środków prywatnych ogółem (wpisano 9 000 000,00 PLN) powinna równać się różnicy kwoty całkowitych wydatków ogółem dla projektu i kwoty wnioskowanego dofinansowania (0,00 - 0,00 = 0,00 PLN).
+    wait until page contains  Wartość środków prywatnych kwalifikowalnych (wpisano 9 000 000,00 PLN) powinna równać się różnicy kwoty całkowitych wydatków kwalifikowalnych i kwoty wnioskowanego dofinansowania (0,00 - 0,00 = 0,00 PLN).
+    wait until page contains  Suma wydatków ogółem projektu (9 000 000,00 PLN) powinna być równa kwocie całkowitych wydatków projektu z Zakresu finansowego (0,00 PLN).
+    wait until page contains  Suma wydatków kwalifikowanych projektu (9 000 000,00 PLN) powinna być równa kwocie całkowitych wydatków kwalifikowalnych projektu z Zakresu finansowego (0,00 PLN).
+    Usun Wniosek    ${IDwniosku}
+    close browser
 
 Oświadczenia dane poprawne
     [Documentation]   Celem testu jest sprawdzenie możliwości dodania oświadczeń
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-26
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     select checkbox  ${Oswiadczenia1InformacjeOgolneOProjekcieCheckbox}
     select checkbox  ${Oswiadczenia2WnioskodawcaInformacjeOgolneCheckbox}
@@ -601,7 +581,6 @@ Oświadczenia dane poprawne
     select checkbox  ${Oswiadczenia12OtrzymanaPomocOrazPowiazanieProjektuCheckbox}
     select checkbox  ${Oswiadczenia14ZalacznikiCheckbox}
     select checkbox  ${OswiadczeniaPodstawaPrawnaUstawaCheckbox}
-    focus  ${BrandButton}
     Zapisz Wniosek
     checkbox should be selected  ${Oswiadczenia1InformacjeOgolneOProjekcieCheckbox}
     checkbox should be selected  ${Oswiadczenia2WnioskodawcaInformacjeOgolneCheckbox}
@@ -626,13 +605,10 @@ Brak uzupełnionych obowiązkowych pól
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-28
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains    Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until page contains    Tytuł projektu: To pole jest obowiązkowe
     wait until page contains    Krótki opis projektu: To pole jest obowiązkowe
     wait until page contains    Cel projektu
@@ -781,17 +757,14 @@ Walidacja pól Regon adres email NIP
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-29
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WnioskodawcaOgolneNipPole}     a
     press key   ${WnioskodawcaOgolneRegonPole}  a
     press key   ${WnioskodawcaOgolnePeselPole}  a
     press key  ${WnioskodawcaOgolneSiedzibaAdresEmailPole}      a
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains    Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until page contains    Nieprawidłowy numer NIP
     wait until page contains    Nieprawidłowy numer REGON
 # PESEL NIE WALIDOWANY, zapytane
@@ -803,40 +776,81 @@ Walidacja dat
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-30
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuPoczatek}    2017-07-01
     Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuKoniec}    2017-06-01
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains    Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until page contains  Okres realizacji projektu <od> powinno być wcześniej niż Okres realizacji projektu <do>
     Usun Wniosek    ${IDwniosku}
     close browser
 
 Sprawdzenie kryterium wartości minmalnego przychodu
-    [Tags]  ty
     [Documentation]   Celem testu jest sprawdzenie zachowania się strony, kiedy użytkownik wprowadzić wartość przychodu ze sprzedaży mniejszą od wartości minimalnej
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-31
     Otworz strone startowa
     Zaloguj sie
-    Click   ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}
-    wait until page contains  Pomyślnie utworzono wniosek
+    Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
     press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyOstatniRokPole}      0.01
     press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyPrzedostatniRokPole}     0.01
     press key  ${WnioskodawcaOgolnePrzychodyZeSprzedazyPoprzedzajacyPrzedostatniRokPole}    0.01
-    focus  ${BrandButton}
     Zapisz Wniosek
-    Click  ${WalidujWniosekButton}
-    wait until page contains    Wynik sprawdzania poprawności wniosku
+    Waliduj wniosek
     wait until page contains    Zgodnie z przyjętymi kryteriami wyboru projektów w ramach działania 3.2.1 POIR o dofinansowanie mogą ubiegać się wyłącznie MSP, które przynajmniej w jednym zamkniętym roku obrotowym (trwającym przynajmniej 12 miesięcy) w okresie 3 lat poprzedzających rok, w którym złożony został wniosek o udzielenie wsparcia osiągnęły wysokość przychodów ze sprzedaży nie mniejszą niż 1 000 000
     Usun Wniosek    ${IDwniosku}
     close browser
 
-#DOPISAC BRAKUJACE TEST CASY
+
+Suma wydatków z żródła finansowania inna niż w zestawienie finansowe ogółem
+    [Tags]  ty
+    [Documentation]   Celem testu jest sprawdzenie zachowania się systemu po wprowadzeniu wartości w żródła finansowania innych niż w zestawie ogółem
+    ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-32
+    Otworz strone startowa
+    Zaloguj sie
+    Utworz wniosek
+    ${IDwniosku} =   Pobierz ID wniosku
+    Click     ${DodajZadanieButton}
+    press key  ${ZakresRzeczowoFinansowyZadaniaNazwaPole}   test
+    press key  ${ZakresRzeczowoFinansowyZadaniaOpisPlanowanychDzialanPole}      test
+    Sprawdz Pole Daty i Wpisz   ${ZakresRzeczowoFinansowyZadaniaDataZakonczeniaPole}    2017-06-29
+    Sprawdz Pole Daty i Wpisz   ${ZakresRzeczowoFinansowyZadaniaDataRozpoczeciaPole}    2017-06-01
+    Zapisz Wniosek
+    Click  ${DodajWydatekRzeczywisciePonoszonyButton}
+    select from list by label   ${ZakresRzeczowoFinansowyWydatkiZadanieDropdown}    1. test
+    select from list by label  ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowDropdown}        Raty spłaty kapitału środków trwałych innych niż nieruchomości
+    press key  ${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategorii}        test
+    press key  ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemPole}   3 000 000.00
+    press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowanePole}    2 000 000.00
+    press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatPole}     100.00
+    press key  ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowaniePole}   2 000 000.00
+    wpisz kod poczowy  ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemPole}    1 000 000.00
+    wpisz kod poczowy  ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweKwalifikowalnePole}    1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemPole}     1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalnePole}     1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemPole}     1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalnePole}     1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemPole}     1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalnePole}     1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemPole}      1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalnePole}      1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemPole}       1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalnePole}       1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowEbiOgolemPole}      1 000 000.00
+    press key  ${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalnePole}      1 000 000.00
+    Zapisz Wniosek
+    Waliduj wniosek
+    wait until page contains        Suma wydatków ogółem z części "Źródła finansowania wydatków" (wpisano 6 000 000,00 PLN) powinna być równa sumie wydatków ogółem z części "Zestawienie finansowe ogółem" (wpisano 3 000 000,00 PLN).
+    wait until page contains        Suma wydatków kwalifikowalnych z części "Źródła finansowania wydatków" (wpisano 6 000 000,00 PLN) powinna być równa sumie wydatków kwalifikowalnych z części "Zestawienie finansowe ogółem" (wpisano 2 000 000,00 PLN).
+    wait until page contains        Wartość środków prywatnych ogółem (wpisano 3 000 000,00 PLN) powinna równać się różnicy kwoty całkowitych wydatków ogółem dla projektu i kwoty wnioskowanego dofinansowania (3 000 000,00 - 2 000 000,00 = 1 000 000,00 PLN).
+    wait until page contains        Wartość środków prywatnych kwalifikowalnych (wpisano 3 000 000,00 PLN) powinna równać się różnicy kwoty całkowitych wydatków kwalifikowalnych i kwoty wnioskowanego dofinansowania (2 000 000,00 - 2 000 000,00 = 0,00 PLN).
+    wait until page contains        Suma wydatków ogółem projektu (6 000 000,00 PLN) powinna być równa kwocie całkowitych wydatków projektu z Zakresu finansowego (3 000 000,00 PLN).
+    wait until page contains        Suma wydatków kwalifikowanych projektu (6 000 000,00 PLN) powinna być równa kwocie całkowitych wydatków kwalifikowalnych projektu z Zakresu finansowego (2 000 000,00 PLN).
+    Usun Wniosek    ${IDwniosku}
+    close browser
+
+
 
 
 
