@@ -840,6 +840,8 @@ Suma wydatków z żródła finansowania inna niż w zestawienie finansowe ogół
     press key  ${WykazZrodelFinansowaniaWydatkowEbiOgolemPole}      1 000 000.00
     press key  ${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalnePole}      1 000 000.00
     Zapisz Wniosek
+    wait until element contains  ${WykazZrodelFinansowaniaWydatkowOgolemSumaPole}   6 000 000.00
+    wait until element contains  ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaPole}   6 000 000.00
     Waliduj wniosek
     wait until page contains        Suma wydatków ogółem z części "Źródła finansowania wydatków" (wpisano 6 000 000,00 PLN) powinna być równa sumie wydatków ogółem z części "Zestawienie finansowe ogółem" (wpisano 3 000 000,00 PLN).
     wait until page contains        Suma wydatków kwalifikowalnych z części "Źródła finansowania wydatków" (wpisano 6 000 000,00 PLN) powinna być równa sumie wydatków kwalifikowalnych z części "Zestawienie finansowe ogółem" (wpisano 2 000 000,00 PLN).
