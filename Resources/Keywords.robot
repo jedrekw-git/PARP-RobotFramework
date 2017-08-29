@@ -41,9 +41,8 @@ Zmienne Srodowiskowe Dla IE
     ...    W ustawieniach, w karcie Zabezpieczenia trzeba włączyć (albo wyłączyć) tryb chroniony dla wszystkich stref:
     ...    http://www.abodeqa.com/2013/05/25/unexpected-error-launching-internet-explorer-protected-mode-must-be-set-to-the-same-value/
     Set Environment Variable    webdriver.ie.driver    ${LocalIEDriver}
-    ${caps}=    Evaluate    sys.modules['selenium.webdriver'].DesiredCapabilities.INTERNETEXPLORER    sys,selenium.webdriver
-    Set To Dictionary    ${caps}    ignoreProtectedModeSettings    ${True}
-#    Create WebDriver    Ie    capabilities=${caps}
+#    ${caps}=    Evaluate    sys.modules['selenium.webdriver'].DesiredCapabilities.INTERNETEXPLORER    sys,selenium.webdriver
+#    Open Browser    ${HOMEPAGE}    ${BROWSER}  desired_capabilities=${caps}
 
 Otworz Przegladarke Na Stronie Logowania Default
     Open Browser    ${HOMEPAGE}    ${BROWSER}

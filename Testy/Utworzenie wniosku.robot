@@ -35,7 +35,7 @@ Informacje ogólne o projekcie dane poprawne
     press key  ${TytulProjektuPole}      Testowy_projekt
     press key  ${KrotkiOpisProjektuPole}     test
     press key  ${CelProjektuPole}        Test
-    Click     ${DodajSlowoKluczoweButon}
+    Click Javascript Xpath    ${DodajSlowoKluczoweButon}
     press key  ${PierwszeSlowoKluczowePole}  test
     Kliknij Dropdown bez pola input i wpisz wartosc  ${DziedzinaProjektuInput}   Zarządzanie projektami IT
     Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuPoczatek}    2017-06-01
@@ -391,7 +391,6 @@ Klasyfikacja projektu dane poprawne
     close browser
 
 
-
 Miejsce realizacji projektu dane poprawne
     [Documentation]   Celem testu jest sprawdzenie możliwości dodania miejsca realizacji projektu
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-21
@@ -500,8 +499,8 @@ Harmonogram rzeczowo finansowy dane poprawne
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowanePole}    10 000 000.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatPole}     0.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowaniePole}   1 000 000.00
-    click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataNieruchomosciNieRadio}
-    click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataInneNieRadio}
+    click javascript id  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataNieruchomosciNieRadio}
+    click javascript id  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataInneNieRadio}
     Zapisz Wniosek
     element should contain  ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaPole}    10.00
     Waliduj wniosek
@@ -519,14 +518,14 @@ Otrzymana pomoc oraz powiązanie projektu dane poprawne
     Zaloguj sie
     Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
-    Click  ${OtrzymanaPomocIPowiazanieProjektuPomocDeminimisOtrzymanaNieRadio}
+    Click Javascript Id  ${OtrzymanaPomocIPowiazanieProjektuPomocDeminimisOtrzymanaNieRadio}
     press key   ${OtrzymanaPomocIPowiazanieProjektuDeminisRolnictwoRybolowstwoPole}      0.00
-    click  ${OtrzymanaPomocIPowiazanieProjektuInnaPomocPublicznaOtrzymanaNieRadio}
+    click javascript id  ${OtrzymanaPomocIPowiazanieProjektuInnaPomocPublicznaOtrzymanaNieRadio}
     press key  ${OtrzymanaPomocIPowiazanieProjektuOpisPowiazaniaProjektuZInnymiWnioskodawcyPole}        test
     press key  ${OtrzymanaPomocIPowiazanieProjektuInwestycjaPoczatkowaOpisNowyZakladPole}       test
     press key  ${OtrzymanaPomocIPowiazanieProjektuInwestycjaPoczatkowaOpisNoweProduktyPole}     test
     press key  ${OtrzymanaPomocIPowiazanieProjektuWartoscKsiegowaPole}      100 000.00
-    click  ${OtrzymanaPomocIPowiazanieProjektuInneProjektyNuts3NieRadio}
+    click javascript id  ${OtrzymanaPomocIPowiazanieProjektuInneProjektyNuts3NieRadio}
     press key  ${OtrzymanaPomocIPowiazanieProjektuSzczegoloweZalozeniaDoPrognozFinansowychPole}     test
     click javascript id  ${OtrzymanaPomocIPowiazanieProjektuRokObrotowyJestRokiemKalendarzowymTakRadio}
     Zapisz Wniosek
@@ -767,7 +766,7 @@ Walidacja pól Regon adres email NIP
     Waliduj wniosek
     wait until page contains    Nieprawidłowy numer NIP
     wait until page contains    Nieprawidłowy numer REGON
-# PESEL NIE WALIDOWANY, zapytane
+# PESEL NIE WALIDOWANY, zgłoszone
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -804,7 +803,6 @@ Sprawdzenie kryterium wartości minmalnego przychodu
 
 
 Suma wydatków z żródła finansowania inna niż w zestawienie finansowe ogółem
-    [Tags]  ty
     [Documentation]   Celem testu jest sprawdzenie zachowania się systemu po wprowadzeniu wartości w żródła finansowania innych niż w zestawie ogółem
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-32
     Otworz strone startowa
@@ -851,22 +849,3 @@ Suma wydatków z żródła finansowania inna niż w zestawienie finansowe ogół
     wait until page contains        Suma wydatków kwalifikowanych projektu (6 000 000,00 PLN) powinna być równa kwocie całkowitych wydatków kwalifikowalnych projektu z Zakresu finansowego (2 000 000,00 PLN).
     Usun Wniosek    ${IDwniosku}
     close browser
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
