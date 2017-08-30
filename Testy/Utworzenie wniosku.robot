@@ -224,7 +224,7 @@ Informacje o pełnomocniku dane poprawne
     Usun Wniosek    ${IDwniosku}
     close browser
 
-Osoba do kontaktów roboczych dane poprawme
+Osoba do kontaktów roboczych dane poprawne
     [Documentation]  Celem testu jest sprawdzenie możliwości dodania osoby do kontaktów roboczych
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-19
     Otworz strone startowa

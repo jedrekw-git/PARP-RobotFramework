@@ -15,6 +15,7 @@ Resource        ../Resources/AdresyURL.robot
 Resource        ../Resources/ZapomnianeHasłoUI.robot
 Resource        ../Resources/MailUI.robot
 Resource        ../Resources/UtworzenieWnioskuUI.robot
+Resource        ../Resources/KeywordsPoleData.robot
 
 *** Keywords ***
 
@@ -118,7 +119,7 @@ Zaloguj na konto email
     wait until element contains     ${MailHeader}      Zapamiętaj mnie
     press key  ${MailLoginPole}    ${RECOVERPASSWORDEMAIL}
     PRESS KEY  ${MailHasloPole}     ${MAIL-PAGE-PASSWORD}
-    Click  ${MailHasloPole}
+    Click2  ${MailHasloPole}
 
 Sprawdz czy pierwszy email jest z PARP
     wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Odzyskiwanie hasła
@@ -186,7 +187,8 @@ Kliknij Dropdown bez pola input i wpisz wartosc
 Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
     [Arguments]    ${AdresPola}     ${WartoscDoWpisania}
-    clear element text  ${AdresPola}
+    Wyczysc Pole Data Chrome     ${AdresPola}
+#    clear element text  ${AdresPola}
     press key   ${AdresPola}   ${WartoscDoWpisania}
 
 Utworz wniosek

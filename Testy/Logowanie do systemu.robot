@@ -66,6 +66,7 @@ Logowanie na nieaktywowane konto
 #    Brak komunikatu że konto nieaktywowane, zgłoszone
 
 Zapomniane hasło dane poprawne
+    [Tags]  ty
     [Documentation]  Celem testu jest sprawdzenie możliwości przywrócenia hasła, które zapomniał użytkownik
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-11
     Otworz strone startowa
