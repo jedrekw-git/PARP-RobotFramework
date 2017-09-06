@@ -43,12 +43,12 @@ Informacje ogólne o projekcie dane poprawne
     Zapisz Wniosek
     Waliduj wniosek
     wait until page contains  Planowany termin rozpoczęcia realizacji projektu nie może być wcześniejszy niż dzień następny po dniu złożenia wniosku w generatorze.
-    wait until page does not contain  Tytuł projektu: To pole jest obowiązkowe      1
-    wait until page does not contain  Krótki opis projektu: To pole jest obowiązkowe    1
-    wait until page does not contain  Cel projektu: To pole jest obowiązkowe        1
-    wait until page does not contain  Okres realizacji projektu <od>: To pole jest obowiązkowe      1
-    wait until page does not contain  Okres realizacji projektu <do>: To pole jest obowiązkowe      1
-    wait until page does not contain  Proszę wpisać przynajmniej jedno słowo kluczowe.      1
+    Na stronie nie powinno byc  Tytuł projektu: To pole jest obowiązkowe
+    Na stronie nie powinno byc  Krótki opis projektu: To pole jest obowiązkowe
+    Na stronie nie powinno byc  Cel projektu: To pole jest obowiązkowe
+    Na stronie nie powinno byc  Okres realizacji projektu <od>: To pole jest obowiązkowe
+    Na stronie nie powinno byc  Okres realizacji projektu <do>: To pole jest obowiązkowe
+    Na stronie nie powinno byc  Proszę wpisać przynajmniej jedno słowo kluczowe.
     go to  ${Dashboard}
     Filtruj Wnioski Po ID   ${IDwniosku}
     wait until element contains  ${PierwszyWniosekNazwaPole}      Testowy_projekt
@@ -116,32 +116,32 @@ Wnioskodawca informacje ogólne dane poprawne
     press key   ${WnioskodawcaOgolneCharakterPopytuPole}        test
     Zapisz Wniosek
     Waliduj wniosek
-    Wait Until Page Does Not Contain    Nazwa Wnioskodawcy: To pole jest obowiązkowe    5
-    Wait Until Page Does Not Contain    Status Wnioskodawcy: To pole jest obowiązkowe   1
-    Wait Until Page Does Not Contain    Data rozpoczęcia działalności zgodnie z dokumentem rejestrowym: To pole jest obowiązkowe    1
-    Wait Until Page Does Not Contain    Forma prawna: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain    Forma własności: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain    NIP Wnioskodawcy: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain    Nieprawidłowy numer NIP     1
-    Wait Until Page Does Not Contain    REGON: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain    Nieprawidłowy numer REGON       1
-    Wait Until Page Does Not Contain    Numer w Krajowym Rejestrze Sądowym: To pole jest obowiązkowe        1
-    Wait Until Page Does Not Contain    Numer kodu PKD przeważającej działalności Wnioskodawcy: To pole jest obowiązkowe    1
-    Wait Until Page Does Not Contain    Możliwość odzyskania VAT: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Kraj: To pole jest obowiązkowe        1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Województwo: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Powiat: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Gmina: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Nr budynku: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Kod pocztowy: To pole jest obowiązkowe        1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Miejscowość: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Telefon: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain    Adres siedziby wnioskodawcy - Adres e-mail: To pole jest obowiązkowe        1
-    Wait Until Page Does Not Contain    Historia wnioskodawcy oraz przedmiot działalności w kontekście projektu: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain    Miejsce na rynku: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain    Charakterystyka rynku: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain    Oczekiwania i potrzeby klientów: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain    Charakter popytu: To pole jest obowiązkowe      1
+    Na stronie nie powinno byc    Nazwa Wnioskodawcy: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Status Wnioskodawcy: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Data rozpoczęcia działalności zgodnie z dokumentem rejestrowym: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Forma prawna: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Forma własności: To pole jest obowiązkowe
+    Na stronie nie powinno byc    NIP Wnioskodawcy: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Nieprawidłowy numer NIP
+    Na stronie nie powinno byc    REGON: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Nieprawidłowy numer REGON
+    Na stronie nie powinno byc    Numer w Krajowym Rejestrze Sądowym: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Numer kodu PKD przeważającej działalności Wnioskodawcy: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Możliwość odzyskania VAT: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Kraj: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Województwo: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Powiat: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Gmina: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Nr budynku: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Kod pocztowy: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Miejscowość: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Telefon: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Adres siedziby wnioskodawcy - Adres e-mail: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Historia wnioskodawcy oraz przedmiot działalności w kontekście projektu: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Miejsce na rynku: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Charakterystyka rynku: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Oczekiwania i potrzeby klientów: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Charakter popytu: To pole jest obowiązkowe
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -167,16 +167,16 @@ Wnioskodawca adres korespodencyjny dane poprawne
     press key  ${WnioskodawcaAdresKorespondencyjnyEmailPole}    mariustestowy@gmail.com
     Zapisz Wniosek
     Waliduj wniosek
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Kraj: To pole jest obowiązkowe     5
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Województwo: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Powiat: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Gmina: To pole jest obowiązkowe        1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Nr budynku: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Kod pocztowy: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Poczta: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Miejscowość: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Telefon: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain     Wnioskodawca - Adres korespondencyjny - Adres e-mail: To pole jest obowiązkowe     1
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Kraj: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Województwo: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Powiat: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Gmina: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Nr budynku: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Kod pocztowy: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Poczta: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Miejscowość: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Telefon: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca - Adres korespondencyjny - Adres e-mail: To pole jest obowiązkowe
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -209,18 +209,18 @@ Informacje o pełnomocniku dane poprawne
     element should not be visible  ${WniosekPelnomocnik2ImiePole}
     Zapisz Wniosek
     Waliduj wniosek
-    Wait Until Page Does Not Contain     Pełnomocnik - Imię: To pole jest obowiązkowe     5
-    wait until page does not contain     Pełnomocnik - Nazwisko: To pole jest obowiązkowe       1
-    wait until page does not contain     Pełnomocnik - Stanowisko: To pole jest obowiązkowe     1
-    wait until page does not contain     Pełnomocnik - Instytucja: To pole jest obowiązkowe     1
-    wait until page does not contain     Pełnomocnik - Telefon komórkowy: To pole jest obowiązkowe      1
-    wait until page does not contain     Pełnomocnik - Nr budynku: To pole jest obowiązkowe     1
-    wait until page does not contain     Pełnomocnik - Kod pocztowy: To pole jest obowiązkowe       1
-    wait until page does not contain     Pełnomocnik - Poczta: To pole jest obowiązkowe     1
-    wait until page does not contain     Pełnomocnik - Miejscowość: To pole jest obowiązkowe        1
-    wait until page does not contain     Pełnomocnik - Województwo: To pole jest obowiązkowe        1
-    wait until page does not contain     Pełnomocnik - Powiat: To pole jest obowiązkowe       1
-    wait until page does not contain     Pełnomocnik - Gmina: To pole jest obowiązkowe      1
+    Na stronie nie powinno byc     Pełnomocnik - Imię: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Nazwisko: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Stanowisko: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Instytucja: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Telefon komórkowy: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Nr budynku: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Kod pocztowy: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Poczta: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Miejscowość: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Województwo: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Powiat: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pełnomocnik - Gmina: To pole jest obowiązkowe
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -241,14 +241,14 @@ Osoba do kontaktów roboczych dane poprawne
     press key  ${WniosekKontaktyRoboczeFaksPole}        111111111
     Zapisz Wniosek
     Waliduj wniosek
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Imię: To pole jest obowiązkowe     5
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Nazwisko: To pole jest obowiązkowe      1
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Stanowisko: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Telefon: To pole jest obowiązkowe        1
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Telefon komórkowy: To pole jest obowiązkowe       1
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Adres e-mail: To pole jest obowiązkowe     1
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Adres e-mail: Nieprawidłowy adres e-mail       1
-    Wait Until Page Does Not Contain     Osoba do kontaktów roboczych - Instytucja: To pole jest obowiązkowe      1
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Imię: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Nazwisko: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Stanowisko: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Telefon: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Telefon komórkowy: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Adres e-mail: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Adres e-mail: Nieprawidłowy adres e-mail
+    Na stronie nie powinno byc     Osoba do kontaktów roboczych - Instytucja: To pole jest obowiązkowe
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -338,55 +338,55 @@ Klasyfikacja projektu dane poprawne
     press key  ${KlasyfikacjaProjektuPromocjaProduktuPole}      test
     Zapisz Wniosek
     Waliduj wniosek
-    Wait Until Page Does Not Contain     Numer kodu PKD działalności, której dotyczy projekt: To pole jest obowiązkowe     5s
-    Wait Until Page Does Not Contain     Opis rodzaju działalności: To pole jest obowiązkowe        1s
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację równościa szans i niedyskryminacji: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację równości szans i niedyskryminacji: To pole jest obowiązkowe     1s
-    Wait Until Page Does Not Contain     Czy produkty projektu będą dostępne dla osób z niepełnosprawnościami?: To pole jest obowiązkowe        1s
-    Wait Until Page Does Not Contain     Uzasadnienie dostępności produktów dla osób z niepełnosprawnościami: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe     1s
-    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe       1s
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady zrównoważonego rozwoju: To pole jest obowiązkowe       1s
-    Wait Until Page Does Not Contain     Obszar KIS, w który wpisuje się projekt: To pole jest wymagane     1s
-    Wait Until Page Does Not Contain     Uzasadnienie wybranego obszaru KIS, w który wpisuje się projekt: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Rodzaj działalności gospodarczej: To pole jest obowiązkowe     1s
-    Wait Until Page Does Not Contain     Klasyfikacja NABS projektu: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Klasyfikacja OECD projektu: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Typ obszaru realizacji: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Wpływ projektu na realizację zasady 4R: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Uzasadnienie wpływu projektu na realizację zasady 4R: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Opis prac badawczo-rozwojowych będących przedmiotem wdrożenia: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Zakres prac badawczo-rozwojowych zrealizowanych samodzielnie przez wnioskodawcę: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Zakres prac badawczo-rozwojowych zrealizowanych na zlecenie wnioskodawcy: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Podstawy prawne do korzystania z wyników prac badawczo-rozwojowych będących przedmiotem wdrożenia: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wynalazku: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wynalazku - objętego ochroną patentową: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wynalazku - zgłoszonego do ochrony patentowej: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wynalazku - objętego lub zgłoszonego do ochrony w procedurze krajowej: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wynalazku - objętego lub zgłoszonego do ochrony w procedurze zagranicznej: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wzoru użytkowego: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wzoru użytkowego - objętego ochroną: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wzoru użytkowego - zgłoszonego do ochrony: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wzoru użytkowego - objętego lub zgłoszonego do ochrony w procedurze krajowej: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Projekt dotyczy wzoru użytkowego - objętego lub zgłoszonego do ochrony w procedurze zagranicznej: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Opis produktu będącego rezultatem projektu wraz ze wskazaniem zakresu i znaczenia wyników prac badawczo-rozwojowych dla opracowania tego produktu. Innowacyjność produktu wdrażanego w oparciu o wyniki prac badawczo-rozwojowych: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Wpływ projektu na dalszy rozwój branży i rynku: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Harmonogram wdrożenia nowego produktu: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Ryzyko technologiczne: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Ryzyko biznesowe: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Ryzyko finansowe: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Ryzyko administracyjne: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Inne ryzyka: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Nieruchomości: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Maszyny i urządzenia: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Zasoby ludzkie: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Inne zasoby: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Rynek docelowy: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Zapotrzebowanie rynkowe na produkt: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Dystrybucja i sprzedaż produktu: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Promocja produktu: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Znaczenie nowych cech i funkcjonalności dla odbiorców produktu: To pole jest obowiązkowe      1s
-    Wait Until Page Does Not Contain     Wnioskodawca jest członkiem klastra posiadającego status Krajowego Klastra Kluczowego: To pole jest obowiązkowe      1s
+    Na stronie nie powinno byc     Numer kodu PKD działalności, której dotyczy projekt: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Opis rodzaju działalności: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wpływ projektu na realizację równościa szans i niedyskryminacji: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Uzasadnienie wpływu projektu na realizację równości szans i niedyskryminacji: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Czy produkty projektu będą dostępne dla osób z niepełnosprawnościami?: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Uzasadnienie dostępności produktów dla osób z niepełnosprawnościami: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wpływ projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Uzasadnienie wpływu projektu na realizację zasady równości szans kobiet i mężczyzn: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wpływ projektu na realizację zasady zrównoważonego rozwoju: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Obszar KIS, w który wpisuje się projekt: To pole jest wymagane
+    Na stronie nie powinno byc     Uzasadnienie wybranego obszaru KIS, w który wpisuje się projekt: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Rodzaj działalności gospodarczej: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Klasyfikacja NABS projektu: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Klasyfikacja OECD projektu: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Typ obszaru realizacji: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wpływ projektu na realizację zasady 4R: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Uzasadnienie wpływu projektu na realizację zasady 4R: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Opis prac badawczo-rozwojowych będących przedmiotem wdrożenia: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Zakres prac badawczo-rozwojowych zrealizowanych samodzielnie przez wnioskodawcę: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Zakres prac badawczo-rozwojowych zrealizowanych na zlecenie wnioskodawcy: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Podstawy prawne do korzystania z wyników prac badawczo-rozwojowych będących przedmiotem wdrożenia: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wynalazku: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wynalazku - objętego ochroną patentową: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wynalazku - zgłoszonego do ochrony patentowej: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wynalazku - objętego lub zgłoszonego do ochrony w procedurze krajowej: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wynalazku - objętego lub zgłoszonego do ochrony w procedurze zagranicznej: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wzoru użytkowego: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wzoru użytkowego - objętego ochroną: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wzoru użytkowego - zgłoszonego do ochrony: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wzoru użytkowego - objętego lub zgłoszonego do ochrony w procedurze krajowej: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Projekt dotyczy wzoru użytkowego - objętego lub zgłoszonego do ochrony w procedurze zagranicznej: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Opis produktu będącego rezultatem projektu wraz ze wskazaniem zakresu i znaczenia wyników prac badawczo-rozwojowych dla opracowania tego produktu. Innowacyjność produktu wdrażanego w oparciu o wyniki prac badawczo-rozwojowych: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wpływ projektu na dalszy rozwój branży i rynku: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Harmonogram wdrożenia nowego produktu: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Ryzyko technologiczne: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Ryzyko biznesowe: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Ryzyko finansowe: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Ryzyko administracyjne: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Inne ryzyka: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Nieruchomości: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Maszyny i urządzenia: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Zasoby ludzkie: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Inne zasoby: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Rynek docelowy: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Zapotrzebowanie rynkowe na produkt: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Dystrybucja i sprzedaż produktu: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Promocja produktu: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Znaczenie nowych cech i funkcjonalności dla odbiorców produktu: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Wnioskodawca jest członkiem klastra posiadającego status Krajowego Klastra Kluczowego: To pole jest obowiązkowe
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -416,7 +416,7 @@ Miejsce realizacji projektu dane poprawne
     wait until element does not contain    xpath=//tr[63]/td/a       Gmina: To pole jest obowiązkowe       1
     wait until element does not contain    xpath=//tr[64]/td/a       Podregion (NUTS 3): To pole jest obowiązkowe        1
     wait until element does not contain    xpath=//tr[65]/td/a       Główna lokalizacja projektu musi być wybrana       1
-    Wait Until Page Does Not Contain     Tytuł prawny do nieruchomości, w której projekt będzie zlokalizowany: To pole jest wymagane       1
+    Na stronie nie powinno byc     Tytuł prawny do nieruchomości, w której projekt będzie zlokalizowany: To pole jest wymagane
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -455,27 +455,26 @@ Wskaźniki dane poprawne
     press key  ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaPole}       test
     Zapisz Wniosek
     Waliduj wniosek
-    wait until page does not contain    Wskaźnik "lsi1420-0005 Liczba nabytych lub wytworzonych w ramach projektu środków trwałych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe     5
-    wait until page does not contain    Wskaźnik "lsi1420-0007 Liczba nabytych w ramach projektu wartości niematerialnych i prawnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.     1
-    wait until page does not contain    Wskaźnik "lsi1420-0006 Liczba nabytych w ramach projektu usług doradczych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
-    wait until page does not contain    Wskaźnik "WLWK-161 Wzrost zatrudnienia we wspieranych przedsiębiorstwach O/K/M [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
-    wait until page does not contain    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Wartość docelowa wskaźnika jest za mała.     1
-    wait until page does not contain    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
-    wait until page does not contain    Wskaźnik "WLWK-181 Przychody ze sprzedaży nowych lub udoskonalonych produktów/procesów [zł]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.        1
-    wait until page does not contain    Wskaźnik "lsi1420-0003 Liczba wprowadzonych innowacji [szt.]". Wartość docelowa wskaźnika jest za mała.     1
-    wait until page does not contain    Rok docelowy wskaźnika jest za mały: lsi1420-0003 Liczba wprowadzonych innowacji [szt.].        1
-    wait until page does not contain    Rok docelowy wskaźnika jest za duży: lsi1420-0003 Liczba wprowadzonych innowacji [szt.].        1
-    wait until page does not contain    Wskaźnik "lsi1420-0009 Liczba wprowadzonych innowacji marketingowych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
-    wait until page does not contain    Wskaźnik "lsi1420-0008 Liczba wprowadzonych innowacji organizacyjnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
-    wait until page does not contain    Wskaźnik "WLWK-179 Liczba wprowadzonych innowacji procesowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
-    wait until page does not contain    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Wartość docelowa wskaźnika jest za mała.        1
-    wait until page does not contain    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.      1
-    wait until page does not contain    Wskaźnik "lsi1420-0010 Liczba wprowadzonych ekoinnowacji". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
-    wait until page does not contain    Wskaźnik "WLWK-793 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - kobiety [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.       1
-    wait until page does not contain    Wskaźnik "WLWK-794 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - mężczyźni [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.     1
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0005 Liczba nabytych lub wytworzonych w ramach projektu środków trwałych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0007 Liczba nabytych w ramach projektu wartości niematerialnych i prawnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0006 Liczba nabytych w ramach projektu usług doradczych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-161 Wzrost zatrudnienia we wspieranych przedsiębiorstwach O/K/M [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Wartość docelowa wskaźnika jest za mała.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-101 Liczba wdrożonych wyników prac B+R [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-181 Przychody ze sprzedaży nowych lub udoskonalonych produktów/procesów [zł]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0003 Liczba wprowadzonych innowacji [szt.]". Wartość docelowa wskaźnika jest za mała.
+    Na stronie nie powinno byc    Rok docelowy wskaźnika jest za mały: lsi1420-0003 Liczba wprowadzonych innowacji [szt.].
+    Na stronie nie powinno byc    Rok docelowy wskaźnika jest za duży: lsi1420-0003 Liczba wprowadzonych innowacji [szt.].
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0009 Liczba wprowadzonych innowacji marketingowych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0008 Liczba wprowadzonych innowacji organizacyjnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-179 Liczba wprowadzonych innowacji procesowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Wartość docelowa wskaźnika jest za mała.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-178 Liczba wprowadzonych innowacji produktowych [szt.]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "lsi1420-0010 Liczba wprowadzonych ekoinnowacji". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-793 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - kobiety [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
+    Na stronie nie powinno byc    Wskaźnik "WLWK-794 Wzrost zatrudnienia we wspieranych przedsiębiorstwach - mężczyźni [EPC]". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
     Usun Wniosek    ${IDwniosku}
     close browser
-
 
 
 Harmonogram rzeczowo finansowy dane poprawne
@@ -504,9 +503,9 @@ Harmonogram rzeczowo finansowy dane poprawne
     Zapisz Wniosek
     element should contain  ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaPole}    10.00
     Waliduj wniosek
-    Wait Until Page Does Not Contain     Proszę wpisać zadania.     5
-    Wait Until Page Does Not Contain     Proszę wpisać wydatki rzeczywiście ponoszone.      1
-    wait until page does not contain     Całkowite wydatki kwalifikowalne nie mogą być mniejsze niż 5 000 000,00 PLN (wpisano 0,00 PLN).        1
+    Na stronie nie powinno byc     Proszę wpisać zadania.
+    Na stronie nie powinno byc     Proszę wpisać wydatki rzeczywiście ponoszone.
+    Na stronie nie powinno byc     Całkowite wydatki kwalifikowalne nie mogą być mniejsze niż 5 000 000,00 PLN (wpisano 0,00 PLN).
     wait until page contains    'Raty spłaty kapitału środków trwałych innych niż nieruchomości': koszty kwalifikowalne zakupu nieruchomości mogą stanowić maksymalnie 10% kosztów kwalifikowalnych ogółem (aktualnie wynoszą 100%).
     Usun Wniosek    ${IDwniosku}
     close browser
@@ -530,8 +529,8 @@ Otrzymana pomoc oraz powiązanie projektu dane poprawne
     click javascript id  ${OtrzymanaPomocIPowiazanieProjektuRokObrotowyJestRokiemKalendarzowymTakRadio}
     Zapisz Wniosek
     Waliduj wniosek
-    Wait Until Page Does Not Contain     Pomoc de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe     5
-    Wait Until Page Does Not Contain     Pomoc publiczna inna niż de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe      1
+    Na stronie nie powinno byc     Pomoc de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe
+    Na stronie nie powinno byc     Pomoc publiczna inna niż de minimis otrzymana w odniesieniu do tych samych wydatków kwalifikowalnych związanych z projektem, którego dotyczy wniosek: To pole jest obowiązkowe
     Usun Wniosek    ${IDwniosku}
     close browser
 
@@ -548,8 +547,8 @@ Otrzymana pomoc oraz powiązanie projektu dane poprawne
     wait until element contains  ${WykazZrodelFinansowaniaWydatkowOgolemSumaPole}   9 000 000.00
     wait until element contains  ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaPole}   9 000 000.00
     Waliduj wniosek
-    wait until page does not contain  Suma wydatków ogółem: Musi być większe od 0
-    wait until page does not contain  Suma wydatków kwalifikowalnych: Musi być większe od 0
+    Na stronie nie powinno byc  Suma wydatków ogółem: Musi być większe od 0
+    Na stronie nie powinno byc  Suma wydatków kwalifikowalnych: Musi być większe od 0
     wait until page contains  Suma wydatków ogółem z części "Źródła finansowania wydatków" (wpisano 9 000 000,00 PLN) powinna być równa sumie wydatków ogółem z części "Zestawienie finansowe ogółem" (wpisano 0,00 PLN).
     wait until page contains  Suma wydatków kwalifikowalnych z części "Źródła finansowania wydatków" (wpisano 9 000 000,00 PLN) powinna być równa sumie wydatków kwalifikowalnych z części "Zestawienie finansowe ogółem" (wpisano 0,00 PLN).
     wait until page contains  Wartość środków prywatnych ogółem (wpisano 9 000 000,00 PLN) powinna równać się różnicy kwoty całkowitych wydatków ogółem dla projektu i kwoty wnioskowanego dofinansowania (0,00 - 0,00 = 0,00 PLN).

@@ -2,7 +2,7 @@
 
 Library           ../Funkcje/page.py
 Library           String
-Library           XvfbRobot
+#Library           XvfbRobot        #Odznaczyć w przypadku użycia przeglądarki headless na systemie linux
 Library           Collections
 Library           Dialogs
 Library           DateTime
@@ -42,8 +42,6 @@ Zmienne Srodowiskowe Dla IE
     ...    W ustawieniach, w karcie Zabezpieczenia trzeba włączyć (albo wyłączyć) tryb chroniony dla wszystkich stref:
     ...    http://www.abodeqa.com/2013/05/25/unexpected-error-launching-internet-explorer-protected-mode-must-be-set-to-the-same-value/
     Set Environment Variable    webdriver.ie.driver    ${LocalIEDriver}
-#    ${caps}=    Evaluate    sys.modules['selenium.webdriver'].DesiredCapabilities.INTERNETEXPLORER    sys,selenium.webdriver
-#    Open Browser    ${HOMEPAGE}    ${BROWSER}  desired_capabilities=${caps}
 
 Otworz Przegladarke Na Stronie Logowania Default
     Open Browser    ${HOMEPAGE}    ${BROWSER}
@@ -122,11 +120,14 @@ Zaloguj na konto email
     Click2  ${MailHasloPole}
 
 Sprawdz czy pierwszy email jest z PARP
+    press key   ${WyszukiwarkaPole}     LSI1420
+    click2      ${WyszukiwarkaPole}
     wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Odzyskiwanie hasła
 
 Kliknij link z emaila
     [Documentation]     Wchodzi na pierwszy mail na koncie o2.pl a nastepnie przechodzi na strone odzyskiwania hasla podana w mailu
     Click Javascript Xpath   ${PierwszyMailTytułPole}
+    wait until element is visible       link=tym odnośnikiem
     ${url}=  get element attribute   link=tym odnośnikiem@href
     go to   ${url}
 
@@ -188,7 +189,6 @@ Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
     [Arguments]    ${AdresPola}     ${WartoscDoWpisania}
     Wyczysc Pole Data Chrome     ${AdresPola}
-#    clear element text  ${AdresPola}
     press key   ${AdresPola}   ${WartoscDoWpisania}
 
 Utworz wniosek
@@ -219,3 +219,8 @@ Wroc do strony glownej
     [Documentation]     Wraca do strony glownej ze strony tworzenia wniosku
     Click  ${BrandButton}
     wait until element contains  css=h2     Trwające nabory
+
+Na stronie nie powinno byc
+    [Arguments]    ${text}
+    ${pageSource} =  get source
+    should not contain  ${pageSource}   ${text}
