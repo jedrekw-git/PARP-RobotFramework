@@ -114,6 +114,7 @@ Podaj login i email zapomnianego konta
 Zaloguj na konto email
     [Documentation]     Przechodzi na stronę logowania konta mailowego a nastepnie loguje sie na nie (o2.pl)
     go to   ${mail-page}
+    sleep  15
     wait until element contains     ${MailHeader}      Zapamiętaj mnie
     press key  ${MailLoginPole}    ${RECOVERPASSWORDEMAIL}
     PRESS KEY  ${MailHasloPole}     ${MAIL-PAGE-PASSWORD}
@@ -188,8 +189,8 @@ Kliknij Dropdown bez pola input i wpisz wartosc
 Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
     [Arguments]    ${AdresPola}     ${WartoscDoWpisania}
-    Wyczysc Pole Data Chrome     ${AdresPola}
-    press key   ${AdresPola}   ${WartoscDoWpisania}
+    Wyczysc Pole Data     ${AdresPola}
+    input text   ${AdresPola}   ${WartoscDoWpisania}
 
 Utworz wniosek
     [Documentation]     Tworzy wniosek do użycia w testach automatycznych
@@ -202,6 +203,12 @@ Zapisz Wniosek
     Click  ${ZapiszWniosekButton}
     wait until page contains  Trwa zapis, proszę czekać...
     Czekaj Na Zakonczenie Ajax
+
+Zloz wniosek
+    [Documentation]     Składa wniosek
+    focus  ${BrandButton}
+    Click  ${ZlozWniosekButton}
+    click link      Złóż wniosek
 
 Usun Wniosek
     [Documentation]     Usuwa wniosek i sprawdza czy został usunięty

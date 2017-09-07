@@ -118,6 +118,6 @@ Wprowadz Date Chrome
 
 Sprawdz Pole Daty i Wpisz
     [Arguments]    ${Pole Id}    ${WartoscDaty}
-    Pilnuj Formatu Daty    ${Pole Id}
+#    Pilnuj Formatu Daty    ${Pole Id}
     Wyczysc Pole Data    ${Pole Id}
     Wprowadz Date    ${Pole Id}    ${WartoscDaty}

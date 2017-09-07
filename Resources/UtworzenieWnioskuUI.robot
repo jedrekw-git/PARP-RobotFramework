@@ -11,6 +11,7 @@ ${OkresRealizacjiProjektuPoczatek}    id=ogolne_projekt_okresRealizacjiProjektuP
 ${OkresRealizacjiProjektuKoniec}    id=ogolne_projekt_okresRealizacjiProjektuKoniec
 ${DodajSlowoKluczoweButon}     xpath=//div[2]/div/button
 ${ZapiszWniosekButton}     id=akcja_zapisz_wniosek
+${ZlozWniosekButton}     id=akcja_zloz_wniosek
 ${WalidujWniosekButton}     link=Sprawdź poprawność
 ${WyjdzZWalidacji}      link=Planowany termin rozpoczęcia realizacji projektu nie może być wcześniejszy niż dzień następny po dniu złożenia wniosku w generatorze.
 ${AdresPolaInput}     xpath=//span/input
