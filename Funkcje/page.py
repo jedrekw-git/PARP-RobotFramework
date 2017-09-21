@@ -19,19 +19,40 @@ class page(ExtendedSelenium2Library):
     def get_random_string(self, length=8):
         return rstr.rstr("abcdefghijklmnoprstuwxyz", length)
 
+    def get_random_string_1_char(self):
+        return self.get_random_string(1)
+
     def get_random_string_big_letters(self, length=8):
         return rstr.rstr("ABCDEFGHIJKLMNOPRSTUWXYZ", length)
 
     def get_random_password(self):
         return str(self.get_random_integer(2)+self.get_random_string(4)+self.get_random_string_big_letters(4)+"$")
 
-    def get_random_password_1_char_long(self):
-        return str(self.get_random_integer(1))
-
     def get_random_integer(self, length=6):
         range_start = 10**(length-1)
         range_end = (10**length)-1
         return str(randint(range_start, range_end))
+
+    def get_random_integer_1_char(self):
+        return str(self.get_random_integer(1))
+
+    def get_random_integer_8_chars(self):
+        return str(self.get_random_integer(8))
+
+    def get_random_integer_10_chars(self):
+        return self.get_random_integer(10)
+
+    def get_random_integer_devided(self):
+        return self.get_random_integer(1)+"/"+self.get_random_integer(1)
+
+    def get_random_floating_point(self, length=2):
+        return self.get_random_integer(length)+"."+self.get_random_integer(2)
+
+    def get_random_floating_point_milions(self):
+        return self.get_random_floating_point(8)
+
+    def get_random_floating_point_milion(self):
+        return self.get_random_floating_point(7)
 
     def get_random_pesel(self):
         a = randint(0, 9)
@@ -83,3 +104,12 @@ class page(ExtendedSelenium2Library):
     def get_todays_date(self):
         _today = datetime.date.today()
         return _today.strftime('%Y-%m-%d')
+
+    def get_random_date(self):
+        y = randint(2000, 2016)
+        m = randint(1, 12)
+        d = randint(1, 29)
+        return y+"-"+m+"-"+d
+
+    def get_random_postal_code(self):
+        return randint(10-99)+"-"+randint(100-999)

@@ -7,6 +7,8 @@ Library           Collections
 Library           Dialogs
 Library           DateTime
 Library           OperatingSystem
+Library           FakerLibrary
+Library             Random
 Resource        ../Resources/DashboardUI.robot
 Resource        ../Resources/DaneDoLogowania.robot
 Resource        ../Resources/LogowanieUI.robot
@@ -116,20 +118,35 @@ Zaloguj na konto email
     go to   ${mail-page}
     sleep  15
     wait until element contains     ${MailHeader}      Zapamiętaj mnie
-    press key  ${MailLoginPole}    ${RECOVERPASSWORDEMAIL}
+    press key  ${MailLoginPole}    ${email}
     PRESS KEY  ${MailHasloPole}     ${MAIL-PAGE-PASSWORD}
     Click2  ${MailHasloPole}
 
-Sprawdz czy pierwszy email jest z PARP
+Wyszukaj w skrzynce mailowej LSI1420
+    [Documentation]     Wyszukuje w skrzynce mailowej o2 maile z PARP
     press key   ${WyszukiwarkaPole}     LSI1420
     click2      ${WyszukiwarkaPole}
+
+Sprawdz czy pierwszy email jest z PARP i dotyczy odzyskania hasła
+    Wyszukaj w skrzynce mailowej LSI1420
     wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Odzyskiwanie hasła
 
-Kliknij link z emaila
+Sprawdz czy pierwszy email jest z PARP i dotyczy nowego konta
+    Wyszukaj w skrzynce mailowej LSI1420
+    wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Nowe konto
+
+Kliknij link z emaila dotyczący odzyskania hasła
     [Documentation]     Wchodzi na pierwszy mail na koncie o2.pl a nastepnie przechodzi na strone odzyskiwania hasla podana w mailu
     Click Javascript Xpath   ${PierwszyMailTytułPole}
     wait until element is visible       link=tym odnośnikiem
     ${url}=  get element attribute   link=tym odnośnikiem@href
+    go to   ${url}
+
+Kliknij link z emaila dotyczący nowego konta
+    [Documentation]     Wchodzi na pierwszy mail na koncie o2.pl a nastepnie przechodzi na strone odzyskiwania hasla podana w mailu
+    Click Javascript Xpath   ${PierwszyMailTytułPole}
+    wait until element is visible       ${LinkZMailaDoAktywacjiNowegoKonta}
+    ${url}=  get element attribute   ${LinkZMailaDoAktywacjiNowegoKonta}@href
     go to   ${url}
 
 Podaj nowe hasło
@@ -170,21 +187,35 @@ Czekaj Na Zakonczenie Ajax
     \    Log    ${IsAjaxComplete}
     \    Run Keyword If    ${IsAjaxComplete}==True    Exit For Loop
 
-Kliknij Dropdown i wpisz wartosc
-    [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
-    [Arguments]    ${AdresDropdowna}      ${WartoscDoWpisania}
-    click  ${AdresDropdowna}
+Kliknij Dropdown i wybierz losową opcję
+    [Documentation]     Klika na dropdown, tworzy adres containera results, pobiera liczbę elementów, klika losowy element i pobiera jego wartość
+    [Arguments]    ${AdresDropdowna}
+    Click    ${AdresDropdowna}
     Czekaj Na Zakonczenie Ajax
-    press key   ${AdresPolaInput}  ${WartoscDoWpisania}
-    Press Key   ${AdresPolaInput}  \\13      # ASCII code dla Enter
+    ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
+    ${AdresDropdownaBezId}   ${last} =  Split String From Right  ${AdresDropdownaBezId}  -  1
+    ${Lista XPath}      Catenate    SEPARATOR=  ${AdresDropdownaBezId}-results
+    ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='    ${Lista XPath}    ']/li
+    ${LiczbaElementow}    get matching xpath count   ${Lista XPath}
+    ${LosowyIndexElementu} =    Evaluate    random.sample(range(2, ${LiczbaElementow}), 1)    random
+    ${TekstWybranegoElementu} =   Get Text      xpath=(${Lista XPath})${LosowyIndexElementu}
+    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
+    Click    ${Lista XPath}
+    [Return]    ${TekstWybranegoElementu}
 
-Kliknij Dropdown bez pola input i wpisz wartosc
+Kliknij Dropdown bez pola input i wybierz losową opcję
     [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
-    [Arguments]    ${AdresDropdowna}      ${WartoscDoWpisania}
+    [Arguments]    ${AdresDropdowna}
     click  ${AdresDropdowna}
     Czekaj Na Zakonczenie Ajax
-    press key   ${AdresDropdowna}  ${WartoscDoWpisania}
-    Press Key   ${AdresDropdowna}  \\13      # ASCII code dla Enter
+    ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
+    ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='${AdresDropdownaBezId}']/option
+    ${LiczbaElementow}    get matching xpath count   ${Lista XPath}
+    ${LosowyIndexElementu} =    Evaluate    random.sample(range(1, ${LiczbaElementow}), 1)    random
+    ${TekstWybranegoElementu} =   Get Text      xpath=(${Lista XPath})${LosowyIndexElementu}
+    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
+    Click    ${Lista XPath}
+    [Return]    ${TekstWybranegoElementu}
 
 Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
@@ -212,8 +243,7 @@ Zloz wniosek
 
 Usun Wniosek
     [Documentation]     Usuwa wniosek i sprawdza czy został usunięty
-    [Arguments]    ${ID}
-    go to  ${homepage}wniosek/usun/${ID}
+    click  ${PierwszyWniosekUsunButton}
     Click  ${PierwszyWniosekUsunPotwierdzButton}
     wait until page contains  Pomyślnie usunięto wniosek
 
@@ -228,6 +258,64 @@ Wroc do strony glownej
     wait until element contains  css=h2     Trwające nabory
 
 Na stronie nie powinno byc
+    [Documentation]     Sprawdza czy na stronie nie ma określonego teksu
     [Arguments]    ${text}
     ${pageSource} =  get source
     should not contain  ${pageSource}   ${text}
+
+Select2 Pobierz Liste Elementow
+    [Arguments]    ${Lista Id}
+    [Documentation]    Pobiera liste elementów z listy rozwijanej stworzonej za pomocą Select2. Zwraca liczbę elementów i liste elementów
+    ...    Krok 1: Kliknij listę o wskazanym id
+    ...    Krok 2: Czekaj na zakończenie działań JavaScript
+    ...    Krok 3: Zamień container na results - to wynika z miejsca, gdzie Select2 przechowuje dane
+    ...    Krok 4: Odetnij od id listy "id="
+    ...    Krok 5: Stwórz XPath dla elementów li zawierających elementy listy
+    ...    Krok 6: Sprawdź ile jest elemetów listy
+    ...    Krok 7: Stwórz zmienną na listę
+    ...    Krok 8.1: Pobierz tekst z kolejnych elemetów li
+    ...    Krok 8.2: Dodaj element do listy, jezeli jest różny od "No results found"
+    ...    Krok 11: Sprawdz ile jest elementów listy po odjęciu "No results found"
+    Click    ${Lista Id}
+    Czekaj Na Zakonczenie Ajax
+    ${Lista XPath}    Replace String    ${Lista Id}    container    results
+    ${Lista XPath}    Fetch From Right    ${Lista XPath}    =
+    ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='    ${Lista XPath}    ']/li
+    ${LiczbaElementow}    Get Matching Xpath Count    ${Lista XPath}
+    ${ListaElementow}    Create List
+    : FOR    ${i}    IN RANGE    1    ${LiczbaElementow} + 1
+    \    ${ElementLabel}    Get Text    xpath=(${Lista XPath})[${i}]
+    \    Run Keyword If    '${ElementLabel}'!='No results found'    Append To List    ${ListaElementow}    ${ElementLabel}
+    ${LiczbaElementow}    Get Length    ${ListaElementow}
+    [Return]    ${LiczbaElementow}    ${ListaElementow}
+
+Select2 Wybierz Element
+    [Arguments]    ${Lista Id}    ${NumerKolejnyElementu}
+    [Documentation]    Wybiera wskazany element z listy Select2
+    ...    Krok 1: Zamień container na results - to wynika z miejsca, gdzie Select2 przechowuje dane
+    ...    Krok 2: Odetnij od id listy "id="
+    ...    Krok 3: Stwórz XPath dla wskazanego li zawierającego element listy
+    ...    Krok 4: Kliknij wskazany element listy
+    ${Lista XPath}    Replace String    ${Lista Id}    container    results
+    ${Lista XPath}    Fetch From Right    ${Lista XPath}    =
+    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(//*[@id='    ${Lista XPath}    ']/li)[    ${NumerKolejnyElementu}
+    ...    ]
+    Click Element    ${Lista XPath}
+
+Select2 Wybrany Element Wartosc
+    [Arguments]    ${Lista Id}
+    [Documentation]    Zwraca wartość wybranego elementu ze wskazanej listy
+    ...    Krok 1: Pobierz tekst z wybranego elementu
+    ...    Krok 2: Pobierz ostatnią linię z tekstu wylosowanego elementu
+    ...    Krok 3: Dla IE usuń pierwszy znak, bo dla IE piwrwszy znak to krzyżyk
+    ${WybranyElement}    Get Text    ${Lista Id}
+    ${WybranyElement}    Get Line    ${WybranyElement}    -1
+    ${WybranyElement}    Run Keyword If    '${BROWSER}'=='ie'    Get Substring    ${WybranyElement}    1
+    ...    ELSE    Set Variable    ${WybranyElement}
+    [Return]    ${WybranyElement}
+
+Podziel liczby i zwróć wynik procentowy
+    [Arguments]    ${1}     ${2}
+    ${Wynik} =  Evaluate  (${1}/${2})*100%
+    [Return]    ${Wynik}
+

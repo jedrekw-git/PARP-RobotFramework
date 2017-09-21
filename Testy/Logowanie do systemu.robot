@@ -22,8 +22,8 @@ Logowanie dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-6
     Otworz strone startowa
     Zaloguj sie
-    wait until element contains  ${BrandButton}     Lokalny System Informatyczny
-    wait until element contains  xpath=//h2     Trwające nabory
+    wait until element contains  ${BrandButton}     Lokalny System Informatyczny        15
+    wait until element contains  xpath=//h2     Trwające nabory     15
     close browser
 
 Logowanie niepoprawne hasło
@@ -50,10 +50,10 @@ Wylogowanie
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-9
     Otworz strone startowa
     Zaloguj sie
-    wait until element contains  ${BrandButton}     Lokalny System Informatyczny
+    wait until element contains  ${BrandButton}     Lokalny System Informatyczny        15
     Click  ${WiecejOpcjiButton}
     Click  ${LogoutButton}
-    wait until element contains  ${LoginLabel}  Nazwa użytkownika:
+    wait until element contains  ${LoginLabel}  Nazwa użytkownika:      15
     close browser
 
 Logowanie na nieaktywowane konto
@@ -70,15 +70,15 @@ Zapomniane hasło dane poprawne
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-11
     Otworz strone startowa
     Click  ${ZapomnianeHasloButton}
-    Podaj login i email zapomnianego konta  ${recoverpasswordlogin}     ${recoverpasswordemail}
+    Podaj login i email zapomnianego konta  ${recoverpasswordlogin}     ${email}
     page should contain  Wysłano powiadomienie z kodem do odzyskania hasła.
     Zaloguj na konto email
-    Sprawdz czy pierwszy email jest z PARP
-    Kliknij link z emaila
-    wait until page contains  Zapamiętaj nowe hasło.
+    Sprawdz czy pierwszy email jest z PARP i dotyczy odzyskania hasła
+    Kliknij link z emaila dotyczący odzyskania hasła
+    wait until page contains  Zapamiętaj nowe hasło.        15
     ${NewPassword} =  get random password
     Podaj nowe hasło    ${NewPassword}
-    wait until page contains    Nowe hasło zostało zapamiętane.
+    wait until page contains    Nowe hasło zostało zapamiętane.     15
     Zaloguj sie uzywajac  ${recoverpasswordlogin}   ${NewPassword}
     element text should be  xpath=//h1     Lokalny System Informatyczny
     close browser

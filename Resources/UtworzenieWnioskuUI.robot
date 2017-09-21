@@ -7,6 +7,7 @@ ${CelProjektuPole}     id=ogolne_projekt_celProjektu
 ${PierwszeSlowoKluczowePole}  id=ogolne_projekt_slowaKluczowe_0_nazwa
 ${DziedzinaProjektuPole}  xpath=//form[@id='formularz_ogolne_projekt']/table/tbody/tr[11]/td[2]/span/span/span/ul
 ${DziedzinaProjektuInput}  xpath=//li/input
+${DziedzinaProjektuDropdown}    id=ogolne_projekt_dziedzinyProjektu
 ${OkresRealizacjiProjektuPoczatek}    id=ogolne_projekt_okresRealizacjiProjektuPoczatek
 ${OkresRealizacjiProjektuKoniec}    id=ogolne_projekt_okresRealizacjiProjektuKoniec
 ${DodajSlowoKluczoweButon}     xpath=//div[2]/div/button
@@ -199,7 +200,7 @@ ${DodajWydatekRzeczywisciePonoszonyButton}     xpath=//div[4]/button
 ${ZakresRzeczowoFinansowyWydatkiZadanieDropdown}    id=zakres_rzeczowo_finansowy_wydatki_0_zadanie
 ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowDropdown}   id=zakres_rzeczowo_finansowy_wydatki_0_kategoriaKosztow
 ${ZakresRzeczowoFinansowyWydatkiNazwaKosztuPole}     id=zakres_rzeczowo_finansowy_wydatki_0_nazwaKosztu
-${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategorii}        id=zakres_rzeczowo_finansowy_wydatki_0_opisKosztuWDanejPodkategorii
+${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategoriiPole}        id=zakres_rzeczowo_finansowy_wydatki_0_opisKosztuWDanejPodkategorii
 ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemPole}    id=zakres_rzeczowo_finansowy_wydatki_0_wartoscOgolem_tbbc_amount
 ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowanePole}  id=zakres_rzeczowo_finansowy_wydatki_0_wydatkiKwalifikowalne_tbbc_amount
 ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatPole}   id=zakres_rzeczowo_finansowy_wydatki_0_wydatkiKwalifikowalneVat_tbbc_amount

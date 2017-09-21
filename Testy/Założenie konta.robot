@@ -18,13 +18,17 @@ Rejestracja dane poprawne
     ${randompesel}=    get random pesel
     Press Key  ${PeselPole}  ${randompesel}
     ${randomemail}=    get random email
-    Press Key   ${EmailPole}    ${randomemail}
+    Press Key   ${EmailPole}    ${email}
     ${randomstring3}=    get random password
     Press Key  ${Haslo1Pole}  ${randomstring3}
     Press Key  ${Haslo2Pole}  ${randomstring3}
     Rejestracja Uzytkownika Zaznacz Checkboxy
     Click  ${ZapiszUzytkownikaButton}
     page should contain  zostało założone. Proszę odebrać wiadomość e-mail z linkiem aktywacyjnym.
+    Zaloguj na konto email
+    Sprawdz czy pierwszy email jest z PARP i dotyczy nowego konta
+    Kliknij link z emaila dotyczący nowego konta
+    wait until page contains    Aktywowano konto.       10
     Close Browser
 
 Rejestracja brak zaznaczonych obowiązkowych checkboxs
@@ -80,7 +84,7 @@ Rejestracja niewalidowane haslo
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-4
     Otworz strone startowa
     Click   ${RejestracjaUzytkownikaButton}
-    ${randompassword1}=    get random password 1 char long
+    ${randompassword1}=    get random integer 1 char
     Press Key  ${Haslo1Pole}  ${randompassword1}
     Press Key  ${Haslo2Pole}  ${randompassword1}
     Click  ${ZapiszUzytkownikaButton}
