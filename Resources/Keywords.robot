@@ -71,6 +71,7 @@ Click Javascript Xpath
     ${lokatorBezXpath}     Fetch From Right    ${xpath}    =
     Execute JavaScript  document.evaluate("${lokatorBezXpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();
 
+
 Click Javascript Id
     [Arguments]    ${id}
     [Documentation]    Klika element przy uzyciu javascript i wykorzystujac lokator id
@@ -92,6 +93,15 @@ Focus Javascript Xpath
     [Documentation]    Scrolluje do elementu przy uzyciu javascript i wykorzystujac lokator xpath
     ${lokatorBezXpath}     Fetch From Right    ${xpath}    =
     Execute Javascript  document.evaluate("${lokatorBezXpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).scrollIntoView(false);
+
+Focus Javascript Id
+    [Arguments]    ${id}
+    [Documentation]    Klika element przy uzyciu javascript i wykorzystujac lokator id
+    ${lokatorBezId}     Fetch From Right    ${id}    =
+    Execute JavaScript  document.getElementById('${lokatorBezId}').scrollIntoView(false);
+
+Skroluj o kawalek ekranu
+    execute javascript  window.scrollBy(250,350);
 
 Zaloguj sie
     [Documentation]     Loguje sie uzywajac zmiennych {login} i {password}
@@ -167,6 +177,8 @@ Filtruj Wnioski Po ID
     [Arguments]    ${ID}
     press key  ${FiltrowanieWnioskowIDPole}     ${ID}
     Click   ${FiltrowanieWnioskowSubmitButton}
+    wait until keyword succeeds  20    1    wait until element contains  ${PierwszyWniosekIDPole}   ${ID}       10
+
 
 Rejestracja Uzytkownika Zaznacz Checkboxy
     [Documentation]     Przy rejestracji użytkownika zaznacza wszystkie checkboxy
@@ -190,32 +202,63 @@ Czekaj Na Zakonczenie Ajax
 Kliknij Dropdown i wybierz losową opcję
     [Documentation]     Klika na dropdown, tworzy adres containera results, pobiera liczbę elementów, klika losowy element i pobiera jego wartość
     [Arguments]    ${AdresDropdowna}
-    Click    ${AdresDropdowna}
-    Czekaj Na Zakonczenie Ajax
     ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
     ${AdresDropdownaBezId}   ${last} =  Split String From Right  ${AdresDropdownaBezId}  -  1
     ${Lista XPath}      Catenate    SEPARATOR=  ${AdresDropdownaBezId}-results
     ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='    ${Lista XPath}    ']/li
+    Focus Javascript Id   ${AdresDropdowna}
+    Skroluj o kawalek ekranu
+    Click    ${AdresDropdowna}
+    Czekaj Na Zakonczenie Ajax
+    wait until element is visible   ${Lista XPath}
     ${LiczbaElementow}    get matching xpath count   ${Lista XPath}
-    ${LosowyIndexElementu} =    Evaluate    random.sample(range(2, ${LiczbaElementow}), 1)    random
+    :FOR    ${i}    IN RANGE    1
+    \   ${LosowyIndexElementu} =    run keyword if  ${LiczbaElementow}==0   set variable  ${Empty}
+    \   run keyword if  ${LiczbaElementow}==0   exit for loop
+    \   ${LosowyIndexElementu} =    run keyword if  ${LiczbaElementow}==1   set variable  [1]
+    \   run keyword if  ${LiczbaElementow}==1   exit for loop
+    \   ${LosowyIndexElementu} =    get random integer in range 2 x        ${LiczbaElementow}
     ${TekstWybranegoElementu} =   Get Text      xpath=(${Lista XPath})${LosowyIndexElementu}
-    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
-    Click    ${Lista XPath}
+    press key  xpath=//span/input   ${TekstWybranegoElementu}
+    press key  xpath=//span/input   \\13
+#    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
+#    click  ${Lista XPath}
     [Return]    ${TekstWybranegoElementu}
 
 Kliknij Dropdown bez pola input i wybierz losową opcję
     [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
     [Arguments]    ${AdresDropdowna}
-    click  ${AdresDropdowna}
+    click javascript id  ${AdresDropdowna}
     Czekaj Na Zakonczenie Ajax
     ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
     ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='${AdresDropdownaBezId}']/option
     ${LiczbaElementow}    get matching xpath count   ${Lista XPath}
-    ${LosowyIndexElementu} =    Evaluate    random.sample(range(1, ${LiczbaElementow}), 1)    random
+    :FOR    ${i}    IN RANGE    1
+    \   ${LosowyIndexElementu} =    run keyword if  ${LiczbaElementow}==0   set variable  ${Empty}
+    \   run keyword if  ${LiczbaElementow}==0   exit for loop
+    \   ${LosowyIndexElementu} =    run keyword if  ${LiczbaElementow}==1   set variable  [1]
+    \   run keyword if  ${LiczbaElementow}==1   exit for loop
+    \   ${LosowyIndexElementu} =    get random integer in range 2 x        ${LiczbaElementow}
     ${TekstWybranegoElementu} =   Get Text      xpath=(${Lista XPath})${LosowyIndexElementu}
     ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
     Click    ${Lista XPath}
     [Return]    ${TekstWybranegoElementu}
+
+Select2 Wybierz Element
+    [Arguments]    ${Lista Id}    ${NumerKolejnyElementu}
+    [Documentation]    Wybiera wskazany element z listy Select2
+    ...    Krok 1: Zamień container na results - to wynika z miejsca, gdzie Select2 przechowuje dane
+    ...    Krok 2: Odetnij od id listy "id="
+    ...    Krok 3: Stwórz XPath dla wskazanego li zawierającego element listy
+    ...    Krok 4: Kliknij wskazany element listy
+
+    ${Lista XPath}    Replace String    ${Lista Id}    container    results
+    ${Lista XPath}    Fetch From Right    ${Lista XPath}    =
+    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(//*[@id='    ${Lista XPath}    ']/li)[    ${NumerKolejnyElementu}
+    ...    ]
+    click  ${Lista Id}
+    Czekaj Na Zakonczenie Ajax
+    Click Element    ${Lista XPath}
 
 Wpisz kod poczowy
     [Documentation]     Wpisuje do pola kod poczowy
@@ -231,9 +274,14 @@ Utworz wniosek
 Zapisz Wniosek
     [Documentation]     Zapisuje wniosek, waliduje pojawienie się popupa i czeka na zakonczenie procesu
     focus  ${BrandButton}
-    Click  ${ZapiszWniosekButton}
+    Click Javascript Id  ${ZapiszWniosekButton}
     wait until page contains  Trwa zapis, proszę czekać...
     Czekaj Na Zakonczenie Ajax
+
+Odswiez strone
+    reload page
+    ${Status} =     RUN KEYWORD AND RETURN STATUS  alert should be present
+    run keyword if  ${Status}==True      dismiss alert  True
 
 Zloz wniosek
     [Documentation]     Składa wniosek
@@ -263,59 +311,133 @@ Na stronie nie powinno byc
     ${pageSource} =  get source
     should not contain  ${pageSource}   ${text}
 
-Select2 Pobierz Liste Elementow
-    [Arguments]    ${Lista Id}
-    [Documentation]    Pobiera liste elementów z listy rozwijanej stworzonej za pomocą Select2. Zwraca liczbę elementów i liste elementów
-    ...    Krok 1: Kliknij listę o wskazanym id
-    ...    Krok 2: Czekaj na zakończenie działań JavaScript
-    ...    Krok 3: Zamień container na results - to wynika z miejsca, gdzie Select2 przechowuje dane
-    ...    Krok 4: Odetnij od id listy "id="
-    ...    Krok 5: Stwórz XPath dla elementów li zawierających elementy listy
-    ...    Krok 6: Sprawdź ile jest elemetów listy
-    ...    Krok 7: Stwórz zmienną na listę
-    ...    Krok 8.1: Pobierz tekst z kolejnych elemetów li
-    ...    Krok 8.2: Dodaj element do listy, jezeli jest różny od "No results found"
-    ...    Krok 11: Sprawdz ile jest elementów listy po odjęciu "No results found"
-    Click    ${Lista Id}
-    Czekaj Na Zakonczenie Ajax
-    ${Lista XPath}    Replace String    ${Lista Id}    container    results
-    ${Lista XPath}    Fetch From Right    ${Lista XPath}    =
-    ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='    ${Lista XPath}    ']/li
-    ${LiczbaElementow}    Get Matching Xpath Count    ${Lista XPath}
-    ${ListaElementow}    Create List
-    : FOR    ${i}    IN RANGE    1    ${LiczbaElementow} + 1
-    \    ${ElementLabel}    Get Text    xpath=(${Lista XPath})[${i}]
-    \    Run Keyword If    '${ElementLabel}'!='No results found'    Append To List    ${ListaElementow}    ${ElementLabel}
-    ${LiczbaElementow}    Get Length    ${ListaElementow}
-    [Return]    ${LiczbaElementow}    ${ListaElementow}
-
-Select2 Wybierz Element
-    [Arguments]    ${Lista Id}    ${NumerKolejnyElementu}
-    [Documentation]    Wybiera wskazany element z listy Select2
-    ...    Krok 1: Zamień container na results - to wynika z miejsca, gdzie Select2 przechowuje dane
-    ...    Krok 2: Odetnij od id listy "id="
-    ...    Krok 3: Stwórz XPath dla wskazanego li zawierającego element listy
-    ...    Krok 4: Kliknij wskazany element listy
-    ${Lista XPath}    Replace String    ${Lista Id}    container    results
-    ${Lista XPath}    Fetch From Right    ${Lista XPath}    =
-    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(//*[@id='    ${Lista XPath}    ']/li)[    ${NumerKolejnyElementu}
-    ...    ]
-    Click Element    ${Lista XPath}
-
-Select2 Wybrany Element Wartosc
-    [Arguments]    ${Lista Id}
-    [Documentation]    Zwraca wartość wybranego elementu ze wskazanej listy
-    ...    Krok 1: Pobierz tekst z wybranego elementu
-    ...    Krok 2: Pobierz ostatnią linię z tekstu wylosowanego elementu
-    ...    Krok 3: Dla IE usuń pierwszy znak, bo dla IE piwrwszy znak to krzyżyk
-    ${WybranyElement}    Get Text    ${Lista Id}
-    ${WybranyElement}    Get Line    ${WybranyElement}    -1
-    ${WybranyElement}    Run Keyword If    '${BROWSER}'=='ie'    Get Substring    ${WybranyElement}    1
-    ...    ELSE    Set Variable    ${WybranyElement}
-    [Return]    ${WybranyElement}
-
 Podziel liczby i zwróć wynik procentowy
     [Arguments]    ${1}     ${2}
-    ${Wynik} =  Evaluate  (${1}/${2})*100%
+    ${1c} =   convert to number  ${1}
+    ${2c} =   convert to number  ${2}
+    ${Wynik} =  Evaluate  (${1c}/${2c})*100
+    ${Wynik} =  convert to number  ${Wynik}     2
+    ${Wynik} =      evaluate  str(${Wynik})
+    ${PoKropce} =   fetch from right  ${Wynik}     .
+    ${PoKropce} =     Catenate   SEPARATOR=     ${PoKropce}   0
+    ${PoKropce} =     Catenate   SEPARATOR=     1   ${PoKropce}
+    ${PrzedKropka} =   fetch from left  ${Wynik}     .
+    ${Wynik} =  evaluate  str(${PrzedKropka})+"."+str(${PoKropce})[1]+str(${PoKropce})[2]
     [Return]    ${Wynik}
+
+Przekonwertuj floating point milion na string ze spacjami
+    [Arguments]    ${floating point}
+    ${floating point} =     EVALUATE  str(${floating point})
+    ${PoKropce} =   fetch from right  ${floating point}     .
+    ${PoKropce} =     Catenate   SEPARATOR=     ${PoKropce}   0
+    ${PoKropce} =     Catenate   SEPARATOR=     1   ${PoKropce}
+    ${PrzedKropka} =   fetch from left  ${floating point}     .
+    ${Miliony} =    EVALUATE  str(${PrzedKropka})[-9:-6]
+    :FOR    ${i}    IN RANGE    1
+    \   ${Wynik} =    Evaluate  str(${PrzedKropka})[-9:-6]+" "+str(${PrzedKropka})[-6:-3]+" "+str(${PrzedKropka})[-3:]+","+str(${PoKropce})[1]+str(${PoKropce})[2]
+    \   ${CzySaMiliony} =   RUN KEYWORD AND RETURN STATUS       should not be empty   ${Miliony}
+    \   exit for loop if    ${CzySaMiliony}
+    \   ${Wynik} =     Evaluate  str(${PrzedKropka})[-6:-3]+" "+str(${PrzedKropka})[-3:]+","+str(${PoKropce})[1]+str(${PoKropce})[2]
+    [Return]    ${Wynik}
+
+Przekonwertuj floating point milion na string ze spacjami i kropka
+    [Arguments]    ${floating point}
+    ${floating point} =     EVALUATE  str(${floating point})
+    ${PoKropce} =   fetch from right  ${floating point}     .
+    ${PoKropce} =     Catenate   SEPARATOR=     ${PoKropce}   0
+    ${PoKropce} =     Catenate   SEPARATOR=     1   ${PoKropce}
+    ${PrzedKropka} =   fetch from left  ${floating point}     .
+    ${Miliony} =    EVALUATE  str(${PrzedKropka})[-9:-6]
+    :FOR    ${i}    IN RANGE    1
+    \   ${Wynik} =    Evaluate  str(${PrzedKropka})[-9:-6]+" "+str(${PrzedKropka})[-6:-3]+" "+str(${PrzedKropka})[-3:]+"."+str(${PoKropce})[1]+str(${PoKropce})[2]
+    \   ${CzySaMiliony} =   RUN KEYWORD AND RETURN STATUS       should not be empty   ${Miliony}
+    \   exit for loop if    ${CzySaMiliony}
+    \   ${Wynik} =     Evaluate  str(${PrzedKropka})[-6:-3]+" "+str(${PrzedKropka})[-3:]+"."+str(${PoKropce})[1]+str(${PoKropce})[2]
+    [Return]    ${Wynik}
+
+Usuń wnioski
+    :FOR    ${i}    IN RANGE    999999
+    \    ${status} =     run keyword and return status  wait until element is visible   ${PierwszyWniosekUsunButton}
+    \    Exit For Loop If    ${status}==${False}
+    \    Usun Wniosek
+
+Przypisz wartosc do indexu xpatha
+    [Arguments]     ${i}
+    :FOR    ${a}    IN RANGE    1
+    \      ${index} =     set variable if  ${i}==0    ${EMPTY}
+    \      exit for loop if    ${i}==0
+    \      ${index} =     EVALUATE  "["+str(${i})+"]"
+    [Return]     ${index}
+
+Sprawdz czy w kolumnie znajduje się tekst
+    [Arguments]    ${AdresKolumnyZxxZamiastZmiennej}     ${IloscWierszy}      ${OczekiwanyTekst}
+    :FOR    ${i}    IN RANGE    ${IloscWierszy}
+    \    ${Index} =     Przypisz wartosc do indexu xpatha     ${i}
+    \    ${AdresZeZmienna} =    replace string      ${AdresKolumnyZxxZamiastZmiennej}    xx      ${index}
+    \    ${TekstWWierszu} =     get text  ${AdresZeZmienna}
+    \    ${TekstWWierszu} =     replace string   ${TekstWWierszu}      ${SPACE}      ${EMPTY}
+    \    ${OczekiwanyTekst} =     replace string   ${OczekiwanyTekst}      ${SPACE}      ${EMPTY}
+    \    ${Status} =    run keyword and return status  should be equal  ${TekstWWierszu}     ${OczekiwanyTekst}
+    \    Exit For Loop If    ${Status}==${True}
+    run keyword if  ${Status}==${False}  fatal error   Nie znaleziono tesktu w kolumnie
+
+Kliknij Losowe radio 0 1
+    [Arguments]    ${AdresKtoregosRadio}
+    ${AdresRadioBezId} =    fetch from right  ${AdresKtoregosRadio}     =
+    ${AdresRadioBezKoncowki} =  cut last char from string  ${AdresRadioBezId}
+    ${LosowyIndexElementu} =    get random integer 0 1
+    ${AdresRadioZKoncowka} =    catenate    SEPARATOR=    id=   ${AdresRadioBezKoncowki}       ${LosowyIndexElementu}
+    :FOR    ${a}    IN RANGE    1
+    \   ${IndexDrugiegoRadio} =     run keyword if  ${LosowyIndexElementu}==0      set variable     1
+    \   run keyword if  ${LosowyIndexElementu}==0   exit for loop
+    \   ${IndexDrugiegoRadio} =     run keyword if  ${LosowyIndexElementu}==1      set variable     0
+    ${AdresDrugiegoRadioZKoncowka} =    catenate    SEPARATOR=    id=   ${AdresRadioBezKoncowki}       ${IndexDrugiegoRadio}
+    click javascript id  ${AdresRadioZKoncowka}
+    checkbox should not be selected     ${AdresDrugiegoRadioZKoncowka}
+
+Kliknij Losowe radio 1 2
+    [Arguments]    ${AdresKtoregosRadio}
+    ${AdresRadioBezId} =    fetch from right  ${AdresKtoregosRadio}     =
+    ${AdresRadioBezKoncowki} =  cut last char from string  ${AdresRadioBezId}
+    ${LosowyIndexElementu} =    get random integer 1 2
+    ${AdresRadioZKoncowka} =    catenate    SEPARATOR=    id=   ${AdresRadioBezKoncowki}       ${LosowyIndexElementu}
+    :FOR    ${a}    IN RANGE    1
+    \   ${IndexDrugiegoRadio} =     run keyword if  ${LosowyIndexElementu}==1      set variable     2
+    \   run keyword if  ${LosowyIndexElementu}==1   exit for loop
+    \   ${IndexDrugiegoRadio} =     run keyword if  ${LosowyIndexElementu}==2      set variable     1
+    ${AdresDrugiegoRadioZKoncowka} =    catenate    SEPARATOR=    id=   ${AdresRadioBezKoncowki}       ${IndexDrugiegoRadio}
+    click javascript id  ${AdresRadioZKoncowka}
+    checkbox should not be selected     ${AdresDrugiegoRadioZKoncowka}
+
+Sprawdz Czy Wartosc Select2 Jest Rowna
+    [Arguments]    ${Pole Id}    ${WartoscDoPorownania}
+    [Documentation]    Krok 1: Pobierz tekst z wybranego elementu
+    ...    Krok 2: Pobierz ostatnią linię z tekstu wylosowanego elementu
+    ...    Krok 3: Dla IE usuń pierwszy znak, bo dla IE piwrwszy znak to krzyżyk
+    ...    Krok 4: Warunek dla pustej listy ulic w adresie, wtedy wartość aktywnego elementu to "Ulica" i trzeba to zmienić na ${EMPTY}
+    ...    Krok 5: Sprawdź, czy poprana wartość jest równa wartości do porównania.
+    ${WybranyElement}    Get Text    ${Pole Id}
+    ${WybranyElement}    Get Line    ${WybranyElement}    -1
+    ${WybranyElement}    Run Keyword If    '${BROWSER}'=='ie' and '${WybranyElement}'!='Ulica'    Get Substring    ${WybranyElement}    1
+    ...    ELSE    Set Variable    ${WybranyElement}
+    Run Keyword If    '${WybranyElement}'=='Ulica'    Set Test Variable    ${WybranyElement}    ${EMPTY}
+    Should Be Equal    ${WybranyElement}    ${WartoscDoPorownania}
+
+
+Sprawdz Czy Wartosc Select2 Bez Pola Input Jest Rowna
+    [Arguments]    ${WybranaWartoscXpath}    ${WartoscDoPorownania}
+    ${WybranyElement}    Get Text       ${WybranaWartoscXpath}
+    should contain      ${WybranyElement}       ${WartoscDoPorownania}
+
+
+Sprawdz czy wartosc elementu jest rowna
+    [Arguments]    ${AdresPola}    ${WartoscDoPorownania}
+    ${WartoscElementu} =   get value  ${AdresPola}
+    should be equal  ${WartoscElementu}     ${WartoscDoPorownania}
+
+Dodaj zalacznik
+    [Arguments]    ${adresPolaWybierz}      ${adresPolaWgraj}
+    press key     ${adresPolaWybierz}     C:${/}Downloads${/}a.doc
+    click   ${adresPolaWgraj}
+
 

@@ -1,6 +1,6 @@
 *** Variables ***
 
-${browser}       firefox    # Web browser to use for testing. Can be overriden from command line.
+${browser}       chrome   # Web browser to use for testing. Can be overriden from command line.
 ${BrowserMode}    Default    # Możliwe wartości to Default, Grid i Headless
 ${DELAY}          0
 ${LocalIEDriver}    C:${/}Downloads{/}IEDriverServer.exe    # Ścieżka do web drivera IE. Wymagane, żeby testować na IE.

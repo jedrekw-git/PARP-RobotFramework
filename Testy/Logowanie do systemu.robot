@@ -80,7 +80,7 @@ Zapomniane hasło dane poprawne
     Podaj nowe hasło    ${NewPassword}
     wait until page contains    Nowe hasło zostało zapamiętane.     15
     Zaloguj sie uzywajac  ${recoverpasswordlogin}   ${NewPassword}
-    element text should be  xpath=//h1     Lokalny System Informatyczny
+    wait until element contains  ${BrandButton}     Lokalny System Informatyczny        15
     close browser
 
 Zapomniane hasło niepoprawna nazwa użytkownika

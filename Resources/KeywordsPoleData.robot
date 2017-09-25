@@ -44,7 +44,7 @@ Pilnuj Formatu Daty Domyslnie
     ...    Krok 6: Przestaw fokus na przycisk Zapisz
     ...    Krok 7: Pobierz wartość z pola
     ...    Krok 8: Pole powinno być puste
-    ...    Krok 9: Wpisz 2013051313 do pola
+    ...    Krok 9: Wpisz 20130513-20 do pola
     ...    Krok 10: Przestaw fokus na kolejne pole
     ...    Krok 11: Pobierz wartość z pola
     ...    Krok 12: Pole powinno być puste
@@ -56,10 +56,11 @@ Pilnuj Formatu Daty Domyslnie
     Focus    ${ZapiszWniosekButton}
     ${WartoscZPolaDataPoEdycji}    Get Value    ${Pole Id}
     Should Be Equal    ${WartoscZPolaDataPoEdycji}    ${EMPTY}
-    Input Text    ${Pole Id}    2013051313
+    Input Text    ${Pole Id}    20130513-20
     Press Key    ${Pole Id}    \\9    # ASCII code dla Tab
     ${WartoscZPolaDataPoEdycji}    Get Value    ${Pole Id}
     Should Be Equal    ${WartoscZPolaDataPoEdycji}    ${EMPTY}
+    Press Key    ${Pole Id}    \\9    # ASCII code dla Tab
 
 
 Pilnuj Formatu Daty Chrome
@@ -78,12 +79,12 @@ Pilnuj Formatu Daty Chrome
     ...    Krok 11: Przestaw fokus na przycisk Zapisz
     ...    Krok 12: Pobierz wartość z pola
     ...    Krok 13: Pole powinno być puste
-    ...    Krok 14: Ustaw zmienną z błędą datą 2013-05-1312
+    ...    Krok 14: Ustaw zmienną z błędą datą 2013-05-5002222222222
     ...    Krok 15: Ustaw ekran na polu z datą
     ...    Krok 16: Za pomocą JavaScript wprowadź błedną datę do pola
     ...    Krok 17: Przestaw fokus na kolejne pole
     ...    Krok 18: Pobierz wartość z pola
-    ...    Krok 19: Pole powinno zawierać skróconą datę 2013-05-13
+    ...    Krok 19: Pole powinno byc puste
     ${PoleBezId}    Fetch From Right    ${Pole Id}    =
     ${BlednaData}    Set Variable    2013-60-70
     Focus    ${Pole Id}
@@ -97,12 +98,12 @@ Pilnuj Formatu Daty Chrome
     Focus    ${ZapiszWniosekButton}
     ${WartoscZPolaDataPoEdycji}    Get Value    ${Pole Id}
     Should Be Equal    ${WartoscZPolaDataPoEdycji}    ${EMPTY}
-    ${BlednaData}    Set Variable    2013-05-1312
+    ${BlednaData}    Set Variable    2013-05-5002222222222
     Focus    ${Pole Id}
     Execute JavaScript    document.getElementById('${PoleBezId}').value='${BlednaData}';
     Focus    ${ZapiszWniosekButton}
     ${WartoscZPolaDataPoEdycji}    Get Value    ${Pole Id}
-    Should Be Equal    ${WartoscZPolaDataPoEdycji}    2013-05-13
+    Should Be Equal    ${WartoscZPolaDataPoEdycji}    ${EMPTY}
 
 Dodaj Do Dzisiejszej Daty
     [Arguments]    ${PrzedzialCzasu}
