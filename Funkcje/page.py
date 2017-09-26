@@ -88,6 +88,9 @@ class page(ExtendedSelenium2Library):
         h = randint(0, 9)
         i = randint(0, 9)
         j = (6*a+5*b+7*c+2*d+3*e+4*f+5*g+6*h+7*i) % 11
+        if j==10:
+            i = i+1
+            j = (6*a+5*b+7*c+2*d+3*e+4*f+5*g+6*h+7*i) % 11
         return str(a)+str(b)+str(c)+str(d)+str(e)+str(f)+str(g)+str(h)+str(i)+str(j)[:1]
 
     def get_random_regon(self):

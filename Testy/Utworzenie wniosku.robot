@@ -736,12 +736,27 @@ Miejsce realizacji projektu dane poprawne
     close browser
 
 Wskaźniki dane poprawne
+    [Tags]  ty
     [Documentation]   Celem testu jest sprawdzenie możliwości uzupełnienia wskaźników danymi poprawnymi
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-22
     Otworz strone startowa
     Zaloguj sie
     Utworz wniosek
     ${IDwniosku} =   Pobierz ID wniosku
+    click  ${WykazWskaznikowWnioskuWskaznikProduktuDodajDropdown}
+    Select 2 wybierz losowa opcje   ${WykazWskaznikowWnioskuWskaznikProduktuDodajContainer}
+    click  ${WykazWskaznikowWnioskuWskaznikProduktuDodajButton}
+    ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaWartosc} =      get random floating point milion
+    press key  ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaPole}        ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc}
+    click  ${WykazWskaznikowWnioskuWskaznikRezultatuDodajDropdown}
+    Select 2 wybierz losowa opcje     ${WykazWskaznikowWnioskuWskaznikRezultatuDodajContainer}
+    click  ${WykazWskaznikowWnioskuWskaznikRezultatuDodajButton}
+    ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaWartosc} =     get random floating point milion
+    press key  ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaWartosc} =     get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaPole}         ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik6MetodologiaIWeryfikacjaWartosc} =      get random string
@@ -754,10 +769,6 @@ Wskaźniki dane poprawne
     press key  ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaPole}        ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik11MetodologiaIWeryfikacjaWartosc} =      get random string
@@ -766,6 +777,14 @@ Wskaźniki dane poprawne
     press key  ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik17MetodologiaIWeryfikacjaWartosc} =      get random string
@@ -778,32 +797,28 @@ Wskaźniki dane poprawne
     press key  ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc}
     Zapisz Wniosek
     Odswiez strone
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaPole}         ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaWartosc}
@@ -812,31 +827,36 @@ Wskaźniki dane poprawne
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik7MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik7MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaPole}        ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik11MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik11MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik17MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik17MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik16WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik16WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik16MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik16MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaPole}        ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaWartosc}
     Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc}
-    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaWartosc}
+    Sprawdz czy wartosc elementu jest rowna  ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaWartosc}
+    Zapisz Wniosek
     Waliduj wniosek
     Na stronie nie powinno byc    Wskaźnik "lsi1420-0005 Liczba nabytych lub wytworzonych w ramach projektu środków trwałych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe
     Na stronie nie powinno byc    Wskaźnik "lsi1420-0007 Liczba nabytych w ramach projektu wartości niematerialnych i prawnych". Opis metodologii wyliczenia wskaźnika oraz sposobu weryfikacji osiągnięcia zaplanowanych wartości wskaźnika: To pole jest obowiązkowe.
@@ -1177,7 +1197,6 @@ Oświadczenia dane poprawne
     close browser
 
 Złożenie wniosku
-    [Tags]  ty
     [Documentation]   Celem testu jest sprawdzenie możliwości złożenia wniosku o dofinansowanie
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-27
     Otworz strone startowa
@@ -1201,7 +1220,7 @@ Złożenie wniosku
     Sprawdz Pole Daty i Wpisz    ${OkresRealizacjiProjektuKoniecPole}    ${OkresRealizacjiProjektuKoniecWartosc}
     ${WnioskodawcaOgolneNazwaWartosc} =     get random string
     press key  ${WnioskodawcaOgolneNazwaPole}   ${WnioskodawcaOgolneNazwaWartosc}
-    ${WnioskodawcaOgolneStatusWartosc} =    Kliknij Dropdown i wybierz losową opcję  ${WnioskodawcaOgolneStatusDropdown}
+    Select2 Wybierz Element  ${WnioskodawcaOgolneStatusDropdown}        2
     ${WnioskodawcaOgolneDataRozpoczeciaDzialalnosciWartosc} =   get random date
     press key  ${WnioskodawcaOgolneDataRozpoczeciaDzialalnosciPole}     ${WnioskodawcaOgolneDataRozpoczeciaDzialalnosciWartosc}
     ${WnioskodawcaOgolneFormaPrawnaWartosc} =  Kliknij Dropdown i wybierz losową opcję  ${WnioskodawcaOgolneFormaPrawnaDropdown}
@@ -1214,7 +1233,7 @@ Złożenie wniosku
     press key   ${WnioskodawcaOgolnePeselPole}  ${WnioskodawcaOgolnePeselWartosc}
     ${WnioskodawcaOgolneKrsWartosc} =   get random integer 10 chars
     press key  ${WnioskodawcaOgolneKrsPole}     ${WnioskodawcaOgolneKrsWartosc}
-    ${WnioskodawcaOgolnePkdWartosc} =      Kliknij Dropdown i wybierz losową opcję  ${WnioskodawcaOgolnePkdDropdown}
+    Select2 Wybierz Element  ${WnioskodawcaOgolnePkdDropdown}       2
     ${WnioskodawcaOgolneMozliwoscOdzyskaniaVATWartosc} =   Kliknij Dropdown i wybierz losową opcję  ${WnioskodawcaOgolneMozliwoscOdzyskaniaVATDropdown}
     select from list by label  ${WnioskodawcaOgolneSiedzibaKrajDropdown}    Polska
     ${WnioskodawcaOgolneSiedzibaWojewodztwoWartosc} =  Kliknij Dropdown i wybierz losową opcję  ${WnioskodawcaOgolneSiedzibaWojewodztwoDropdown}
@@ -1371,7 +1390,7 @@ Złożenie wniosku
     ${KlasyfikacjaProjektuRodzajDzialalnosciGospodarczejWartosc} =     Kliknij Dropdown i wybierz losową opcję  ${KlasyfikacjaProjektuRodzajDzialalnosciGospodarczejDropdown}
     ${KlasyfikacjaProjektuKlasyfikacjaNABSWartosc} =   Kliknij Dropdown i wybierz losową opcję  ${KlasyfikacjaProjektuKlasyfikacjaNABSDropdown}
     ${KlasyfikacjaProjektuKlasyfikacjaOECDWartosc} =   Kliknij Dropdown i wybierz losową opcję  ${KlasyfikacjaProjektuKlasyfikacjaOECDDropdown}
-    ${KlasyfikacjaProjektuTypObszaruRealizacjiWartosc} =   Kliknij Dropdown i wybierz losową opcję  ${KlasyfikacjaProjektuTypObszaruRealizacjiDropdown}
+    Select2 Wybierz Element  ${KlasyfikacjaProjektuTypObszaruRealizacjiDropdown}        5
     select from list by label  ${KlasyfikacjaProjektuCzlonekKlastraKluczowegoDropdown}      Tak
     ${KlasyfikacjaProjektuNazwaKlastraKluczowegoWartosc} =     Kliknij Dropdown i wybierz losową opcję  ${KlasyfikacjaProjektuNazwaKlastraKluczowegoDropdown}
     ${KlasyfikacjaProjektuDataWstapieniaDoKlastraKluczowegoWartosc} =       get random date
@@ -1494,7 +1513,21 @@ Złożenie wniosku
     Wpisz kod poczowy  ${MiejsceRealizacjiProjektuKodPocztowyPole}      ${MiejsceRealizacjiProjektuKodPocztowyWartosc}
     ${MiejsceRealizacjiProjektuTytulPrawnyWartosc} =    get random string
     press key  ${MiejsceRealizacjiProjektuTytulPrawnyPole}      ${MiejsceRealizacjiProjektuTytulPrawnyWartosc}
-    ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaWartosc} =      get random floating point
+    click  ${WykazWskaznikowWnioskuWskaznikProduktuDodajDropdown}
+    Select 2 wybierz losowa opcje   ${WykazWskaznikowWnioskuWskaznikProduktuDodajContainer}
+    click  ${WykazWskaznikowWnioskuWskaznikProduktuDodajButton}
+    ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaWartosc} =      get random floating point milion
+    press key  ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaPole}        ${WykazWskaznikowWnioskuWskaznik9WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc}
+    click  ${WykazWskaznikowWnioskuWskaznikRezultatuDodajDropdown}
+    Select 2 wybierz losowa opcje     ${WykazWskaznikowWnioskuWskaznikRezultatuDodajContainer}
+    click  ${WykazWskaznikowWnioskuWskaznikRezultatuDodajButton}
+    ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaWartosc} =     get random floating point milion
+    press key  ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik24WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaWartosc} =     get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik24MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaPole}         ${WykazWskaznikowWnioskuWskaznik6WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik6MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik6MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik6MetodologiaIWeryfikacjaWartosc}
@@ -1506,10 +1539,6 @@ Złożenie wniosku
     press key  ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaPole}        ${WykazWskaznikowWnioskuWskaznik8WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik8MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik10WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik11WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik11MetodologiaIWeryfikacjaWartosc} =      get random string
@@ -1518,6 +1547,14 @@ Złożenie wniosku
     press key  ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik12WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik12MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik13WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik17WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik17MetodologiaIWeryfikacjaWartosc} =      get random string
@@ -1530,36 +1567,32 @@ Złożenie wniosku
     press key  ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik15WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik15MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik14WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik18WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik18MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaWartosc} =      get random floating point milions
-    press key  ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik21WartoscDocelowaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik21MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik19WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik19MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaWartosc} =      get random floating point milions
     press key  ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik22WartoscDocelowaWartosc}
     ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik22MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaWartosc} =      get random floating point milions
+    press key  ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaPole}       ${WykazWskaznikowWnioskuWskaznik23WartoscDocelowaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaPole}       ${WykazWskaznikowWnioskuWskaznik23MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik1MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik4MetodologiaIWeryfikacjaWartosc}
     ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaWartosc} =      get random string
     press key  ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik5MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik9MetodologiaIWeryfikacjaWartosc}
-    ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc} =      get random string
-    press key  ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik13MetodologiaIWeryfikacjaWartosc}
-    Kliknij Losowe radio 0 1  ${OtrzymanaPomocIPowiazanieProjektuPomocDeminimisOtrzymanaNieRadio}
+    ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik10MetodologiaIWeryfikacjaWartosc}
+    ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc} =      get random string
+    press key  ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaPole}        ${WykazWskaznikowWnioskuWskaznik14MetodologiaIWeryfikacjaWartosc}
+    click javascript id  ${OtrzymanaPomocIPowiazanieProjektuPomocDeminimisOtrzymanaNieRadio}
     ${OtrzymanaPomocIPowiazanieProjektuDeminisRolnictwoRybolowstwoWartosc} =    get random floating point
     press key   ${OtrzymanaPomocIPowiazanieProjektuDeminisRolnictwoRybolowstwoPole}      ${OtrzymanaPomocIPowiazanieProjektuDeminisRolnictwoRybolowstwoWartosc}
-    Kliknij Losowe radio 0 1  ${OtrzymanaPomocIPowiazanieProjektuInnaPomocPublicznaOtrzymanaNieRadio}
+    click javascript id  ${OtrzymanaPomocIPowiazanieProjektuInnaPomocPublicznaOtrzymanaNieRadio}
     ${OtrzymanaPomocIPowiazanieProjektuOpisPowiazaniaProjektuZInnymiWnioskodawcyWartosc} =  get random string
     press key  ${OtrzymanaPomocIPowiazanieProjektuOpisPowiazaniaProjektuZInnymiWnioskodawcyPole}        ${OtrzymanaPomocIPowiazanieProjektuOpisPowiazaniaProjektuZInnymiWnioskodawcyWartosc}
     ${OtrzymanaPomocIPowiazanieProjektuInwestycjaPoczatkowaOpisNowyZakladWartosc} =  get random string
@@ -1578,66 +1611,37 @@ Złożenie wniosku
     sprawdz pole daty i wpisz   ${OtrzymanaPomocIPowiazanieProjektuDataZakonczeniaRokuObrotowegoPole}       ${OtrzymanaPomocIPowiazanieProjektuDataZakonczeniaRokuObrotowegoWartosc}
     ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemWartosc} =  set variable  1000000.00
     wpisz kod poczowy  ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemPole}    ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemWartosc} =    set variable    1000000.00
+    ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemWartosc} =    set variable    0.00
     press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemPole}     ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalneWartosc} =   set variable      100000.00
+    ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalneWartosc} =   set variable      0.00
     press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalnePole}     ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemWartosc} =   set variable      1000000.00
+    ${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemWartosc} =   set variable      0.00
     press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemPole}     ${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalneWartosc} =   set variable      100000.00
+    ${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalneWartosc} =   set variable      0.00
     press key  ${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalnePole}     ${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemWartosc} =   set variable      3000000.00
+    ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemWartosc} =   set variable      10000000.00
     press key  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemPole}     ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalneWartosc} =   set variable      300000.00
+    ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalneWartosc} =   set variable      5000000.00
     press key  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalnePole}     ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemWartosc} =    set variable     1000000.00
+    ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemWartosc} =    set variable     0.00
     press key  ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemPole}      ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalneWartosc} =   set variable   100000.00
+    ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalneWartosc} =   set variable   0.00
     press key  ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalnePole}      ${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemWartosc} =   set variable    1000000.00
+    ${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemWartosc} =   set variable    0.00
     press key  ${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemPole}       ${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalneWartosc} =  set variable   100000.00
+    ${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalneWartosc} =  set variable   0.00
     press key  ${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalnePole}       ${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalneWartosc}
     click javascript xpath  ${WykazZrodelFinansowaniaWydatkowDodajInneButton}
     ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowNazwaWartosc} =      get random string
     press key  ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowNazwaPole}        ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowNazwaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartosc} =   set variable      1000000.00
+    ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartosc} =   set variable      0.00
     press key  ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemPole}        ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartosc} =   set variable       100000.00
+    ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartosc} =   set variable       0.00
     press key  ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowanePole}     ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowEbiOgolemWartosc} =     get random floating point milion
+    ${WykazZrodelFinansowaniaWydatkowEbiOgolemWartosc} =     set variable       0.00
     press key  ${WykazZrodelFinansowaniaWydatkowEbiOgolemPole}      ${WykazZrodelFinansowaniaWydatkowEbiOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalneWartosc} =     get random floating point milion
+    ${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalneWartosc} =     set variable       0.00
     press key  ${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalnePole}      ${WykazZrodelFinansowaniaWydatkowEbiKwalifikowalneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowOgolemSumaWartosc} =  Evaluate  ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowOgolemSumaWartoscPrzekonwertowana} =   Przekonwertuj floating point milion na string ze spacjami  ${WykazZrodelFinansowaniaWydatkowOgolemSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowOgolemSumaWartoscPrzekonwertowanaZKropka} =   Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowOgolemSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaWartosc} =  Evaluate     ${WykazZrodelFinansowaniaWydatkowŚrodkiWspolnotoweOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaWartoscPrzekonwertowana} =   Przekonwertuj floating point milion na string ze spacjami  ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaWartoscPrzekonwertowanaZKropka} =   Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaWartosc} =  Evaluate  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneLeasingOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneKredytOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaWartoscPrzekonwertowana} =  Przekonwertuj floating point milion na string ze spacjami  ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaWartoscPrzekonwertowanaZKropka} =  Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaWartosc} =  Evaluate  ${WykazZrodelFinansowaniaWydatkowPrywatneSrodkiWlasneKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneLeasingKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowPrywatneKredytKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaWartoscPrzekonwertowana} =  Przekonwertuj floating point milion na string ze spacjami  ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaWartoscPrzekonwertowanaZKropka} =  Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaWartosc} =     evaluate  ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaOgolemWartosc}+${WykazZrodelFinansowaniaWydatkowKspBudzetJstOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaWartoscPrzekonwertowana} =     Przekonwertuj floating point milion na string ze spacjami  ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaWartoscPrzekonwertowanaZKropka} =     Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaWartosc} =     evaluate  ${WykazZrodelFinansowaniaWydatkowKspBudzetPanstwaKwalifikowalneWartosc}+${WykazZrodelFinansowaniaWydatkowKspBudzetJstKwalifikowalneWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaWartoscPrzekonwertowana} =  Przekonwertuj floating point milion na string ze spacjami  ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaWartoscPrzekonwertowanaZKropka} =  Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaWartosc}
-    ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartoscPrzekonwertowanaZKropka} =      Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartosc}
-    ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartoscPrzekonwertowanaZKropka} =   Przekonwertuj floating point milion na string ze spacjami i kropka  ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartosc}
-    Zapisz Wniosek
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaPole}     ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneOgolemSumaWartoscPrzekonwertowanaZKropka}       5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaPole}      ${WykazZrodelFinansowaniaWydatkowKrajoweSrodkiPubliczneKwalifikowaneSumaWartoscPrzekonwertowanaZKropka}        5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaPole}       ${WykazZrodelFinansowaniaWydatkowPrywatneOgolemSumaWartoscPrzekonwertowanaZKropka}     5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaPole}        ${WykazZrodelFinansowaniaWydatkowPrywatneKwalifikowaneSumaWartoscPrzekonwertowanaZKropka}      5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowInneOgolemSumaPole}       ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscOgolemWartoscPrzekonwertowanaZKropka}        5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowInneKwalifikowaneSumaPole}        ${WykazZrodelFinansowaniaWydatkowInneZrodlaFinansowaniaWydatkowWartoscKwalifikowaneWartoscPrzekonwertowanaZKropka}     5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowOgolemSumaPole}   ${WykazZrodelFinansowaniaWydatkowOgolemSumaWartoscPrzekonwertowanaZKropka}      5
-    wait until element contains  ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaPole}   ${WykazZrodelFinansowaniaWydatkowKwalifikowalneSumaWartoscPrzekonwertowanaZKropka}      5
     Click Javascript Xpath     ${DodajZadanieButton}
     wait until element is visible      ${ZakresRzeczowoFinansowyZadaniaNazwaPole}      15
     ${ZakresRzeczowoFinansowyZadaniaNazwaWartosc} =   get random string
@@ -1652,40 +1656,19 @@ Złożenie wniosku
     Click Javascript Xpath  ${DodajWydatekRzeczywisciePonoszonyButton}
     wait until element contains     ${ZakresRzeczowoFinansowyWydatkiZadanieDropdown}    ${ZakresRzeczowoFinansowyZadaniaNazwaWartosc}      15
     select from list by label   ${ZakresRzeczowoFinansowyWydatkiZadanieDropdown}    1. ${ZakresRzeczowoFinansowyZadaniaNazwaWartosc}
-    ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowWartosc} =     Kliknij Dropdown bez pola input i wybierz losową opcję  ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowDropdown}
-    ${ZakresRzeczowoFinansowyWydatkiPodkategoriaKosztowWartosc} =  kliknij dropdown bez pola input i wybierz losową opcję  ${ZakresRzeczowoFinansowyWydatkiPodkategoriaKosztowDropdown}
+    Kliknij Dropdown bez pola input i wybierz opcję  ${ZakresRzeczowoFinansowyWydatkiKategoriaKosztowDropdown}   5
     ${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategoriiWartosc} =  get random string
     press key  ${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategoriiPole}        ${ZakresRzeczowoFinansowyWydatkiOpisKosztuWDanejPodkategoriiWartosc}
-    ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartosc} =    set variable   9000000.00
+    ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartosc} =    set variable   11000000.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemPole}   ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartosc}
-    ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartosc} =     set variable  900000.00
+    ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartosc} =     set variable  6000000.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowanePole}    ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartosc}
     ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatWartosc} =     set variable   0.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatPole}    ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatWartosc}
-    ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartosc} =     set variable     3000000.00
+    ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartosc} =     set variable     1000000.00
     press key  ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowaniePole}   ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartosc}
-    Click  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataNieruchomosciNieRadio}
-    Kliknij Losowe radio 0 1  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataInneNieRadio}
-    Zapisz Wniosek
-    ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaWartosc} =   Podziel liczby i zwróć wynik procentowy     ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartosc}      ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartosc}
-    element should contain  ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaPole}    ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaWartosc}
-    ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartoscPrzekonwertowana} =     Przekonwertuj floating point milion na string ze spacjami i kropka  ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartosc}
-    wait until element contains  ${WydatkiRzeczywisciePonoszoneSumaWartoscOgolemPole}   ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartoscPrzekonwertowana}
-    ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartoscPrzekonwertowana} =     Przekonwertuj floating point milion na string ze spacjami i kropka  ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartosc}
-    wait until element contains  ${WydatkiRzeczywisciePonoszoneSumaWydatkiKwalifikowalnePole}   ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartoscPrzekonwertowana}
-    wait until element contains  ${WydatkiRzeczywisciePonoszoneSumaWydatkiKwalifikowalneVatPole}    ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatWartosc}
-    ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartoscPrzekonwertowana} =     Przekonwertuj floating point milion na string ze spacjami i kropka  ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartosc}
-    wait until element contains  ${WydatkiRzeczywisciePonoszoneSumaWnioskowaneDofinansowaniePole}   ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartoscPrzekonwertowana}
-    wait until element contains  ${WydatkiRzeczywisciePonoszoneSumaIntensywnoscPole}    ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaWartosc}
-    Sprawdz czy w kolumnie znajduje się tekst   ${WydatkiWRamachKategoriiKosztówWydatkiOgolemKolumna}       13      ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartoscPrzekonwertowana}
-    Sprawdz czy w kolumnie znajduje się tekst   ${WydatkiWRamachKategoriiKosztówWydatkiKwalifikowaneKolumna}    13      ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartoscPrzekonwertowana}
-    Sprawdz czy w kolumnie znajduje się tekst   ${WydatkiWRamachKategoriiKosztówDofinansowanieKolumna}      13      ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartoscPrzekonwertowana}
-    Sprawdz czy w kolumnie znajduje się tekst   ${WydatkiWRamachKategoriiKosztówUdzial%Kolumna}         13       100.00
-    Sprawdz czy w kolumnie znajduje się tekst   ${ZestawienieFinansoweOgolemWydatkiOgolemKolumna}       5       ${ZakresRzeczowoFinansowyWydatkiWartoscOgolemWartoscPrzekonwertowana}
-    sprawdz czy w kolumnie znajduje się tekst   ${ZestawienieFinansoweOgolemWydatkiKwalifikowaneKolumna}        5       ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneWartoscPrzekonwertowana}
-    sprawdz czy w kolumnie znajduje się tekst   ${ZestawienieFinansoweOgolemVATKolumna}     5       ${ZakresRzeczowoFinansowyWydatkiWartoscKwalifikowaneVatWartosc}
-    sprawdz czy w kolumnie znajduje się tekst   ${ZestawienieFinansoweOgolemDofinansowanieKolumna}      5       ${ZakresRzeczowoFinansowyWydatkiWnioskowaneDofinansowanieWartoscPrzekonwertowana}
-    sprawdz czy w kolumnie znajduje się tekst   ${ZestawienieFinansoweOgolem%DofinansowaniaKolumna}     5       ${ZakresRzeczowoFinansowyWydatki%DofinansowaniaWartosc}
+    Click Javascript Id  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataNieruchomosciNieRadio}
+    click javascript id  ${ZakresRzeczowoFinansowyPodmiotUpowaznionySplataInneNieRadio}
     select checkbox  ${Oswiadczenia1InformacjeOgolneOProjekcieCheckbox}
     select checkbox  ${Oswiadczenia2WnioskodawcaInformacjeOgolneCheckbox}
     select checkbox  ${Oswiadczenia3WnioskodawcaAdresKorespondencyjnyCheckbox}
@@ -1706,11 +1689,13 @@ Złożenie wniosku
     Dodaj zalacznik     ${WybierzZalacznikPrzeprowadzeniePracB+RButton}       ${WgrajZalacznikPrzeprowadzeniePracB+RButton}
     Zapisz Wniosek
     Zloz wniosek
-#    wait until page contains  Złożenie wniosku nie powiodło się. Wniosek posiada błędy walidacyjne, które uniemożliwiają złożenie wniosku. Błędy widoczne są po kliknięciu na przycisk "Sprawdź poprawność".​      15
-#    go to  ${Dashboard}
-#    Filtruj Wnioski Po ID   ${IDwniosku}
-#    Usun Wniosek
-#    close browser
+    wait until keyword succeeds  20    1    wait until element contains     xpath=/html/body/div[3]/div[4]/h3[1]        Wniosek został zarejestrowany    15
+    ${todaysdate} =    get todays date
+    wait until keyword succeeds  20    1    wait until element contains     xpath=/html/body/div[3]/div[4]/p        Wniosek został zarejestrowany dnia ${todaysdate} z numerem POIR.03.02.01-04    15
+    go to  ${Dashboard}
+    Filtruj Wnioski Po ID   ${IDwniosku}
+    wait until element contains     ${PierwszyWniosekStatusPole}       	Złożony niepotwierdzony      5
+    close browser
 
 Brak uzupełnionych obowiązkowych pól
     [Documentation]   Celem testu jest sprawdzenie walidacji przez system nie uzupełnionych pól

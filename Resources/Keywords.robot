@@ -85,6 +85,8 @@ Click2
 
 Click
     [Arguments]    ${Lokator}
+    FOCUS   ${Lokator}
+    Skroluj o kawalek ekranu do gory
     Run Keyword If    '${BROWSER}'=='ie'    Click2     ${Lokator}
     ...    ELSE    click element    ${Lokator}
 
@@ -102,6 +104,10 @@ Focus Javascript Id
 
 Skroluj o kawalek ekranu
     execute javascript  window.scrollBy(250,350);
+
+
+Skroluj o kawalek ekranu do gory
+    execute javascript  window.scrollBy(-250,-350);
 
 Zaloguj sie
     [Documentation]     Loguje sie uzywajac zmiennych {login} i {password}
@@ -225,6 +231,31 @@ Kliknij Dropdown i wybierz losową opcję
 #    click  ${Lista XPath}
     [Return]    ${TekstWybranegoElementu}
 
+Select 2 wybierz losowa opcje
+    [Documentation]     Klika na dropdown, tworzy adres containera results, pobiera liczbę elementów, klika losowy element i pobiera jego wartość
+    [Arguments]    ${AdresDropdowna}
+    ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
+    ${AdresDropdownaBezId}   ${last} =  Split String From Right  ${AdresDropdownaBezId}  -  1
+    ${Lista XPath}      Catenate    SEPARATOR=  ${AdresDropdownaBezId}-results
+    ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='    ${Lista XPath}    ']/li
+    Focus Javascript Id   ${AdresDropdowna}
+    Skroluj o kawalek ekranu
+    Czekaj Na Zakonczenie Ajax
+    wait until element is visible   ${Lista XPath}
+    ${LiczbaElementow}    get matching xpath count   ${Lista XPath}
+    :FOR    ${i}    IN RANGE    1
+    \   ${LosowyIndexElementu} =    run keyword if  ${LiczbaElementow}==0   set variable  ${Empty}
+    \   run keyword if  ${LiczbaElementow}==0   exit for loop
+    \   ${LosowyIndexElementu} =    run keyword if  ${LiczbaElementow}==1   set variable  [1]
+    \   run keyword if  ${LiczbaElementow}==1   exit for loop
+    \   ${LosowyIndexElementu} =    get random integer in range 2 x        ${LiczbaElementow}
+    ${TekstWybranegoElementu} =   Get Text      xpath=(${Lista XPath})${LosowyIndexElementu}
+    press key  xpath=//span/input   ${TekstWybranegoElementu}
+    press key  xpath=//span/input   \\13
+#    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
+#    click  ${Lista XPath}
+
+
 Kliknij Dropdown bez pola input i wybierz losową opcję
     [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
     [Arguments]    ${AdresDropdowna}
@@ -243,6 +274,18 @@ Kliknij Dropdown bez pola input i wybierz losową opcję
     ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${LosowyIndexElementu}
     Click    ${Lista XPath}
     [Return]    ${TekstWybranegoElementu}
+
+Kliknij Dropdown bez pola input i wybierz opcję
+    [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
+    [Arguments]    ${AdresDropdowna}    ${IndexElementu}
+    ${IndexElementu} =  Przypisz wartosc do indexu xpatha   ${IndexElementu}
+    click javascript id  ${AdresDropdowna}
+    Czekaj Na Zakonczenie Ajax
+    ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
+    ${Lista XPath}    Catenate    SEPARATOR=    //*[@id='${AdresDropdownaBezId}']/option
+    ${Lista XPath}    Catenate    SEPARATOR=    xpath=(${Lista XPath})${IndexElementu}
+    Click    ${Lista XPath}
+
 
 Select2 Wybierz Element
     [Arguments]    ${Lista Id}    ${NumerKolejnyElementu}

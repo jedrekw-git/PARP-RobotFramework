@@ -17,3 +17,5 @@ ${NowyWniosekPOPW.01.04.00-IIetap2017}      xpath=//tr[2]/td[5]/a
 ${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}     //a[contains(@href, '/wniosek/utworz/71')]
 ${FiltrowanieWnioskowIDPole}     xpath=//input
 ${FiltrowanieWnioskowSubmitButton}      xpath=//th[7]/button
+${FiltrowanieWnioskowStatusDropdown}        xpath=//th[6]/span/span/select
+${FiltrowanieWnioskowStatusPole}        xpath=//th[6]/span/span[2]/input
