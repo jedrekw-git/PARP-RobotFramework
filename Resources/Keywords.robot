@@ -84,6 +84,7 @@ Click2
     Press Key   ${locator}    \\13
 
 Click
+    [Documentation]  Skroluje do elementu a następnie klika go
     [Arguments]    ${Lokator}
     FOCUS   ${Lokator}
     Skroluj o kawalek ekranu do gory
@@ -98,16 +99,18 @@ Focus Javascript Xpath
 
 Focus Javascript Id
     [Arguments]    ${id}
-    [Documentation]    Klika element przy uzyciu javascript i wykorzystujac lokator id
+    [Documentation]    Skroluje do elementu używająć javascript i lokatora id
     ${lokatorBezId}     Fetch From Right    ${id}    =
     Execute JavaScript  document.getElementById('${lokatorBezId}').scrollIntoView(false);
 
 Skroluj o kawalek ekranu
-    execute javascript  window.scrollBy(250,350);
+    [Documentation]  Skroluje stronę w dół
+    execute javascript  window.scrollBy(0,350);
 
 
 Skroluj o kawalek ekranu do gory
-    execute javascript  window.scrollBy(-250,-350);
+    [Documentation]  Skroluje stronę do góry
+    execute javascript  window.scrollBy(0,-350);
 
 Zaloguj sie
     [Documentation]     Loguje sie uzywajac zmiennych {login} i {password}
@@ -144,10 +147,12 @@ Wyszukaj w skrzynce mailowej LSI1420
     click2      ${WyszukiwarkaPole}
 
 Sprawdz czy pierwszy email jest z PARP i dotyczy odzyskania hasła
+    [Documentation]  Wyszukuje w skrzynce mailowe o2 maile z PRAP i sprawdza czy pierwszy mail dotyczy odzyskiwania hasła
     Wyszukaj w skrzynce mailowej LSI1420
     wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Odzyskiwanie hasła
 
 Sprawdz czy pierwszy email jest z PARP i dotyczy nowego konta
+    [Documentation]  Wyszukuje w skrzynce mailowe o2 maile z PRAP i sprawdza czy pierwszy mail dotyczy aktywacji nowego konta
     Wyszukaj w skrzynce mailowej LSI1420
     wait until keyword succeeds   3 min     5 sec   element text should be    ${PierwszyMailTytułPole}    LSI1420: Nowe konto
 
@@ -159,7 +164,7 @@ Kliknij link z emaila dotyczący odzyskania hasła
     go to   ${url}
 
 Kliknij link z emaila dotyczący nowego konta
-    [Documentation]     Wchodzi na pierwszy mail na koncie o2.pl a nastepnie przechodzi na strone odzyskiwania hasla podana w mailu
+    [Documentation]     Wchodzi na pierwszy mail na koncie o2.pl a nastepnie przechodzi na strone aktywacji nowego konta podana w mailu
     Click Javascript Xpath   ${PierwszyMailTytułPole}
     wait until element is visible       ${LinkZMailaDoAktywacjiNowegoKonta}
     ${url}=  get element attribute   ${LinkZMailaDoAktywacjiNowegoKonta}@href
@@ -206,7 +211,7 @@ Czekaj Na Zakonczenie Ajax
     \    Run Keyword If    ${IsAjaxComplete}==True    Exit For Loop
 
 Kliknij Dropdown i wybierz losową opcję
-    [Documentation]     Klika na dropdown, tworzy adres containera results, pobiera liczbę elementów, klika losowy element i pobiera jego wartość
+    [Documentation]     Klika na dropdown, tworzy adres containera results, pobiera liczbę elementów, wpisuje wartość losowego elementu w pole input i zatwierdza klawiszem enter. Zwraca wartość elementu
     [Arguments]    ${AdresDropdowna}
     ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
     ${AdresDropdownaBezId}   ${last} =  Split String From Right  ${AdresDropdownaBezId}  -  1
@@ -232,7 +237,7 @@ Kliknij Dropdown i wybierz losową opcję
     [Return]    ${TekstWybranegoElementu}
 
 Select 2 wybierz losowa opcje
-    [Documentation]     Klika na dropdown, tworzy adres containera results, pobiera liczbę elementów, klika losowy element i pobiera jego wartość
+    [Documentation]     Tworzy adres containera results, pobiera liczbę elementów, losuje element, wpsuje jego wartość w pole wyszukiwania i zatwierdza klawiszem enter.
     [Arguments]    ${AdresDropdowna}
     ${AdresDropdownaBezId}    Fetch From Right    ${AdresDropdowna}    =
     ${AdresDropdownaBezId}   ${last} =  Split String From Right  ${AdresDropdownaBezId}  -  1
@@ -257,7 +262,7 @@ Select 2 wybierz losowa opcje
 
 
 Kliknij Dropdown bez pola input i wybierz losową opcję
-    [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
+    [Documentation]     Klika na dropdown, losuje element i klika go. Zwraca wartość elementu
     [Arguments]    ${AdresDropdowna}
     click javascript id  ${AdresDropdowna}
     Czekaj Na Zakonczenie Ajax
@@ -276,7 +281,7 @@ Kliknij Dropdown bez pola input i wybierz losową opcję
     [Return]    ${TekstWybranegoElementu}
 
 Kliknij Dropdown bez pola input i wybierz opcję
-    [Documentation]     Klika na dropdown i wpisuje wartosc w pole wyszukiwania a następnie zatwierdza klawiszem enter
+    [Documentation]     Klika na dropdown i wybiera element o wskazanym index'ie
     [Arguments]    ${AdresDropdowna}    ${IndexElementu}
     ${IndexElementu} =  Przypisz wartosc do indexu xpatha   ${IndexElementu}
     click javascript id  ${AdresDropdowna}
@@ -322,6 +327,7 @@ Zapisz Wniosek
     Czekaj Na Zakonczenie Ajax
 
 Odswiez strone
+    [Documentation]  Odświeża stronę i akceptuje alert jeśli się pojawi
     reload page
     ${Status} =     RUN KEYWORD AND RETURN STATUS  alert should be present
     run keyword if  ${Status}==True      dismiss alert  True
@@ -355,6 +361,7 @@ Na stronie nie powinno byc
     should not contain  ${pageSource}   ${text}
 
 Podziel liczby i zwróć wynik procentowy
+    [Documentation]     Dzieli liczby a i b przez siebie z zwraca ich wynik procentowy
     [Arguments]    ${1}     ${2}
     ${1c} =   convert to number  ${1}
     ${2c} =   convert to number  ${2}
@@ -369,6 +376,7 @@ Podziel liczby i zwróć wynik procentowy
     [Return]    ${Wynik}
 
 Przekonwertuj floating point milion na string ze spacjami
+    [Documentation]  Konwertuje liczbę zmiennoprzecinkową na string ze spacjami i przecinkiem
     [Arguments]    ${floating point}
     ${floating point} =     EVALUATE  str(${floating point})
     ${PoKropce} =   fetch from right  ${floating point}     .
@@ -384,6 +392,7 @@ Przekonwertuj floating point milion na string ze spacjami
     [Return]    ${Wynik}
 
 Przekonwertuj floating point milion na string ze spacjami i kropka
+    [Documentation]  Konwertuje liczbę zmiennoprzecinkową na string ze spacjami i kropką
     [Arguments]    ${floating point}
     ${floating point} =     EVALUATE  str(${floating point})
     ${PoKropce} =   fetch from right  ${floating point}     .
@@ -399,12 +408,14 @@ Przekonwertuj floating point milion na string ze spacjami i kropka
     [Return]    ${Wynik}
 
 Usuń wnioski
+    [Documentation]  Usuwa wszystkie wnioski
     :FOR    ${i}    IN RANGE    999999
     \    ${status} =     run keyword and return status  wait until element is visible   ${PierwszyWniosekUsunButton}
     \    Exit For Loop If    ${status}==${False}
     \    Usun Wniosek
 
 Przypisz wartosc do indexu xpatha
+    [Documentation]  Przypisuje do liczby index
     [Arguments]     ${i}
     :FOR    ${a}    IN RANGE    1
     \      ${index} =     set variable if  ${i}==0    ${EMPTY}
@@ -413,6 +424,7 @@ Przypisz wartosc do indexu xpatha
     [Return]     ${index}
 
 Sprawdz czy w kolumnie znajduje się tekst
+    [Documentation]     Sprawdza czy w  kolumnie (adres xpath z "xx" zamiast indexu wiersza) znajduje się tekst
     [Arguments]    ${AdresKolumnyZxxZamiastZmiennej}     ${IloscWierszy}      ${OczekiwanyTekst}
     :FOR    ${i}    IN RANGE    ${IloscWierszy}
     \    ${Index} =     Przypisz wartosc do indexu xpatha     ${i}
@@ -425,6 +437,7 @@ Sprawdz czy w kolumnie znajduje się tekst
     run keyword if  ${Status}==${False}  fatal error   Nie znaleziono tesktu w kolumnie
 
 Kliknij Losowe radio 0 1
+    [Documentation]  Klika losowe radio na podstawie adresu id (konczace sie na 0 lub 1) i sprawdza czy pozostałe radio jest niezaznaczone
     [Arguments]    ${AdresKtoregosRadio}
     ${AdresRadioBezId} =    fetch from right  ${AdresKtoregosRadio}     =
     ${AdresRadioBezKoncowki} =  cut last char from string  ${AdresRadioBezId}
@@ -439,6 +452,7 @@ Kliknij Losowe radio 0 1
     checkbox should not be selected     ${AdresDrugiegoRadioZKoncowka}
 
 Kliknij Losowe radio 1 2
+    [Documentation]  Klika losowe radio na podstawie adresu id (konczace sie na 1 lub 2) i sprawdza czy pozostałe radio jest niezaznaczone
     [Arguments]    ${AdresKtoregosRadio}
     ${AdresRadioBezId} =    fetch from right  ${AdresKtoregosRadio}     =
     ${AdresRadioBezKoncowki} =  cut last char from string  ${AdresRadioBezId}
@@ -468,17 +482,20 @@ Sprawdz Czy Wartosc Select2 Jest Rowna
 
 
 Sprawdz Czy Wartosc Select2 Bez Pola Input Jest Rowna
+    [Documentation]  Sprawdza czy wartość dropdowna Select2 bez pola input jest równa x
     [Arguments]    ${WybranaWartoscXpath}    ${WartoscDoPorownania}
     ${WybranyElement}    Get Text       ${WybranaWartoscXpath}
     should contain      ${WybranyElement}       ${WartoscDoPorownania}
 
 
 Sprawdz czy wartosc elementu jest rowna
+    [Documentation]  Sprawdza czy wartość pola jest równa x
     [Arguments]    ${AdresPola}    ${WartoscDoPorownania}
     ${WartoscElementu} =   get value  ${AdresPola}
     should be equal  ${WartoscElementu}     ${WartoscDoPorownania}
 
 Dodaj zalacznik
+    [Documentation]  Dodaje załącznik z lokalizacji C:\Downloads\a.doc
     [Arguments]    ${adresPolaWybierz}      ${adresPolaWgraj}
     press key     ${adresPolaWybierz}     C:${/}Downloads${/}a.doc
     click   ${adresPolaWgraj}
