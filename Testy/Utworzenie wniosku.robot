@@ -33,6 +33,7 @@ Utworzenie wniosku
     close browser
 
 Informacje ogólne o projekcie dane poprawne
+    [Tags]  ty
     [Documentation]  Celem testu jest uzupełnienie danych w module informacje ogólne o projekcie używając poprawnych danych
     ...     https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&item=testcase&id=LSI.TA-15
     Otworz strone startowa

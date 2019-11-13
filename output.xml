@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171025 17:50:41.951" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\jedrekw\PycharmProjects\lsi1420-TestyAutomatyczne\Testy\Utworzenie wniosku.robot" id="s1" name="Utworzenie wniosku">
+<test id="s1-t1" name="Informacje ogólne o projekcie dane poprawne">
+<kw name="Otworz strone startowa" library="Keywords">
+<doc>Otwiera stronę startową uzywajac przegladarki podanej w pliku ../Resources/AdresyURL.robot</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BROWSER}'=='ie'</arg>
+<arg>Zmienne Srodowiskowe Dla IE</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:42.686" starttime="20171025 17:50:42.686"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BrowserMode}'=='Default'</arg>
+<arg>Otworz Przegladarke Na Stronie Logowania Default</arg>
+</arguments>
+<kw name="Otworz Przegladarke Na Stronie Logowania Default" library="Keywords">
+<kw name="Open Browser" library="page">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171025 17:50:42.687" level="INFO">Opening browser 'firefox' to base url 'https://lsi1420-selenium.parp.gov.pl/'</msg>
+<status status="PASS" endtime="20171025 17:50:52.781" starttime="20171025 17:50:42.687"></status>
+</kw>
+<kw name="Maximize Browser Window" library="page">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171025 17:50:52.845" starttime="20171025 17:50:52.781"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:52.845" starttime="20171025 17:50:42.687"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:52.846" starttime="20171025 17:50:42.687"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BrowserMode}'=='Grid'</arg>
+<arg>Otworz Przegladarke Na Stronie Logowania Grid</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:52.847" starttime="20171025 17:50:52.846"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BrowserMode}'=='Headless'</arg>
+<arg>Otworz Przegladarke Na Stronie Logowania Headless</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:52.847" starttime="20171025 17:50:52.847"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BrowserMode}'=='Proxy'</arg>
+<arg>Otworz Przegladarke Na Stronie Logowania Proxy</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:52.848" starttime="20171025 17:50:52.848"></status>
+</kw>
+<kw name="Set Selenium Speed" library="page">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:52.849" starttime="20171025 17:50:52.848"></status>
+</kw>
+<kw name="Ukryj Cookie Info" library="Keywords">
+<doc>Ukryj UE cookie Info klikając przycisk na dole strony</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>${HideUeCookieInfoButton}</arg>
+</arguments>
+<assign>
+<var>${CzyCookieInfoWidoczne}</var>
+</assign>
+<kw name="Element Should Be Visible" library="page">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>${HideUeCookieInfoButton}</arg>
+</arguments>
+<msg timestamp="20171025 17:50:52.851" level="INFO">Verifying element 'id=hide-ue-cookie-info' is visible.</msg>
+<status status="PASS" endtime="20171025 17:50:52.929" starttime="20171025 17:50:52.851"></status>
+</kw>
+<msg timestamp="20171025 17:50:52.929" level="INFO">${CzyCookieInfoWidoczne} = True</msg>
+<status status="PASS" endtime="20171025 17:50:52.929" starttime="20171025 17:50:52.850"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${CzyCookieInfoWidoczne}</arg>
+<arg>Click Button</arg>
+<arg>${HideUeCookieInfoButton}</arg>
+</arguments>
+<kw name="Click Button" library="page">
+<doc>Clicks a button identified by ``locator``.</doc>
+<arguments>
+<arg>${HideUeCookieInfoButton}</arg>
+</arguments>
+<msg timestamp="20171025 17:50:52.933" level="INFO">Clicking button 'id=hide-ue-cookie-info'.</msg>
+<status status="PASS" endtime="20171025 17:50:53.715" starttime="20171025 17:50:52.932"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:53.715" starttime="20171025 17:50:52.930"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:53.715" starttime="20171025 17:50:52.849"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:53.715" starttime="20171025 17:50:42.686"></status>
+</kw>
+<kw name="Zaloguj sie" library="Keywords">
+<doc>Loguje sie uzywajac zmiennych {login} i {password}</doc>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${LoginPole}</arg>
+<arg>${login}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:53.788" starttime="20171025 17:50:53.716"></status>
+</kw>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${HasłoPole}</arg>
+<arg>${password}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:53.850" starttime="20171025 17:50:53.788"></status>
+</kw>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${HasłoPole}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:53.897" starttime="20171025 17:50:53.851"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:53.897" starttime="20171025 17:50:53.716"></status>
+</kw>
+<kw name="Utworz wniosek" library="Keywords">
+<doc>Tworzy wniosek do użycia w testach automatycznych</doc>
+<kw name="Click" library="Keywords">
+<doc>Skroluje do elementu a następnie klika go</doc>
+<arguments>
+<arg>${NowyWniosekPOIR.03.02.01-DoTestówAutomatycznych}</arg>
+</arguments>
+<kw name="Focus" library="page">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>${Lokator}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:50:57.154" starttime="20171025 17:50:53.900"></status>
+</kw>
+<kw name="Skroluj o kawalek ekranu do gory" library="Keywords">
+<doc>Skroluje stronę do góry</doc>
+<kw name="Execute Javascript" library="page">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollBy(0,-350);</arg>
+</arguments>
+<msg timestamp="20171025 17:50:57.155" level="INFO">Executing JavaScript:
+window.scrollBy(0,-350);</msg>
+<status status="PASS" endtime="20171025 17:50:57.166" starttime="20171025 17:50:57.155"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:50:57.167" starttime="20171025 17:50:57.154"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BROWSER}'=='ie'</arg>
+<arg>Click2</arg>
+<arg>${Lokator}</arg>
+<arg>ELSE</arg>
+<arg>click element</arg>
+<arg>${Lokator}</arg>
+</arguments>
+<kw name="Click Element" library="page">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${Lokator}</arg>
+</arguments>
+<msg timestamp="20171025 17:50:57.171" level="INFO">Clicking element '//a[contains(@href, '/wniosek/utworz/71')]'.</msg>
+<status status="PASS" endtime="20171025 17:51:05.958" starttime="20171025 17:50:57.171"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:05.958" starttime="20171025 17:50:57.169"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:05.959" starttime="20171025 17:50:53.899"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="page">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Pomyślnie utworzono wniosek</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:06.048" starttime="20171025 17:51:05.959"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:06.048" starttime="20171025 17:50:53.898"></status>
+</kw>
+<kw name="Pobierz ID wniosku" library="Keywords">
+<doc>Przy dodawaniu wniosku pobiera z adresu URL ID wniosku</doc>
+<assign>
+<var>${IDwniosku}</var>
+</assign>
+<kw name="Get Location" library="page">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20171025 17:51:06.582" level="INFO">${url} = https://lsi1420-selenium.parp.gov.pl/wniosek/edytuj/3471</msg>
+<status status="PASS" endtime="20171025 17:51:06.582" starttime="20171025 17:51:06.049"></status>
+</kw>
+<kw name="Fetch From Right" library="String">
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>/</arg>
+</arguments>
+<assign>
+<var>${ID}</var>
+</assign>
+<msg timestamp="20171025 17:51:06.583" level="INFO">${ID} = 3471</msg>
+<status status="PASS" endtime="20171025 17:51:06.583" starttime="20171025 17:51:06.583"></status>
+</kw>
+<msg timestamp="20171025 17:51:06.583" level="INFO">${IDwniosku} = 3471</msg>
+<status status="PASS" endtime="20171025 17:51:06.583" starttime="20171025 17:51:06.048"></status>
+</kw>
+<kw name="Get Random String" library="page">
+<assign>
+<var>${TytulProjektuWartosc}</var>
+</assign>
+<msg timestamp="20171025 17:51:06.584" level="INFO">${TytulProjektuWartosc} = lsykyfwe</msg>
+<status status="PASS" endtime="20171025 17:51:06.584" starttime="20171025 17:51:06.584"></status>
+</kw>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${TytulProjektuPole}</arg>
+<arg>${TytulProjektuWartosc}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:06.653" starttime="20171025 17:51:06.585"></status>
+</kw>
+<kw name="Get Random String" library="page">
+<assign>
+<var>${KrotkiOpisProjektuWartosc}</var>
+</assign>
+<msg timestamp="20171025 17:51:06.655" level="INFO">${KrotkiOpisProjektuWartosc} = njgxdhrc</msg>
+<status status="PASS" endtime="20171025 17:51:06.655" starttime="20171025 17:51:06.655"></status>
+</kw>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${KrotkiOpisProjektuPole}</arg>
+<arg>${KrotkiOpisProjektuWartosc}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:06.798" starttime="20171025 17:51:06.656"></status>
+</kw>
+<kw name="Get Random String" library="page">
+<assign>
+<var>${CelProjektuWartosc}</var>
+</assign>
+<msg timestamp="20171025 17:51:06.799" level="INFO">${CelProjektuWartosc} = dsxonjlj</msg>
+<status status="PASS" endtime="20171025 17:51:06.799" starttime="20171025 17:51:06.799"></status>
+</kw>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${CelProjektuPole}</arg>
+<arg>${CelProjektuWartosc}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:06.950" starttime="20171025 17:51:06.802"></status>
+</kw>
+<kw name="Click Javascript Xpath" library="Keywords">
+<doc>Klika element przy uzyciu javascript i wykorzystujac lokator xpath</doc>
+<arguments>
+<arg>${DodajSlowoKluczoweButon}</arg>
+</arguments>
+<kw name="Fetch From Right" library="String">
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<arguments>
+<arg>${xpath}</arg>
+<arg>=</arg>
+</arguments>
+<assign>
+<var>${lokatorBezXpath}</var>
+</assign>
+<msg timestamp="20171025 17:51:06.952" level="INFO">${lokatorBezXpath} = //div[2]/div/button</msg>
+<status status="PASS" endtime="20171025 17:51:06.952" starttime="20171025 17:51:06.952"></status>
+</kw>
+<kw name="Execute Javascript" library="page">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.evaluate("${lokatorBezXpath}", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</arg>
+</arguments>
+<msg timestamp="20171025 17:51:06.953" level="INFO">Executing JavaScript:
+document.evaluate("//div[2]/div/button", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null).snapshotItem(0).click();</msg>
+<status status="PASS" endtime="20171025 17:51:07.018" starttime="20171025 17:51:06.953"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:07.018" starttime="20171025 17:51:06.951"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="page">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${PierwszeSlowoKluczowePole}</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:07.153" starttime="20171025 17:51:07.019"></status>
+</kw>
+<kw name="Get Random String" library="page">
+<assign>
+<var>${PierwszeSlowoKluczoweWartosc}</var>
+</assign>
+<msg timestamp="20171025 17:51:07.155" level="INFO">${PierwszeSlowoKluczoweWartosc} = ofzrbobp</msg>
+<status status="PASS" endtime="20171025 17:51:07.155" starttime="20171025 17:51:07.154"></status>
+</kw>
+<kw name="Press Key" library="page">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${PierwszeSlowoKluczowePole}</arg>
+<arg>${PierwszeSlowoKluczoweWartosc}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:07.208" starttime="20171025 17:51:07.156"></status>
+</kw>
+<kw name="Kliknij Dropdown bez pola input i wybierz losową opcję" library="Keywords">
+<doc>Klika na dropdown, losuje element i klika go. Zwraca wartość elementu</doc>
+<arguments>
+<arg>${DziedzinaProjektuDropdown}</arg>
+</arguments>
+<assign>
+<var>${DziedzinaProjektuWartosc}</var>
+</assign>
+<kw name="Click Javascript Id" library="Keywords">
+<doc>Klika element przy uzyciu javascript i wykorzystujac lokator id</doc>
+<arguments>
+<arg>${AdresDropdowna}</arg>
+</arguments>
+<kw name="Fetch From Right" library="String">
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<arguments>
+<arg>${id}</arg>
+<arg>=</arg>
+</arguments>
+<assign>
+<var>${lokatorBezId}</var>
+</assign>
+<msg timestamp="20171025 17:51:07.211" level="INFO">${lokatorBezId} = ogolne_projekt_dziedzinyProjektu</msg>
+<status status="PASS" endtime="20171025 17:51:07.211" starttime="20171025 17:51:07.210"></status>
+</kw>
+<kw name="Execute Javascript" library="page">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>document.getElementById('${lokatorBezId}').click();</arg>
+</arguments>
+<msg timestamp="20171025 17:51:07.211" level="INFO">Executing JavaScript:
+document.getElementById('ogolne_projekt_dziedzinyProjektu').click();</msg>
+<status status="PASS" endtime="20171025 17:51:07.291" starttime="20171025 17:51:07.211"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:07.292" starttime="20171025 17:51:07.210"></status>
+</kw>
+<kw name="Czekaj Na Zakonczenie Ajax" library="Keywords">
+<doc>Sprawdza w pętli czy działanie Ajax zakończyło się. Jeśli tak, wychodzi z pętli.</doc>
+<kw type="for" name="${INDEX} IN RANGE [ 1 | 10000 ]">
+<kw type="foritem" name="${INDEX} = 1">
+<kw name="Execute Javascript" library="page">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>return window.jQuery!=undefined &amp;&amp; jQuery.active==0</arg>
+</arguments>
+<assign>
+<var>${IsAjaxComplete}</var>
+</assign>
+<msg timestamp="20171025 17:51:07.299" level="INFO">Executing JavaScript:
+return window.jQuery!=undefined &amp;&amp; jQuery.active==0</msg>
+<msg timestamp="20171025 17:51:07.399" level="INFO">${IsAjaxComplete} = True</msg>
+<status status="PASS" endtime="20171025 17:51:07.399" starttime="20171025 17:51:07.297"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${INDEX}</arg>
+</arguments>
+<msg timestamp="20171025 17:51:07.400" level="INFO">1</msg>
+<status status="PASS" endtime="20171025 17:51:07.400" starttime="20171025 17:51:07.399"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IsAjaxComplete}</arg>
+</arguments>
+<msg timestamp="20171025 17:51:07.400" level="INFO">True</msg>
+<status status="PASS" endtime="20171025 17:51:07.400" starttime="20171025 17:51:07.400"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IsAjaxComplete}==True</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20171025 17:51:07.401" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20171025 17:51:07.401" starttime="20171025 17:51:07.401"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:07.401" starttime="20171025 17:51:07.401"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:07.402" starttime="20171025 17:51:07.296"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:07.402" starttime="20171025 17:51:07.294"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:07.402" starttime="20171025 17:51:07.292"></status>
+</kw>
+<kw name="Fetch From Right" library="String">
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<arguments>
+<arg>${AdresDropdowna}</arg>
+<arg>=</arg>
+</arguments>
+<assign>
+<var>${AdresDropdownaBezId}</var>
+</assign>
+<msg timestamp="20171025 17:51:07.403" level="INFO">${AdresDropdownaBezId} = ogolne_projekt_dziedzinyProjektu</msg>
+<status status="PASS" endtime="20171025 17:51:07.403" starttime="20171025 17:51:07.402"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>//*[@id='${AdresDropdownaBezId}']/option</arg>
+</arguments>
+<assign>
+<var>${Lista XPath}</var>
+</assign>
+<msg timestamp="20171025 17:51:07.403" level="INFO">${Lista XPath} = //*[@id='ogolne_projekt_dziedzinyProjektu']/option</msg>
+<status status="PASS" endtime="20171025 17:51:07.403" starttime="20171025 17:51:07.403"></status>
+</kw>
+<kw name="Get Matching Xpath Count" library="page">
+<doc>Returns number of elements matching `xpath`</doc>
+<arguments>
+<arg>${Lista XPath}</arg>
+</arguments>
+<assign>
+<var>${LiczbaElementow}</var>
+</assign>
+<msg timestamp="20171025 17:51:22.432" level="INFO">${LiczbaElementow} = 0</msg>
+<status status="PASS" endtime="20171025 17:51:22.432" starttime="20171025 17:51:07.403"></status>
+</kw>
+<kw type="for" name="${i} IN RANGE [ 1 ]">
+<kw type="foritem" name="${i} = 0">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${LiczbaElementow}==0</arg>
+<arg>set variable</arg>
+<arg>${Empty}</arg>
+</arguments>
+<assign>
+<var>${LosowyIndexElementu}</var>
+</assign>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Empty}</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:22.434" starttime="20171025 17:51:22.433"></status>
+</kw>
+<msg timestamp="20171025 17:51:22.434" level="INFO">${LosowyIndexElementu} = </msg>
+<status status="PASS" endtime="20171025 17:51:22.434" starttime="20171025 17:51:22.433"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${LiczbaElementow}==0</arg>
+<arg>exit for loop</arg>
+</arguments>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20171025 17:51:22.434" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20171025 17:51:22.434" starttime="20171025 17:51:22.434"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:22.434" starttime="20171025 17:51:22.434"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:22.435" starttime="20171025 17:51:22.433"></status>
+</kw>
+<status status="PASS" endtime="20171025 17:51:22.435" starttime="20171025 17:51:22.432"></status>
+</kw>
+<kw name="Get Text" library="page">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(${Lista XPath})${LosowyIndexElementu}</arg>
+</arguments>
+<assign>
+<var>${TekstWybranegoElementu}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="page">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171025 17:51:37.522" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171025 17:51:37.523" starttime="20171025 17:51:37.354"></status>
+</kw>
+<msg timestamp="20171025 17:51:37.534" level="FAIL">WebDriverException: Message: Failed to interpret value as array
+</msg>
+<status status="FAIL" endtime="20171025 17:51:37.534" starttime="20171025 17:51:22.435"></status>
+</kw>
+<status status="FAIL" endtime="20171025 17:51:37.535" starttime="20171025 17:51:07.209"></status>
+</kw>
+<doc>Celem testu jest uzupełnienie danych w module informacje ogólne o projekcie używając poprawnych danych
+https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&amp;item=testcase&amp;id=LSI.TA-15</doc>
+<tags>
+<tag>ty</tag>
+</tags>
+<status status="FAIL" endtime="20171025 17:51:37.536" critical="yes" starttime="20171025 17:50:42.684">WebDriverException: Message: Failed to interpret value as array
+</status>
+</test>
+<test id="s1-t2" name="Wskaźniki dane poprawne">
+<kw name="Otworz strone startowa" library="Keywords">
+<doc>Otwiera stronę startową uzywajac przegladarki podanej w pliku ../Resources/AdresyURL.robot</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BROWSER}'=='ie'</arg>
+<arg>Zmienne Srodowiskowe Dla IE</arg>
+</arguments>
+<status status="PASS" endtime="20171025 17:51:37.542" starttime="20171025 17:51:37.541"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BrowserMode}'=='Default'</arg>
+<arg>Otworz Przegladarke Na Stronie Logowania Default</arg>
+</arguments>
+<kw name="Otworz Przegladarke Na Stronie Logowania Default" library="Keywords">
+<kw name="Open Browser" library="page">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171025 17:51:37.544" level="INFO">Opening browser 'firefox' to base url 'https://lsi1420-selenium.parp.gov.pl/'</msg>
+<kw name="Capture Page Screenshot" library="page">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171025 17:51:46.358" level="FAIL">WebDriverException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" endtime="20171025 17:51:46.358" starttime="20171025 17:51:46.333"></status>
+</kw>
+<msg timestamp="20171025 17:51:46.358" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20171025 17:51:46.363" level="FAIL">WebDriverException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" endtime="20171025 17:51:46.364" starttime="20171025 17:51:37.543"></status>
+</kw>
+<status status="FAIL" endtime="20171025 17:51:46.364" starttime="20171025 17:51:37.543"></status>
+</kw>
+<status status="FAIL" endtime="20171025 17:51:46.364" starttime="20171025 17:51:37.542"></status>
+</kw>
+<status status="FAIL" endtime="20171025 17:51:46.364" starttime="20171025 17:51:37.541"></status>
+</kw>
+<doc>Celem testu jest sprawdzenie możliwości uzupełnienia wskaźników danymi poprawnymi
+https://testlink.parp.gov.pl/linkto.php?tprojectPrefix=LSI.TA&amp;item=testcase&amp;id=LSI.TA-22</doc>
+<tags>
+<tag>ty</tag>
+</tags>
+<status status="FAIL" endtime="20171025 17:51:46.365" critical="yes" starttime="20171025 17:51:37.539">WebDriverException: Message: Tried to run command without establishing a connection
+</status>
+</test>
+<doc>Utworzenie wniosku</doc>
+<status status="FAIL" endtime="20171025 17:51:46.367" starttime="20171025 17:50:41.954"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="2" pass="0">ty</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Utworzenie wniosku" pass="0">Utworzenie wniosku</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20171025 17:50:42.661" level="ERROR">Error in file 'C:\Users\jedrekw\PycharmProjects\lsi1420-TestyAutomatyczne\Resources\Keywords.robot': Importing test library 'Random' failed: ImportError: No module named Random
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\WINDOWS\SYSTEM32\python27.zip
+  c:\python27\DLLs
+  c:\python27\lib
+  c:\python27\lib\plat-win
+  c:\python27\lib\lib-tk
+  c:\python27
+  c:\python27\lib\site-packages</msg>
+<msg timestamp="20171025 17:51:46.358" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: Tried to run command without establishing a connection
+</msg>
+</errors>
+</robot>

@@ -1,0 +1,650 @@
+1508946697576	geckodriver	INFO	geckodriver 0.18.0
+1508946697584	geckodriver	INFO	Listening on 127.0.0.1:62633
+1508946699670	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1508946699886	addons.manager	DEBUG	Application has been upgraded
+1508946699908	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider", "XPIInternal"]
+1508946699911	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1508946699933	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1508946699936	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1508946699937	addons.manager	DEBUG	Starting provider: XPIProvider
+1508946699937	addons.xpi	DEBUG	startup
+1508946699938	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1508946699938	addons.xpi	INFO	Removing all system add-on upgrades.
+1508946699939	addons.xpi	DEBUG	checkForChanges
+1508946699939	addons.xpi	DEBUG	Loaded add-on state: ${}
+1508946699941	addons.xpi	INFO	Mapping activity-stream@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
+1508946699942	addons.xpi	INFO	Mapping aushelper@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1508946699942	addons.xpi	INFO	Mapping clicktoplay-rollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\clicktoplay-rollout@mozilla.org.xpi
+1508946699942	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1508946699942	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1508946699943	addons.xpi	INFO	Mapping followonsearch@mozilla.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
+1508946699943	addons.xpi	INFO	Mapping onboarding@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\onboarding@mozilla.org.xpi
+1508946699943	addons.xpi	INFO	Mapping screenshots@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
+1508946699944	addons.xpi	INFO	Mapping shield-recipe-client@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\shield-recipe-client@mozilla.org.xpi
+1508946699945	addons.xpi	INFO	Mapping webcompat@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1508946699945	addons.xpi	DEBUG	New add-on activity-stream@mozilla.org in app-system-defaults
+1508946699946	addons.xpi	INFO	Mapping activity-stream@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
+1508946699947	addons.xpi	DEBUG	New add-on aushelper@mozilla.org in app-system-defaults
+1508946699947	addons.xpi	INFO	Mapping aushelper@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1508946699948	addons.xpi	DEBUG	New add-on clicktoplay-rollout@mozilla.org in app-system-defaults
+1508946699948	addons.xpi	INFO	Mapping clicktoplay-rollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\clicktoplay-rollout@mozilla.org.xpi
+1508946699949	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1508946699949	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1508946699949	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1508946699950	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1508946699950	addons.xpi	DEBUG	New add-on followonsearch@mozilla.com in app-system-defaults
+1508946699951	addons.xpi	INFO	Mapping followonsearch@mozilla.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
+1508946699951	addons.xpi	DEBUG	New add-on onboarding@mozilla.org in app-system-defaults
+1508946699951	addons.xpi	INFO	Mapping onboarding@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\onboarding@mozilla.org.xpi
+1508946699952	addons.xpi	DEBUG	New add-on screenshots@mozilla.org in app-system-defaults
+1508946699952	addons.xpi	INFO	Mapping screenshots@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
+1508946699952	addons.xpi	DEBUG	New add-on shield-recipe-client@mozilla.org in app-system-defaults
+1508946699953	addons.xpi	INFO	Mapping shield-recipe-client@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\shield-recipe-client@mozilla.org.xpi
+1508946699953	addons.xpi	DEBUG	New add-on webcompat@mozilla.org in app-system-defaults
+1508946699953	addons.xpi	INFO	Mapping webcompat@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1508946699955	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1508946699955	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1508946699955	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1508946699956	addons.xpi	DEBUG	getInstallState changed: true, state: {}
+1508946699956	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1508946699965	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\jedrekw\AppData\Local\Temp\rust_mozprofile.0qUHgiu1FK0b\extensions.json
+1508946699966	addons.xpi-utils	DEBUG	New add-on activity-stream@mozilla.org installed in app-system-defaults
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1508946699993	DeferredSave.extensions.json	DEBUG	Save changes
+1508946699994	addons.xpi-utils	DEBUG	New add-on aushelper@mozilla.org installed in app-system-defaults
+1508946699997	DeferredSave.extensions.json	DEBUG	Starting timer
+1508946699999	DeferredSave.extensions.json	DEBUG	Save changes
+1508946699999	addons.xpi-utils	DEBUG	New add-on clicktoplay-rollout@mozilla.org installed in app-system-defaults
+1508946700003	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700004	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+1508946700008	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700008	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+1508946700014	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700014	addons.xpi-utils	DEBUG	New add-on followonsearch@mozilla.com installed in app-system-defaults
+1508946700018	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700018	addons.xpi-utils	DEBUG	New add-on onboarding@mozilla.org installed in app-system-defaults
+1508946700022	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700022	addons.xpi-utils	DEBUG	New add-on screenshots@mozilla.org installed in app-system-defaults
+1508946700028	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700029	addons.xpi-utils	DEBUG	New add-on shield-recipe-client@mozilla.org installed in app-system-defaults
+1508946700032	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700033	addons.xpi-utils	DEBUG	New add-on webcompat@mozilla.org installed in app-system-defaults
+1508946700035	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700036	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1508946700042	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700042	addons.manager	DEBUG	Registering startup change 'installed' for activity-stream@mozilla.org
+1508946700051	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
+1508946700054	addons.xpi	DEBUG	Calling bootstrap method install on activity-stream@mozilla.org version 0.0.0
+1508946700054	addons.xpi-utils	DEBUG	Make addon app-system-defaults:activity-stream@mozilla.org visible
+1508946700054	addons.xpi	DEBUG	Updating XPIState for {"id":"activity-stream@mozilla.org","syncGUID":"{e83caea7-80c2-44b3-824d-9a3c04893900}","location":"app-system-defaults","version":"0.0.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Activity Stream","description":"A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Firefox.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947156,"updateDate":1502217947156,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\activity-stream@mozilla.org.xpi","skinnable":false,"size":950324,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700056	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700056	addons.manager	DEBUG	Registering startup change 'installed' for aushelper@mozilla.org
+1508946700057	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1508946700060	addons.xpi	DEBUG	Calling bootstrap method install on aushelper@mozilla.org version 2.0
+1508946700060	addons.xpi-utils	DEBUG	Make addon app-system-defaults:aushelper@mozilla.org visible
+1508946700060	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{5d9527ef-7d9c-4572-9861-c7158d020a1a}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947156,"updateDate":1502217947156,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\aushelper@mozilla.org.xpi","skinnable":false,"size":8486,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700061	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700061	addons.manager	DEBUG	Registering startup change 'installed' for clicktoplay-rollout@mozilla.org
+1508946700061	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\clicktoplay-rollout@mozilla.org.xpi
+1508946700072	addons.xpi	DEBUG	Calling bootstrap method install on clicktoplay-rollout@mozilla.org version 1.2
+1508946700072	addons.xpi-utils	DEBUG	Make addon app-system-defaults:clicktoplay-rollout@mozilla.org visible
+1508946700072	addons.xpi	DEBUG	Updating XPIState for {"id":"clicktoplay-rollout@mozilla.org","syncGUID":"{3fe2a063-2cb1-4389-8de7-61ce8485474a}","location":"app-system-defaults","version":"1.2","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Click-to-Play staged rollout","description":"Staged rollout for Click-to-Play Flash.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947157,"updateDate":1502217947157,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\clicktoplay-rollout@mozilla.org.xpi","skinnable":false,"size":5717,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700072	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700072	addons.manager	DEBUG	Registering startup change 'installed' for e10srollout@mozilla.org
+1508946700073	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1508946700076	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 2.15
+1508946700077	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
+1508946700077	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"{d382e38c-88f4-432e-90b8-8d5ea35d36f9}","location":"app-system-defaults","version":"2.15","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947157,"updateDate":1502217947157,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","skinnable":false,"size":13732,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700078	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700078	addons.manager	DEBUG	Registering startup change 'installed' for firefox@getpocket.com
+1508946700078	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1508946700083	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.5
+1508946700083	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1508946700083	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{de318587-72b8-4f27-b2a2-8e56e7d64bc8}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947164,"updateDate":1502217947164,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","skinnable":false,"size":1002023,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700084	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700084	addons.manager	DEBUG	Registering startup change 'installed' for followonsearch@mozilla.com
+1508946700084	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
+1508946700086	addons.xpi	DEBUG	Calling bootstrap method install on followonsearch@mozilla.com version 0.9.1
+1508946700086	addons.xpi-utils	DEBUG	Make addon app-system-defaults:followonsearch@mozilla.com visible
+1508946700087	addons.xpi	DEBUG	Updating XPIState for {"id":"followonsearch@mozilla.com","syncGUID":"{93194641-f655-479f-b46a-0de0be873a31}","location":"app-system-defaults","version":"0.9.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Follow-on Search Telemetry","description":null,"creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947164,"updateDate":1502217947164,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\followonsearch@mozilla.com.xpi","skinnable":false,"size":16730,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700087	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700087	addons.manager	DEBUG	Registering startup change 'installed' for onboarding@mozilla.org
+1508946700087	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\onboarding@mozilla.org.xpi
+1508946700090	addons.xpi	DEBUG	Calling bootstrap method install on onboarding@mozilla.org version 0.1
+1508946700090	addons.xpi-utils	DEBUG	Make addon app-system-defaults:onboarding@mozilla.org visible
+1508946700090	addons.xpi	DEBUG	Updating XPIState for {"id":"onboarding@mozilla.org","syncGUID":"{e5957fc0-1497-49b7-b948-6f6cd012866f}","location":"app-system-defaults","version":"0.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Photon onboarding","description":"Photon onboarding","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947168,"updateDate":1502217947168,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\onboarding@mozilla.org.xpi","skinnable":false,"size":418655,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700091	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700091	addons.manager	DEBUG	Registering startup change 'installed' for screenshots@mozilla.org
+1508946700091	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
+1508946700095	addons.xpi	DEBUG	Calling bootstrap method install on screenshots@mozilla.org version 10.10.0
+1508946700095	addons.xpi-utils	DEBUG	Make addon app-system-defaults:screenshots@mozilla.org visible
+1508946700095	addons.xpi	DEBUG	Updating XPIState for {"id":"screenshots@mozilla.org","syncGUID":"{a6ed47ef-d9a4-4ab4-a0ed-2b96dc90bac5}","location":"app-system-defaults","version":"10.10.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Firefox Screenshots","description":null,"creator":null,"homepageURL":"https://pageshot.net/"},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947172,"updateDate":1502217947172,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\screenshots@mozilla.org.xpi","skinnable":false,"size":651762,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"51.0a1","maxVersion":"*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700095	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700096	addons.manager	DEBUG	Registering startup change 'installed' for shield-recipe-client@mozilla.org
+1508946700096	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\shield-recipe-client@mozilla.org.xpi
+1508946700098	addons.xpi	DEBUG	Calling bootstrap method install on shield-recipe-client@mozilla.org version 55.1
+1508946700098	addons.xpi-utils	DEBUG	Make addon app-system-defaults:shield-recipe-client@mozilla.org visible
+1508946700098	addons.xpi	DEBUG	Updating XPIState for {"id":"shield-recipe-client@mozilla.org","syncGUID":"{4332127c-ecfb-4e19-93a3-bf7be9639a86}","location":"app-system-defaults","version":"55.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Shield Recipe Client","description":"Client to download and run recipes for SHIELD, Heartbeat, etc.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947174,"updateDate":1502217947174,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\shield-recipe-client@mozilla.org.xpi","skinnable":false,"size":141970,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700099	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700099	addons.manager	DEBUG	Registering startup change 'installed' for webcompat@mozilla.org
+1508946700099	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1508946700101	addons.xpi	DEBUG	Calling bootstrap method install on webcompat@mozilla.org version 1.1
+1508946700101	addons.xpi-utils	DEBUG	Make addon app-system-defaults:webcompat@mozilla.org visible
+1508946700101	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{282f6038-58ea-4c7d-80dd-f4f482099902}","location":"app-system-defaults","version":"1.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947174,"updateDate":1502217947174,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\webcompat@mozilla.org.xpi","skinnable":false,"size":8990,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700102	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700102	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1508946700102	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{e5e1d011-00e5-48fd-8203-4bd191750f6e}","location":"app-global","version":"56.0","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"optionsBrowserStyle":null,"aboutURL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":false,"userDisabled":false,"appDisabled":false,"installDate":1502217947149,"updateDate":1502217947149,"applyBackgroundUpdates":1,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","skinnable":true,"size":7141,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.0"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"userPermissions":null,"icons":{},"iconURL":"chrome://browser/content/default-theme-icon.svg","icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700103	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700103	addons.xpi	DEBUG	Updating XPIState for {"id":"activity-stream@mozilla.org","syncGUID":"{e83caea7-80c2-44b3-824d-9a3c04893900}","location":"app-system-defaults","version":"0.0.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Activity Stream","description":"A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Firefox.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947156,"updateDate":1502217947156,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\activity-stream@mozilla.org.xpi","skinnable":false,"size":950324,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"aushelper@mozilla.org","syncGUID":"{5d9527ef-7d9c-4572-9861-c7158d020a1a}","location":"app-system-defaults","version":"2.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Application Update Service Helper","description":"Sets value(s) in the update url based on custom checks.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947156,"updateDate":1502217947156,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\aushelper@mozilla.org.xpi","skinnable":false,"size":8486,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"clicktoplay-rollout@mozilla.org","syncGUID":"{3fe2a063-2cb1-4389-8de7-61ce8485474a}","location":"app-system-defaults","version":"1.2","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Click-to-Play staged rollout","description":"Staged rollout for Click-to-Play Flash.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947157,"updateDate":1502217947157,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\clicktoplay-rollout@mozilla.org.xpi","skinnable":false,"size":5717,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"{d382e38c-88f4-432e-90b8-8d5ea35d36f9}","location":"app-system-defaults","version":"2.15","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947157,"updateDate":1502217947157,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","skinnable":false,"size":13732,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"{de318587-72b8-4f27-b2a2-8e56e7d64bc8}","location":"app-system-defaults","version":"1.0.5","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947164,"updateDate":1502217947164,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","skinnable":false,"size":1002023,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"followonsearch@mozilla.com","syncGUID":"{93194641-f655-479f-b46a-0de0be873a31}","location":"app-system-defaults","version":"0.9.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Follow-on Search Telemetry","description":null,"creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947164,"updateDate":1502217947164,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\followonsearch@mozilla.com.xpi","skinnable":false,"size":16730,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"52.0","maxVersion":"59.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"onboarding@mozilla.org","syncGUID":"{e5957fc0-1497-49b7-b948-6f6cd012866f}","location":"app-system-defaults","version":"0.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Photon onboarding","description":"Photon onboarding","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947168,"updateDate":1502217947168,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\onboarding@mozilla.org.xpi","skinnable":false,"size":418655,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"screenshots@mozilla.org","syncGUID":"{a6ed47ef-d9a4-4ab4-a0ed-2b96dc90bac5}","location":"app-system-defaults","version":"10.10.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Firefox Screenshots","description":null,"creator":null,"homepageURL":"https://pageshot.net/"},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947172,"updateDate":1502217947172,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\screenshots@mozilla.org.xpi","skinnable":false,"size":651762,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"51.0a1","maxVersion":"*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700104	addons.xpi	DEBUG	Updating XPIState for {"id":"shield-recipe-client@mozilla.org","syncGUID":"{4332127c-ecfb-4e19-93a3-bf7be9639a86}","location":"app-system-defaults","version":"55.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Shield Recipe Client","description":"Client to download and run recipes for SHIELD, Heartbeat, etc.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947174,"updateDate":1502217947174,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\shield-recipe-client@mozilla.org.xpi","skinnable":false,"size":141970,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700105	addons.xpi	DEBUG	Updating XPIState for {"id":"webcompat@mozilla.org","syncGUID":"{282f6038-58ea-4c7d-80dd-f4f482099902}","location":"app-system-defaults","version":"1.1","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"defaultLocale":{"name":"Web Compat","description":"Urgent post-release fixes for web compatibility.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947174,"updateDate":1502217947174,"applyBackgroundUpdates":1,"bootstrap":true,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\webcompat@mozilla.org.xpi","skinnable":false,"size":8990,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.*"}],"targetPlatforms":[],"multiprocessCompatible":true,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false,"userPermissions":null,"icons":{},"iconURL":null,"icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700105	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"{e5e1d011-00e5-48fd-8203-4bd191750f6e}","location":"app-global","version":"56.0","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"optionsBrowserStyle":null,"aboutURL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"installDate":1502217947149,"updateDate":1502217947149,"applyBackgroundUpdates":1,"path":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","skinnable":true,"size":7141,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"56.0","maxVersion":"56.0"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"userPermissions":null,"icons":{},"iconURL":"chrome://browser/content/default-theme-icon.svg","icon64URL":null,"blocklistState":0,"blocklistURL":null}
+1508946700105	DeferredSave.extensions.json	DEBUG	Save changes
+1508946700105	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1508946700105	addons.xpi-utils	DEBUG	Updating add-on states
+1508946700110	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
+1508946700112	addons.xpi	DEBUG	Calling bootstrap method startup on activity-stream@mozilla.org version 0.0.0
+1508946700113	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1508946700113	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1508946700114	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\clicktoplay-rollout@mozilla.org.xpi
+1508946700115	addons.xpi	DEBUG	Calling bootstrap method startup on clicktoplay-rollout@mozilla.org version 1.2
+1508946700115	addons.xpi	WARN	Exception running bootstrap method startup on clicktoplay-rollout@mozilla.org: [Exception... "Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPrefBranch.getStringPref]"  nsresult: "0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/browser/features/clicktoplay-rollout@mozilla.org.xpi!/bootstrap.js :: defineCohort :: line 49"  data: no] Stack trace: defineCohort()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/browser/features/clicktoplay-rollout@mozilla.org.xpi!/bootstrap.js:49 < startup()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/browser/features/clicktoplay-rollout@mozilla.org.xpi!/bootstrap.js:40 < callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4391 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2229 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/omni.ja!/components/addonManager.js:65
+1508946700116	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1508946700116	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 2.15
+1508946700117	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1508946700117	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1508946700147	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
+1508946700148	addons.xpi	DEBUG	Calling bootstrap method startup on followonsearch@mozilla.com version 0.9.1
+1508946700149	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\onboarding@mozilla.org.xpi
+1508946700149	addons.xpi	DEBUG	Calling bootstrap method startup on onboarding@mozilla.org version 0.1
+1508946700150	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
+1508946700151	addons.xpi	DEBUG	Calling bootstrap method startup on screenshots@mozilla.org version 10.10.0
+1508946700151	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\shield-recipe-client@mozilla.org.xpi
+1508946700152	addons.xpi	DEBUG	Calling bootstrap method startup on shield-recipe-client@mozilla.org version 55.1
+1508946700159	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1508946700161	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.1
+1508946700167	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1508946700168	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1508946700168	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1508946700168	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1508946700168	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1508946700168	addons.manager	DEBUG	Starting provider: GMPProvider
+1508946700177	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1508946700177	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1508946700177	addons.manager	DEBUG	Starting provider: PluginProvider
+1508946700177	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1508946700177	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1508946700178	addons.manager	DEBUG	Completed startup sequence
+1508946700357	Marionette	INFO	Enabled via --marionette
+1508946700476	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1508946700476	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1508946700476	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1508946700478	DeferredSave.extensions.json	DEBUG	Starting write
+1508946700710	DeferredSave.extensions.json	DEBUG	Write succeeded
+1508946700710	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 22
+[Child 2396] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2396] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1508946701908	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1508946701908	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1508946701908	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1508946701910	addons.xpi	INFO	Mapping activity-stream@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
+1508946701910	addons.xpi	INFO	Mapping aushelper@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1508946701910	addons.xpi	INFO	Mapping clicktoplay-rollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\clicktoplay-rollout@mozilla.org.xpi
+1508946701910	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1508946701910	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1508946701910	addons.xpi	INFO	Mapping followonsearch@mozilla.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
+1508946701911	addons.xpi	INFO	Mapping onboarding@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\onboarding@mozilla.org.xpi
+1508946701911	addons.xpi	INFO	Mapping screenshots@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
+1508946701911	addons.xpi	INFO	Mapping shield-recipe-client@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\shield-recipe-client@mozilla.org.xpi
+1508946701911	addons.xpi	INFO	Mapping webcompat@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1508946701912	addons.xpi	DEBUG	Existing add-on activity-stream@mozilla.org in app-system-defaults
+1508946701912	addons.xpi	DEBUG	Existing add-on aushelper@mozilla.org in app-system-defaults
+1508946701912	addons.xpi	DEBUG	Existing add-on clicktoplay-rollout@mozilla.org in app-system-defaults
+1508946701912	addons.xpi	DEBUG	Existing add-on e10srollout@mozilla.org in app-system-defaults
+1508946701913	addons.xpi	DEBUG	Existing add-on firefox@getpocket.com in app-system-defaults
+1508946701913	addons.xpi	DEBUG	Existing add-on followonsearch@mozilla.com in app-system-defaults
+1508946701913	addons.xpi	DEBUG	Existing add-on onboarding@mozilla.org in app-system-defaults
+1508946701913	addons.xpi	DEBUG	Existing add-on screenshots@mozilla.org in app-system-defaults
+1508946701914	addons.xpi	DEBUG	Existing add-on shield-recipe-client@mozilla.org in app-system-defaults
+1508946701914	addons.xpi	DEBUG	Existing add-on webcompat@mozilla.org in app-system-defaults
+1508946701914	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1508946701914	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1508946701915	addons.xpi	DEBUG	getInstallState changed: false, state: {}
+1508946702047	Marionette	INFO	Listening on port 62639
+1508946702057	Marionette	INFO	Listening on port 62639
+1508946702126	addons.productaddons	INFO	sending request to: https://aus5.mozilla.org/update/3/GMP/56.0/20170808170225/WINNT_x86-msvc-x64/en-US/beta/Windows_NT%2010.0.0.0%20(x64)/default/default/update.xml
+1508946702800	Marionette	WARN	TLS certificate errors will be ignored for this session
+1508946702818	addons.productaddons	INFO	Completed downloading document
+1508946702846	Marionette	DEBUG	Register listener.js for window 4294967297
+1508946702894	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1508946703767	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1508946703768	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1508946703826	addons.productaddons	INFO	downloadXHR File download. status=200
+1508946703833	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\jedrekw\AppData\Local\Temp\tmpaddon-ee9cc
+1508946705729	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1508946705731	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 55.1
+1508946705737	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.10.0
+1508946705737	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+1508946705738	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.1
+1508946705738	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1508946705739	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 2.15
+1508946705739	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.2
+1508946705740	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1508946705741	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+1508946705741	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/home"
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1508946705754	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "4294967297"
+JavaScript error: resource://shield-recipe-client/lib/RecipeRunner.jsm, line 153: TypeError: prefs is undefined
+1508946705809	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+[Child 12424] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1508946705859	addons.manager	DEBUG	shutdown
+1508946705860	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1508946705860	addons.xpi	DEBUG	shutdown
+1508946705860	addons.xpi-utils	DEBUG	shutdown
+1508946705860	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1508946705860	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1508946705860	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1508946705861	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1508946705861	addons.manager	DEBUG	Calling shutdown blocker for <unnamed-provider>
+1508946705868	addons.manager	DEBUG	Async provider shutdown done
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 13860] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1508946706295	geckodriver::marionette	ERROR	Failed to kill browser process
+64147295	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364148311	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364149876	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364150984	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364152876	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364154225	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364155869	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364158276	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364159891	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364160207	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364165095	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364166076	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364168978	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364170594	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364170941	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364171288	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364171604	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364171941	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364172272	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364172599	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364172930	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364173245	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364173580	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364173932	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364178172	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364179374	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364180523	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364181705	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364186119	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364187359	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364188705	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364189867	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364190967	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364192346	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+JavaScript error: https://lsi1420-selenium.parp.gov.pl/knockoutjs/binding.maskedinput.js, line 17: TypeError: observable is not a function
+1506364199035	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364199978	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364201351	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364202303	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364207361	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364222280	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364222742	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364223635	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364225293	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364226111	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506364466783	addons.manager	INFO	Skipping background update check
+1506364706798	DeferredSave.extensions.json	DEBUG	Save changes
+1506364706798	DeferredSave.extensions.json	DEBUG	Starting timer
+1506364706822	DeferredSave.extensions.json	DEBUG	Starting write
+1506364706827	DeferredSave.extensions.json	DEBUG	Write succeeded
+1506365252407	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1506365252410	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 55.1
+1506365252415	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.10.0
+1506365252416	addons.xpi	DEBUG	Calling bootstrap method shutdown on onboarding@mozilla.org version 0.1
+1506365252418	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.1
+1506365252420	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1506365252421	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 2.15
+1506365252422	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.2
+1506365252423	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+1506365252426	addons.xpi	DEBUG	Calling bootstrap method shutdown on activity-stream@mozilla.org version 0.0.0
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Child 16448] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1506365253171	addons.manager	DEBUG	shutdown
+1506365253172	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1506365253172	addons.xpi	DEBUG	shutdown
+1506365253172	addons.xpi-utils	DEBUG	shutdown
+1506365253172	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1506365253172	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1506365253173	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1506365253174	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1506365253174	addons.manager	DEBUG	Calling shutdown blocker for <unnamed-provider>
+1506365253186	addons.manager	DEBUG	Async provider shutdown done
+[GPU 17348] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+BUG	Calling shutdown blocker for XPIProvider
+1506358265640	addons.xpi	DEBUG	shutdown
+1506358265640	addons.xpi-utils	DEBUG	shutdown
+1506358265641	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1506358265642	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1506358265643	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1506358265644	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1506358265644	addons.manager	DEBUG	Calling shutdown blocker for <unnamed-provider>
+1506358265647	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1506358265657	addons.manager	DEBUG	Async provider shutdown done
+[GPU 18412] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+rionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335455913	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335455917	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335456812	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335457382	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335459224	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335459226	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335459464	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335459467	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335460402	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335460959	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335462880	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335462884	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335463071	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335463074	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335463934	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335464564	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335466363	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335466365	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335466556	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335466559	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335467498	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335468064	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335469826	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335469828	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335470025	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335470028	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335470869	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335471429	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335473312	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335473318	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335473547	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335473554	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335474464	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335475046	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335476767	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335476769	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335476955	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335476957	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335477811	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335478373	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335480051	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335480054	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335480249	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335480251	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335481096	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335481761	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335483418	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335483419	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335483648	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335483650	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335484532	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335485098	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335486593	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335486600	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335486783	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335486786	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335487709	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335488294	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335489764	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335489766	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335489941	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335489943	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335490776	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335491335	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335492793	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335492795	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335492983	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335492985	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335493831	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335494394	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335495839	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335495846	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335496026	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335496028	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335497001	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335497581	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335498981	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335498990	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335499190	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335499192	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335500039	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335500628	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335502054	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335502057	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335502269	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335502273	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335503102	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335503660	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335504978	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335504979	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335505214	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335505216	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335506039	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335506607	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335507972	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335507978	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335508153	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335508156	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335509006	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335509568	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335510880	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335510886	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335511067	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335511070	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335511887	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335512464	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335513695	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335513699	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335513889	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335513891	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335514738	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335515296	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335516549	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335516555	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335516740	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335516743	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335517614	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335518173	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335519444	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335519452	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335519662	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335519664	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335520491	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335521049	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335522127	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335522130	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335522306	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335522308	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335523123	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506335523690	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335524567	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335524570	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335524717	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335524718	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506335540479	Marionette	INFO	New connections will no longer be accepted
+1506335540496	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1506335540496	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 55.1
+1506335540500	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+1506335540508	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.1
+1506335540509	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1506335540510	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 2.0
+1506335540510	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.2
+1506335540511	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
+el_win.cc, line 346
+1506335333146	addons.manager	DEBUG	shutdown
+1506335333148	addons.manager	DEBUG	Calling shutdown blocker for XPIProvider
+1506335333148	addons.xpi	DEBUG	shutdown
+1506335333148	addons.xpi-utils	DEBUG	shutdown
+1506335333150	addons.manager	DEBUG	Calling shutdown blocker for LightweightThemeManager
+1506335333151	addons.manager	DEBUG	Calling shutdown blocker for GMPProvider
+1506335333152	addons.manager	DEBUG	Calling shutdown blocker for PluginProvider
+1506335333153	addons.manager	DEBUG	Calling shutdown blocker for PreviousExperimentProvider
+1506335333153	addons.manager	DEBUG	Calling shutdown blocker for <unnamed-provider>
+1506335333158	addons.xpi	DEBUG	Notifying XPI shutdown observers
+1506335333173	addons.manager	DEBUG	Async provider shutdown done
+[GPU 1588] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+i1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233176845	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233177424	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233178983	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233178986	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233179177	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233179180	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233180008	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233180555	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233182078	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233182080	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233182285	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233182286	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233183109	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233183652	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233185151	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233185157	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233185374	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233185377	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233186265	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233186828	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233188278	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233188282	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233188493	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233188496	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233189352	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233189901	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233191319	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233191321	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233191502	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233191504	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233192335	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233192905	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233194280	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233194287	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233194467	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233194469	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233195418	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233195972	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233197301	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233197308	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233197495	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233197497	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233198359	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233198920	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233200218	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233200223	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233200402	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233200405	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233201216	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233201772	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233203063	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233203067	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233203246	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233203248	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233204076	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233204642	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233205865	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233205867	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233206058	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233206060	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233206908	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233207471	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233208662	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233208664	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233208874	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233208878	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233209709	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233210286	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233211436	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233211440	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233211633	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233211636	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233212479	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233213084	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233214226	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233214231	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233214419	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233214422	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233215267	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233215844	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233216980	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233216984	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233217162	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233217167	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233218011	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233218560	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233219614	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233219619	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233219801	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233219802	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233220610	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233221159	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233222168	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233222170	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233222337	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233222339	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233223233	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1506233223788	Marionette	DEBUG	Received DOM event "beforeunload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233224583	Marionette	DEBUG	Received DOM event "pagehide" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233224587	Marionette	DEBUG	Received DOM event "unload" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233224756	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233224759	Marionette	DEBUG	Received DOM event "pageshow" for "https://lsi1420-selenium.parp.gov.pl/wniosek/wyswietlListeKonkursow"
+1506233240444	Marionette	INFO	New connections will no longer be accepted
+1506233240463	addons.xpi	DEBUG	Calling bootstrap method shutdown on webcompat@mozilla.org version 1.1
+1506233240463	addons.xpi	DEBUG	Calling bootstrap method shutdown on shield-recipe-client@mozilla.org version 55.1
+1506233240469	addons.xpi	DEBUG	Calling bootstrap method shutdown on screenshots@mozilla.org version 10.12.0
+1506233240477	addons.xpi	DEBUG	Calling bootstrap method shutdown on followonsearch@mozilla.com version 0.9.1
+1506233240478	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.5
+1506233240478	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 2.0
+1506233240479	addons.xpi	DEBUG	Calling bootstrap method shutdown on clicktoplay-rollout@mozilla.org version 1.2
+1506233240480	addons.xpi	DEBUG	Calling bootstrap method shutdown on aushelper@mozilla.org version 2.0
